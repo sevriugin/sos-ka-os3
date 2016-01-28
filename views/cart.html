@@ -2,7 +2,7 @@
 			<div id="main-nav" class="">
 				<div class="container-fluid">	
 					<div class="nav-header">
-							<a href="#/products" class="nav-brand">YATIM <span>ROSTOV</span></a>
+							<a href="#/products" class="nav-brand"><span>SOS</span>-ka</a>
 							<a class="nav-icon pull-right visible-xs menu-link" href="#/cart" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
 							<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
 						</div>
@@ -33,9 +33,9 @@
 						  <tbody>
 							<tr ng:repeat="item in invoice.items">
 	  	 						<td class="vert-align"><a href="{{ item.url }}">{{ item.title }}</a></td>
-								<td class="vert-align">{{ item.cost | currency:"₽ ":0 }}</td>
+								<td class="vert-align">{{ item.cost | currency:"��� ":0 }}</td>
 								<td class="text-center vert-align"><input type="number" min="1" max="9" ng:model="item.qty" ng:required class="form-control form-control-inline" style="width: 52px!important;"></td>
-								<td class="text-right vert-align">{{ item.qty * item.cost | currency:"₽ ":0 }}</td>
+								<td class="text-right vert-align">{{ item.qty * item.cost | currency:"��� ":0 }}</td>
 								<td class="text-center vert-align"><a href="#/cart" ng:click="removeItem($index)" class="remove-item"><i class="icon-close"></i></a></td>
 							</tr>	
 <!-- 							<tr>
@@ -70,22 +70,22 @@
 								<tr>
 								  <td>Sub total:</td>
 								  <td></td>
-								  <td class="text-right"><b>{{ total() | currency:"₽ ":0 }}</b></td>
+								  <td class="text-right"><b>{{ total() | currency:"��� ":0 }}</b></td>
 								</tr>								
 								<tr>
 								  <td>Shipping cost:</td>
 								  <td></td>
-								  <td class="text-right">{{ shiping() | currency:"₽ ":0 }}</td>
+								  <td class="text-right">{{ shiping() | currency:"��� ":0 }}</td>
 								</tr>
 								<tr>
 								  <td>Tax:</td>
 								  <td></td>
-								  <td class="text-right">{{ tax | currency:"₽ ":0 }}</td>
+								  <td class="text-right">{{ tax | currency:"��� ":0 }}</td>
 								</tr>
 								<tr>
 								  <td>Total:</td>
 								  <td></td>
-								  <td id="total" class="text-right">{{ total() + shiping() + tax | currency:"₽ ":0 }}</td>
+								  <td id="total" class="text-right">{{ total() + shiping() + tax | currency:"��� ":0 }}</td>
 								</tr>
 							  </tbody>
 							</table>
