@@ -1,0 +1,24 @@
+<div id="main-nav" class="">
+				<div class="container-fluid">	
+					<div class="nav-header">
+							<a href="#/products" class="nav-brand">YATIM <span>ROSTOV</span></a>
+							<a class="nav-icon pull-right visible-xs menu-link" href="#/products" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
+							<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
+						</div>
+				</div>
+</div>
+
+<div class="container-fluid productlist">
+	<div class="row">
+		<div ng-repeat="product in products | orderBy:orderProp" ng-class="productClass(product)">
+			<a href="#/products/{{product.id}}">
+				<img ng-src="{{product.imageUrl}}" class="img-responsive" alt="item">
+				<span class="productlist-price-container">
+					<span class="product-price">
+						<span class="price">{{product.cost | currency:"₽ ":0}}</span>
+					</span>
+				</span>
+			</a>
+		</div>
+	</div>
+</div>

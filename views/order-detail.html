@@ -1,0 +1,130 @@
+<div id="wrap">
+	<div id="main-nav" class="">
+		<div class="container-fluid">	
+			<div class="nav-header">
+				<a href="#/products" class="nav-brand">YATIM <span>ROSTOV</span></a>
+				<a class="nav-icon pull-right visible-xs menu-link" href="#/about" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
+				<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid title">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>{{order.id}}</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid cart-list">
+		<div class="row">
+			<div class="col-sm-6">
+				<div ng-show="success" id="alert-contact"> 
+					<div class="alert alert-success" role="alert"><strong>Your order has been sent.</strong></div>
+				</div>
+				<div ng-show="error" class="alert alert-danger">{{error}}</div>
+				<form name="form" ng-submit="changeStatus()" role="form" class="myform">
+					<h3 class="text-center">Delivery address</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label" for="firstname">First Name</label>
+        						<i class="fa fa-key"></i>
+       							<input type="text" name="firstname" id="firstname" placeholder="{{order.firstname}}" class="form-control" ng-model="firstname" required disabled />
+        						<span ng-show="form.firstname.$dirty && form.firstname.$error.required" class="form-control">First name is required</span>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label" for="lastname">Last Name</label>
+        						<i class="fa fa-key"></i>
+       							<input type="text" name="lastname" id="lastname" placeholder="{{order.lastname}}" class="form-control" ng-model="lastname" required disabled/>
+        						<span ng-show="form.lastname.$dirty && form.lastname.$error.required" class="form-control">Last name is required</span>
+							</div>
+						</div>
+					</div>	
+					<div class="form-group">
+						<label class="control-label" for="email">EMail</label>
+        				<i class="fa fa-key"></i>
+       					<input type="text" name="email" id="email" placeholder="{{order.email}}" class="form-control" ng-model="email" required disabled/>
+        				<span ng-show="form.email.$dirty && form.email.$error.required" class="form-control">EMail is required</span>
+					</div>							
+					<div class="form-group">
+						<label class="control-label" for="address">Address</label>
+        				<i class="fa fa-key"></i>
+       					<input type="text" name="address" id="address" placeholder="{{order.address}}" class="form-control" ng-model="address" required disabled/>
+        				<span ng-show="form.address.$dirty && form.address.$error.required" class="form-control">Address is required</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="address2">Address2</label>
+        				<i class="fa fa-key"></i>
+       					<input type="text" name="address2" id="address2" placeholder="{{order.address2}}" class="form-control" ng-model="address2" disabled/>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="city">City</label>
+        				<i class="fa fa-key"></i>
+       					<input type="text" name="city" id="city" placeholder="{{order.city}}" class="form-control" ng-model="city" required disabled/>
+        				<span ng-show="form.city.$dirty && form.city.$error.required" class="form-control">City is required</span>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="postal">Postal/ZIP Code</label>
+        				<i class="fa fa-key"></i>
+       					<input type="text" name="postal" id="postal" placeholder="{{order.postal}}" class="form-control" ng-model="postal" required disabled/>
+        				<span ng-show="form.postal.$dirty && form.postal.$error.required" class="form-control">Postal/ZIP Code is required</span>
+					</div>					
+					<div class="form-group">
+					<label class="control-label" for="phone">Phone</label>
+        				<i class="fa fa-key"></i>
+       					<input type="text" name="phone" id="phone" placeholder="{{order.phone}}" class="form-control" ng-model="phone" required disabled/>
+        				<span ng-show="form.phone.$dirty && form.phone.$error.required" class="form-control">Phone is required</span>
+					</div>
+					<p><button type="submit" ng-disabled="form.$invalid || dataLoading || success" class="btn btn-store btn-block">Change Status</button></p>
+        			<img ng-if="newdataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>		
+				</form>
+			</div>
+			<div class="col-sm-6 ">
+				<table class="table">
+					<thead>
+						<tr>
+							<th colspan="3" class="text-center">You're purchasing this...</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng:repeat="item in order.items">
+	  	 					<td class="vert-align">{{ item.title}}</td>
+							<td class="vert-align">{{ item.qty}}x</td>
+							<td class="vert-align text-right">{{ item.qty * item.cost | currency:"₽  ":0 }}</td>
+						</tr>
+						<tr>
+							<td class="vert-align"><b>Cart subtotal</b></td>
+							<td class="vert-align"></td>
+							<td class="vert-align text-right"><b>{{order.amount | currency:"₽  ":0}}</b></td>
+						</tr>
+						<tr>
+							<td class="vert-align">Shipping cost:</td>
+							<td class="vert-align"></td>
+							<td class="vert-align text-right">{{order.delivery | currency:"₽  ":0}}</td>
+						</tr>
+						<tr>
+							<td class="vert-align">Tax:</td>
+							<td class="vert-align"></td>
+							<td class="vert-align text-right">{{order.tax | currency:"₽  ":0}}</td>
+						</tr>
+						<tr>
+							<td class="vert-align">Total:</td>
+							<td class="vert-align"></td>
+							<td class="vert-align text-right" id="total">{{order.totalAmount | currency:"₽  ":0}}</td>
+						</tr>
+					</tbody>
+				</table>		
+			</div>	
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12 text-center show-more">
+				<a href="#/orders" class="btn btn-outline">Return</a>
+			</div>	
+		</div>
+	</div>
+</div>

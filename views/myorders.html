@@ -1,0 +1,98 @@
+<div id="main-nav" class="">
+	<div class="container-fluid">	
+		<div class="nav-header">
+			<a href="#/products" class="nav-brand">YATIM <span>ROSTOV</span></a>
+			<a class="nav-icon pull-right visible-xs menu-link" href="#/cart" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
+			<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
+		</div>
+	</div>
+</div>
+			
+<div class="container-fluid title">
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>My Orders</h2>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid cart-list">
+	<div class="row">
+		<div class="col-sm-8">
+			<div ng-show="error" class="alert alert-danger">{{error}}</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th class="text-center">Quantity</th>
+						<th class="text-right">Sub total</th>
+						<th class="text-right">Total</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng:repeat="order in orders">
+						<td class="vert-align"><a href="#/orders/{{$index}}">{{ order.id }}</a></td>
+						<td class="text-center vert-align"><input type="number" min="1" max="9" ng:model="order.total" ng:required class="form-control form-control-inline" style="width: 52px!important;" disabled></td>
+						<td class="text-right vert-align">{{ order.amount | currency:"₽  ":0 }}</td>
+						<td class="text-right vert-align">{{ order.totalAmount | currency:"₽  ":0 }}</td>
+						<td class="text-center vert-align"><a href="#/orders" ng:click="removeItem($index)" class="remove-item"><i class="icon-close"></i></a></td>
+					</tr>	
+<!-- 				<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr> -->
+					<tr ng-if="ordersNumber() == 0">
+						<td colspan="5">
+							<h2 class="text-center">You don't have any orders</h2>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<h4>INTERNATIONAL ORDERS</h4>
+			<p>Shipping costs for international orders will be displayed at checkout.<br>
+				All international orders must have a ship-to destination outside of the United States. We cannot support customers with international billing addresses shipping to U.S. addresses.
+			</p>	
+
+		</div>
+		<div class="col-sm-4 " ng-if="ordersNumber() > 0">
+			<table class="table">
+				<thead>
+					<tr>
+						<th colspan="3" class="text-center">Summary</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Orders' number:</td>
+						<td></td>
+						<td class="text-right">{{ ordersNumber() }}</td>
+					</tr>							
+					<tr>
+						<td>Orders' sub total:</td>
+						<td></td>
+						<td class="text-right">{{ ordersSubtotal() | currency:"₽  ":0 }}</td>
+					</tr>
+					<tr>
+						<td>Orders' total:</td>
+						<td></td>
+						<td class="text-right">{{ ordersTotal() | currency:"₽  ":0 }}</td>
+					</tr>
+				</tbody>
+			</table>
+						
+			<a href="#/products" class="btn btn-right">Return</a>
+		</div>	
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 text-center show-more">
+			<a href="#/products" class="btn btn-outline">Cancel and return to store</a>
+		</div>	
+	</div>	
+
+</div>

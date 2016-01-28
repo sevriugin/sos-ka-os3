@@ -1,8 +1,45 @@
 #!/bin/env node
 //  OpenShift sample Node application
-var express = require('express');
-var fs      = require('fs');
+var express 	= require('express');
+var fs      	= require('fs');
+var mongodb 	= require('mongodb');
 
+var nodemailer 	= require('nodemailer');
+var bodyParser	= require('body-parser');
+
+var jade 		= require('jade'); 
+
+//create application/json parser 
+var jsonParser 			= bodyParser.json()
+ 
+// create application/x-www-form-urlencoded parser 
+var urlencodedParser 	= bodyParser.urlencoded({ extended: true })
+
+//create reusable transporter object using SMTP transport
+var transporter 		= nodemailer.createTransport({
+	host: 'smtp.mailgun.org',
+	auth: {
+		user: 'postmaster@mg.sos-ka.com',
+		pass: '4a2eba988d7d49ff8df89bad7068f704'
+	}
+});
+
+var MongoClient = mongodb.MongoClient;
+
+//NB! No need to recreate the transporter object. You can use
+//the same transporter object for all e-mails
+
+//setup e-mail data with unicode symbols
+var mailOptions 		= {
+		from:'<order@yatim-rostov.com>',					// sender address
+		sender:'<order@yatim-rostov.com>',
+		replyTo:'<yatim-rostov@mg.sos-ka.com>',
+		to:'yatim-rostov@mg.sos-ka.com', 					// list of receivers
+		cc:'yatim-rostov@mg.sos-ka.com',
+		subject:'New Order #', 								// Subject line
+		text:'Hello world from yatim-rostov.com', 			// plaintext body
+		html: '<b>Hello world from yatim-rostov.com</b>' 	// html body
+};
 
 /**
  *  Define the sample application.
@@ -21,9 +58,19 @@ var SampleApp = function() {
      *  Set up server IP address and port # using env variables/defaults.
      */
     self.setupVariables = function() {
+    	
         //  Set the environment variables we need.
-        self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+        self.ipaddress 			= process.env.OPENSHIFT_NODEJS_IP;
+        self.port      			= process.env.OPENSHIFT_NODEJS_PORT || 8080;
+        self.connection_string  = '127.0.0.1:27017/OpenShift-Sample-App';
+        
+        if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
+        	  self.connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+        	  process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
+        	  process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
+        	  process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
+        	  process.env.OPENSHIFT_APP_NAME;
+        }
 
         if (typeof self.ipaddress === "undefined") {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
@@ -83,6 +130,13 @@ var SampleApp = function() {
             process.on(element, function() { self.terminator(element); });
         });
     };
+    
+    /* MongoDb helpers													  */
+    /* shop.users collection											  */
+    
+    self.insertNewUser = function(user) {
+    	
+    };
 
 
     /*  ================================================================  */
@@ -104,6 +158,11 @@ var SampleApp = function() {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
         };
+        
+        self.routes['/index.html/#/products'] = function(req, res) {
+            res.setHeader('Content-Type', 'text/html');
+            res.send(self.cache_get('index.html') );
+        };
     };
 
 
@@ -113,12 +172,209 @@ var SampleApp = function() {
      */
     self.initializeServer = function() {
         self.createRoutes();
-        self.app = express.createServer();
+        self.app = express();
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
+        
+        self.app.post('/api/orders', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/orders');
+        	
+        	var user = {};
+    		
+        	user.username	= req.body.username;
+        	
+        	console.log('/api/orders/loading orders for user : ', user.username);
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+          	  if(err) { return res.status(500).json({status:"error", message:err }); }
+        		  
+          	  var select 		= {};
+          	  var coll			= db.collection('shop.orders');
+          	  select.username 	= user.username;
+        		  
+          	  coll.find(select).toArray(function(err, docs) {
+          		  if(err) { return res.status(500).json({status:"error", message:err }); }
+          		  
+          		  var count = docs.length;
+          		  console.log('/api/orders/number of orders : %d', count );
+        			  
+          		  if(count > 0) {
+          			  res.status(200).json({status:"ok", orders:docs});
+          		  }
+          		  else {
+          			  res.status(202).json({status:"error", message:"No orders selected" });
+          		  }
+          		  db.close();
+          	  })
+        	})	
+        });
+        
+        self.app.post('/api/order', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/order');
+        	
+        	var invoice 	= {};
+        	var imgPath		= 'http://yatimrostov-yabe.rhcloud.com/';
+        		
+        	invoice		 	= req.body.invoice;
+        	invoice.id		= 'Order #' + req.body.invoice.phone + '-' + Date(Date.now());
+        	
+        	for (var i = 0, len = invoice.items.length; i < len; i++) {
+        		invoice.items[i].imgUrl	= imgPath + invoice.items[i].imgUrl;
+        		
+        		console.log('--- imgUrl : ', invoice.items[i].imgUrl);
+        	}
+        	
+        	if(!invoice.username) {
+        		invoice.username = 'UNREGISTERED';
+        	}
+        	
+        	console.log('Place new order from : ', invoice.username);
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+          	  if(err) { return res.status(500).json({status:"error", message:err }); }
+        		  
+          	  var select 		= {};
+          	  var coll			= db.collection('shop.orders');
+          	  select.username 	= invoice.username;
+        		  
+          	  coll.find(select).count(function(err, count) {
+          		  if(err) { return res.status(500).json({status:"error", message:err }); }
+          		  console.log('/api/order/user order count : %d', count );
+        			  
+          		  coll.insertOne(invoice, function(err, r) {
+          			  if(err) { return res.status(500).json({status:"error", message:err }); }
+          			  console.log('/api/order/order inserted : %d', r.insertedCount );
+
+          			  // Compile a function
+          			  var fn = jade.compileFile('./views/order_email.jade');
+
+          			  // Render the function
+          			  var html = fn({invoice:invoice});
+          				  
+          			  // Sending mail
+          			  mailOptions['subject']	= invoice.id;
+          			  mailOptions['html'] 		= html;
+          			  mailOptions['to']			= invoice.email;
+          				  
+          			  //send mail with defined transport object
+          			  transporter.sendMail(mailOptions, function(error, info) {
+          				  if(error) {
+          					  	return console.log(error);
+          				  }
+          				  		console.log('Message sent: ' + info.response);
+          			  });
+          				  
+          			  res.status(200).json({status:"ok"});
+          			  db.close();
+          		  })
+          	  })
+        	})
+        });
+        
+        self.app.post('/api/authenticate', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/authenticate');
+        	
+        	var user = {};
+    		
+        	user.username	= req.body.username;
+        	user.authdata	= req.body.authdata;
+        	
+        	console.log('/api/authenticate/login user : ', user);
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+          	  if(err) { return res.status(500).json({status:"error", message:err }); }
+        		  
+          	  var select 		= {};
+          	  var coll			= db.collection('shop.users');
+          	  select.username 	= user.username;
+        		  
+          	  coll.find(select).toArray(function(err, docs) {
+          		  if(err) { return res.status(500).json({status:"error", message:err }); }
+          		  
+          		  var count = docs.length;
+          		  console.log('/api/authenticate/user count : %d', count );
+        			  
+          		  if(count > 0) {
+          			  if(docs[0].authdata === user.authdata) {
+          				  res.status(200).json({status:"ok"});
+          			  }
+          			  else {
+          				res.status(202).json({status:"error", message:"Invalid password" });
+          			  }
+          		  }
+          		  else {
+          			  res.status(202).json({status:"error", message:"User is not registred" });
+          		  }
+          		  db.close();
+          	  })
+        	})
+        	
+        });
+        
+        self.app.post('/api/registration', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/registration');
+        	
+        	var user = {};
+        		
+        	user.firstname 	= req.body.firstname;
+        	user.lastname	= req.body.lastname;
+        	user.username	= req.body.username;
+        	user.authdata	= req.body.authdata;
+        		
+        	console.log('Adding new user : ', user);
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+          	  if(err) { return res.status(500).json({status:"error", message:err }); }
+        		  
+          	  var select 		= {};
+          	  var coll			= db.collection('shop.users');
+          	  select.username 	= user.username;
+        		  
+          	  coll.find(select).count(function(err, count) {
+          		  if(err) { return res.status(500).json({status:"error", message:err }); }
+          		  console.log('/api/registration/user count : %d', count );
+        			  
+          		  if(count == 0) {
+          			  coll.insertOne(user, function(err, r) {
+          				  if(err) { return res.status(500).json({status:"error", message:err }); }
+          				  console.log('/api/registration/user inserted : %d', r.insertedCount );
+
+          				  // Compile a function
+          				  var fn = jade.compileFile('./views/registration_email.jade');
+
+          				  // Render the function
+          				  var html = fn({user:user});
+          				  
+          				  // Sending mail
+          				  mailOptions['subject']	= 'New registration';
+          				  mailOptions['html'] 		= html;
+          				  mailOptions['to']			= user.username;
+          				  
+          				  //send mail with defined transport object
+          				  transporter.sendMail(mailOptions, function(error, info) {
+          					  if(error) {
+          						  return console.log(error);
+          					  }
+          					  console.log('Message sent: ' + info.response);
+          				  });
+          				  
+          				  res.status(200).json({status:"ok"});
+          				  db.close();
+          			  })
+          		  }
+          		  else {
+          			res.status(202).json({status:"error", message:"User already exists" });
+          		  }
+          	  })
+        	})
+        });
+        
+      //serve static assets
+      self.app.use(express.static(__dirname +'/'));
+      
     };
 
 
@@ -133,8 +389,7 @@ var SampleApp = function() {
         // Create the express server and routes.
         self.initializeServer();
     };
-
-
+      
     /**
      *  Start the server (starts up the sample application).
      */

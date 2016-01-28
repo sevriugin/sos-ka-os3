@@ -1,0 +1,61 @@
+<div id="main-nav" class="">
+				<div class="container-fluid">	
+					<div class="nav-header">
+							<a href="#/products" class="nav-brand">YATIM <span>ROSTOV</span></a>
+							<a class="nav-icon pull-right visible-xs menu-link" href="#/products/{{product.id}}" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
+							<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
+						</div>
+				</div>
+</div>
+
+<div class="container-fluid hidden-xs">
+	<div class="row">
+		<ol class="breadcrumb">
+			<li><a href="/">Собрание</a></li>
+			<li class="active">{{product.title}}</li>
+		</ol>
+	</div>
+</div>
+
+<div class="container-fluid product">
+	<div class="row visible-xs product-mobile">
+		<div class="col-xs-12 text-center">
+			<h2 class="product-title">{{product.title}}</h2>
+				<div class="product-price">
+					<span class="price">{{product.cost | currency:"₽ ":0}}</span>
+				</div>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-sm-8 ">
+			<ul class="list-group">
+				<li ng-repeat="img in product.images" class="list-group-item">
+    				<img ng-src="{{img}}" class="product-img img-responsive" alt="item">
+    			</li>
+    		</ul>
+		</div>
+		<div class="col-sm-4 ">
+			<h2 class="product-title hidden-xs">{{product.title}}</h2>
+			<div class="product-price hidden-xs">
+				<span class="price">{{product.cost | currency:"₽ ":0}}</span>
+			</div>
+			<div class="product-detail">
+				<p>{{product.snippet}}</p>
+			</div>
+			<form  action="product1.html" method="POST" class="myform">
+				<div class="form-group clearfix">
+				</div>	
+					<div class="product-btn">
+						<a ng-click="addToCart(product)" href="" class="btn">Добавить в корзину</a>
+					</div>	
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-8 ">
+			<div class="paging clearfix">
+				<a class="btn btn-outline pull-left" href="#/products/{{nextId}}"><i class="icon-arrow-left2 left"></i><span>Previous</span><span class="hidden-xs"> </span></a>
+			</div>
+		</div>
+	</div>
+</div>
