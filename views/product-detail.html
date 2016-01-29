@@ -12,6 +12,7 @@
 	<div class="row">
 		<ol class="breadcrumb">
 			<li><a href="/">Собрание</a></li>
+			<li><a href="#/vendorProducts/{{vendor.id}}">{{vendor.title}}</a></li>
 			<li class="active">{{product.title}}</li>
 		</ol>
 	</div>
@@ -52,9 +53,14 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-8 ">
+		<div class="col-sm-4">
 			<div class="paging clearfix">
 				<a class="btn btn-outline pull-left" href="#/products/{{nextId}}"><i class="icon-arrow-left2 left"></i><span>Previous</span><span class="hidden-xs"> </span></a>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="paging clearfix">
+				<a class="btn btn-outline pull-right" href="#/vendor/{{vendor.id}}"><span>{{vendor.title}}</span><i class="icon-arrow-right2 right"></i><span class="hidden-xs"> </span></a>
 			</div>
 		</div>
 	</div>

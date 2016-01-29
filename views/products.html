@@ -8,13 +8,25 @@
 				</div>
 </div>
 
+<div ng-if="queryActive()" class="container-fluid hidden-xs">
+	<div class="row">
+		<ol class="breadcrumb">
+			<li><a href="/">Собрание</a></li>
+			<li class="active">{{vendor.title}}</li>
+		</ol>
+	</div>
+</div>
+
 <div class="container-fluid productlist">
 	<div class="row">
-		<div ng-repeat="product in products | orderBy:orderProp">
-			<div ng-if="nextVendor(product)" class="col-sm-12">
-				<h2 class="text-center">{{vendor.title}}</h2>
-				<div class="product-detail">
-					<p>{{vendor.snippet}}</p>
+		<div ng-repeat="product in products | filter:query">
+			<div ng-if="nextVendor(product)">
+				<div class="row">
+					<div class="col-sm-12 text-center show-more">
+						<div class="paging clearfix">
+							<a class="btn btn-outline" href="#/vendor/{{vendor.id}}"><i class="icon-arrow-left2 left"></i><span>{{vendor.title}}</span><span class="hidden-xs"> </span></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div ng-class="productClass(product)">

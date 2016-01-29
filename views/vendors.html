@@ -1,0 +1,39 @@
+<div id="main-nav" class="">
+	<div class="container-fluid">	
+		<div class="nav-header">
+			<a href="#/products" class="nav-brand"><span>SOS</span>-ka</a>
+			<a class="nav-icon pull-right visible-xs menu-link" href="#/products/{{product.id}}" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
+			<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
+		</div>
+	</div>
+</div>
+
+<div ng-repeat="vendor in vendors | filter:query" class="container-fluid product">
+	<div class="row visible-xs product-mobile">
+		<div class="col-xs-12 text-center">
+			<h2 class="product-title">{{vendor.title}}</h2>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-sm-8 ">
+			<ul class="list-group">
+				<li ng-repeat="img in vendor.images" class="list-group-item">
+    				<img ng-src="{{img}}" class="product-img img-responsive" alt="item">
+    			</li>
+    		</ul>
+		</div>
+		<div class="col-sm-4 ">
+			<h2 class="product-title hidden-xs">{{vendor.title}}</h2>
+			<div class="product-detail">
+				<p>{{vendor.snippet}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-8 ">
+			<div class="paging clearfix">
+				<a class="btn btn-outline pull-left" href="#/vendorProducts/{{vendor.id}}"><i class="icon-arrow-left2 left"></i><span>Products</span><span class="hidden-xs"> </span></a>
+			</div>
+		</div>
+	</div>
+</div>

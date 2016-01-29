@@ -462,7 +462,7 @@ productControllers.controller('loginController', ['$scope', '$rootScope', '$loca
 	 };
 }]);
 
-productControllers.controller('ProductListCtrl', ['$scope','productFactory', function ($scope, productFactory) {
+productControllers.controller('ProductListCtrl', ['$scope', '$routeParams', 'productFactory', function ($scope, $routeParams, productFactory) {
 	
 	$scope.productClass = function(product) {
 		return product.style;
@@ -489,7 +489,13 @@ productControllers.controller('ProductListCtrl', ['$scope','productFactory', fun
 	$scope.products 	= productFactory.products;
     $scope.orderProp 	= 'key';
     $scope.vendor		= null;
-	
+    $scope.query		= '';
+    
+    if($routeParams.vendorId) {
+    	$scope.query	= $routeParams.vendorId;
+    	$scope.vendor	= productFactory.getVendor($routeParams.vendorId);
+    }
+    
 	$scope.nextVendor	= function(product) {
 		if($scope.vendor) {
 			if(product.vendor === $scope.vendor.id) {
@@ -499,6 +505,44 @@ productControllers.controller('ProductListCtrl', ['$scope','productFactory', fun
 		$scope.vendor	= productFactory.getVendor(product.vendor);
 		return true;
 	};
+	
+	$scope.queryActive 	= function() {
+		if($scope.query !='') {
+			return true;
+		}
+		return false;
+	};
+}]);
+
+productControllers.controller('VendorListCtrl', ['$scope', '$routeParams', 'productFactory', function ($scope, $routeParams, productFactory) {
+	
+	$scope.productClass = function(product) {
+		return product.style;
+	};
+	
+	$scope.qty			= function() { 
+    	return productFactory.qty(); 
+    };
+	
+    $scope.menuOpen		= false;
+    $scope.menuToggle	= function() {
+    	$scope.menuOpen	= $scope.menuOpen ? false : true;
+    }
+    
+    $scope.viewClass	= function() {
+    	return ($scope.menuOpen ? 'menu-open' : '');
+    }
+    
+    $scope.menuClass	= function() {
+    	return ($scope.menuOpen ? 'menu-wrapper menu-front' : 'menu-wrapper');
+    }
+    
+	$scope.vendors	 	= productFactory.vendors;
+	$scope.query		= '';
+    
+    if($routeParams.vendorId) {
+    	$scope.query	= $routeParams.vendorId;
+    }
 }]);
 
 productControllers.controller('OrderDetailCtrl', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {
@@ -533,6 +577,7 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'p
 	$scope.product 		= productFactory.setCurrent($scope.productId);
 	$scope.nextId		= productFactory.getNext();
 	$scope.prevId		= productFactory.getPrev();
+	$scope.vendor		= productFactory.getVendor($scope.product.vendor);
 	
 	$scope.addToCart = function(product) {
 		productFactory.addToCart(product);

@@ -15,6 +15,18 @@ storeApp.config(['$routeProvider',
 								templateUrl: 'views/product-detail.html',
 								controller: 'ProductDetailCtrl'
 							}).
+							when('/vendors', {
+								templateUrl: 'views/vendors.html',
+								controller: 'VendorListCtrl'
+							}).
+							when('/vendorProducts/:vendorId', {
+								templateUrl: 'views/products.html',
+								controller: 'ProductListCtrl'
+							}).
+							when('/vendor/:vendorId', {
+								templateUrl: 'views/vendors.html',
+								controller: 'VendorListCtrl'
+							}).
 							when('/cart', {
 								templateUrl: 'views/cart.html',
 								controller: 'cartController'
