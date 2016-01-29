@@ -6,14 +6,28 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.products = [
 	                    {
 	                    	"key": 0,
-	                    	"qty": 0,
-	                    	"cost": 5100,
-	                        "id": "galactica", 
-	                        "imageUrl": "img/jewel_1a.jpg", 
-	                        "title": "Ожерелье Галактика", 
-	                        "snippet": "Ожерелье Галактика из самородных кристаллов горного хрусталя и пирита.",
-	                        "images": ["img/jewel_1a.jpg","img/jewel_1b.jpg","img/jewel_1c.jpg"],
-	                        "style":"col-sm-8"
+	                    	"qty": 1,
+	                    	"cost": 2300,
+	                        "id": "tessa-turtle",
+	                        "vendor": "mary-meyer",
+	                        "imageUrl": "img/tessa-turtle.jpg", 
+	                        "title": "Черепаха", 
+	                        "snippet": "Черепаха с цветочками на панцыре, нежная и милая. Новинка 2016 года.",
+	                        "images": ["img/tessa-turtle.jpg"],
+	                        "style" : "col-sm-8"
+	                    }
+	                ];
+	
+	service.vendors = [
+	                    {
+	                       	"key": 0,
+	                        "id": "mary-meyer",
+	                        "imageUrl": "img/mary-meyer.jpg", 
+	                        "title": "Mary Meyer", 
+	                        "snippet": "Mary “Gram” Meyer started her beloved toy company in 1933. Over 80 years later, her children and grandchildren are keeping the legacy alive with over 400 products in the Mary Meyer line.",
+	                        "images": ["img/mary-meyer.jpg"],
+	                        "web": "http://www.marymeyer.com",
+	                        "style" : "col-sm-8"
 	                    }
 	                ];
 	
@@ -56,6 +70,10 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.loadProducts = function() {
 		$http.get('views/products.json').success(function(data) {
 			angular.copy(data, service.products);
+		});
+		
+		$http.get('views/vendors.json').success(function(data) {
+			angular.copy(data, service.vendors);
 		});
 	};
 	

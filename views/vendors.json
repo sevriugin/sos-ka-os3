@@ -1,0 +1,22 @@
+[
+    {
+    	"key": 0,
+        "id": "mary-meyer",
+        "imageUrl": "img/mary-meyer.jpg", 
+        "title": "Mary Meyer", 
+        "snippet": "Mary “Gram” Meyer started her beloved toy company in 1933. Over 80 years later, her children and grandchildren are keeping the legacy alive with over 400 products in the Mary Meyer line.",
+        "images": ["img/mary-meyer.jpg"],
+        "web": "http://www.marymeyer.com",
+        "style" : "col-sm-8"
+    }, 
+    {
+    	"key": 1,
+        "id": "paci-plushies", 
+        "imageUrl": "img/paci-plushies", 
+        "title": "PACI-PLUSHIES", 
+        "snippet": "Nookums® Paci-Plushies® are lovingly designed and brought to you by a mother of four pacifier loving little ones. Exhausted by constantly disappearing or misplaced pacifiers, creator Stacy Dallman sought out a solution to keep her babies pacifiers in sight and close at hand at all times.",
+        "images": ["img/paci-plushies.jpg"],
+        "web": "http://www.paciplushies.com",
+        "style" : "col-sm-8"
+    }
+]
