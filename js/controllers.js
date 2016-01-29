@@ -108,6 +108,16 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		return null;
 	};
 	
+	service.getVendor = function(vendorId) {
+		for (var i = 0, len = service.vendors.length; i < len; i++) {
+			if (service.vendors[i].id === vendorId) {
+				return service.vendors[i];
+			}
+		}
+		return null;
+	};
+	
+	
 	service.getSelectedProduct = function() {
 		return service.selectedProduct;
 	};
@@ -478,6 +488,17 @@ productControllers.controller('ProductListCtrl', ['$scope','productFactory', fun
 	productFactory.loadProducts();
 	$scope.products 	= productFactory.products;
     $scope.orderProp 	= 'key';
+    $scope.vendor		= null;
+	
+	$scope.nextVendor	= function(product) {
+		if($scope.vendor) {
+			if(product.vendor === $scope.vendor.id) {
+				return false;
+			}
+		}
+		$scope.vendor	= productFactory.getVendor(product.vendor);
+		return true;
+	};
 }]);
 
 productControllers.controller('OrderDetailCtrl', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {

@@ -257,6 +257,11 @@ a:hover {
 }
 
 /* ------------------------------ product list -------------------------- */
+
+.vendor {
+	background-color: #EBEBEB;
+	padding: 40px 0;
+}
 .productlist a .product-price {
 	-webkit-transition:all .3s ease-out;
 	-moz-transition:all .3s ease-out;

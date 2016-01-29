@@ -10,15 +10,23 @@
 
 <div class="container-fluid productlist">
 	<div class="row">
-		<div ng-repeat="product in products | orderBy:orderProp" ng-class="productClass(product)">
-			<a href="#/products/{{product.id}}">
-				<img ng-src="{{product.imageUrl}}" class="img-responsive" alt="item">
-				<span class="productlist-price-container">
-					<span class="product-price">
-						<span class="price">{{product.vendor}} {{product.cost | currency:"₽ ":0}}</span>
-					</span>
-				</span> 
-			</a>
+		<div ng-repeat="product in products | orderBy:orderProp">
+			<div ng-if="nextVendor(product)" class="col-sm-12">
+				<h2 class="text-center">{{vendor.title}}</h2>
+				<div class="product-detail">
+					<p>{{vendor.snippet}}</p>
+				</div>
+			</div>
+			<div ng-class="productClass(product)">
+				<a href="#/products/{{product.id}}">
+					<img ng-src="{{product.imageUrl}}" class="img-responsive" alt="item">
+					<span class="productlist-price-container">
+						<span class="product-price">
+							<span class="price">{{product.cost | currency:"₽ ":0}}</span>
+						</span>
+					</span> 
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
