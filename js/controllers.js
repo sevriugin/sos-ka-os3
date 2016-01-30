@@ -255,8 +255,10 @@ productControllers.factory('productFactory', ['$http', function ($http) {
      service.empty = function() {
     	 service.invoice.items = [];
      };
-	
-	return service;
+     
+	// load products
+    service.loadProducts();
+    return service;
 }]);
 
 productControllers.controller('orderListCtrl', ['$scope', '$location', 'productFactory', 'AuthenticationService', function ($scope, $location, productFactory, AuthenticationService) {
@@ -485,7 +487,8 @@ productControllers.controller('ProductListCtrl', ['$scope', '$routeParams', 'pro
     	return ($scope.menuOpen ? 'menu-wrapper menu-front' : 'menu-wrapper');
     }
     
-	productFactory.loadProducts();
+	// productFactory.loadProducts();
+    
 	$scope.products 	= productFactory.products;
     $scope.orderProp 	= 'key';
     $scope.vendor		= null;
