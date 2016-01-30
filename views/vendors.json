@@ -12,11 +12,21 @@
     {
     	"key": 1,
         "id": "paci-plushies", 
-        "imageUrl": "img/paci-plushies", 
+        "imageUrl": "img/paci-plushies.jpg", 
         "title": "PACI-PLUSHIES", 
         "snippet": "Nookums® Paci-Plushies® are lovingly designed and brought to you by a mother of four pacifier loving little ones. Exhausted by constantly disappearing or misplaced pacifiers, creator Stacy Dallman sought out a solution to keep her babies pacifiers in sight and close at hand at all times.",
         "images": ["img/paci-plushies.jpg"],
         "web": "http://www.paciplushies.com",
+        "style" : "col-sm-8"
+    },
+    {
+    	"key": 2,
+        "id": "WubbaNub", 
+        "imageUrl": "img/WubbaNub.jpg", 
+        "title": "WubbaNub", 
+        "snippet": "WubbaNub® philosophy is simple: to create products that parents would feel safe to give to their kids.",
+        "images": ["img/WubbaNub.jpg"],
+        "web": "http://www.WubbaNub.com",
         "style" : "col-sm-8"
     }
 ]
