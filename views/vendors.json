@@ -1,6 +1,6 @@
 [
     {
-    	"key": 0,
+    	"key": 1,
         "id": "mary-meyer",
         "imageUrl": "img/mary-meyer.jpg", 
         "title": "MARY MEYER", 
@@ -10,7 +10,7 @@
         "style" : "col-sm-8"
     }, 
     {
-    	"key": 1,
+    	"key": 2,
         "id": "paci-plushies", 
         "imageUrl": "img/paci-plushies.jpg", 
         "title": "PACI-PLUSHIES", 
@@ -20,7 +20,7 @@
         "style" : "col-sm-8"
     },
     {
-    	"key": 2,
+    	"key": 3,
         "id": "WubbaNub", 
         "imageUrl": "img/WubbaNub.jpg", 
         "title": "WubbaNub", 
