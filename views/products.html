@@ -8,7 +8,7 @@
 				</div>
 </div>
 
-<div ng-if="queryActive()" class="container-fluid hidden-xs">
+<div id="top" ng-if="queryActive()" class="container-fluid hidden-xs">
 	<div class="row">
 		<ol class="breadcrumb">
 			<li><a href="/">Собрание</a></li>
@@ -38,6 +38,16 @@
 						</span>
 					</span> 
 				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div ng-if="queryActive()" class="container-fluid hidden-xs">
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="paging clearfix">
+				<a class="btn btn-outline pull-left" href="#/products"><i class="icon-arrow-left2 left"></i><span>Top</span><span class="hidden-xs"> </span></a>
 			</div>
 		</div>
 	</div>
