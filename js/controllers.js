@@ -27,7 +27,8 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                        "snippet": "Mary “Gram” Meyer started her beloved toy company in 1933. Over 80 years later, her children and grandchildren are keeping the legacy alive with over 400 products in the Mary Meyer line.",
 	                        "images": ["img/mary-meyer.jpg"],
 	                        "web": "http://www.marymeyer.com",
-	                        "style" : "col-sm-8"
+	                        "style" : "col-sm-8",
+	                        "details" : "Mary Meyer имеет эксклюзивную лицензию на производство сосок Wubbanub. Осьминог Wubbanub с соской-пустышкой Avent Soothie. Без латекса, без Бисфенола А (BPA ), поливинилхлорида (PVC) и без содержания Фталатов. Возможна стирка ручная и в стиральной машине при 30 градусах. Рекомендована для возраста от 0-6 месяцев. Длина 15.2 см."
 	                    }
 	                ];
 	
