@@ -137,7 +137,52 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 			}
 		}
 		return null;
-	}
+	};
+	
+	service.getNextForVendor = function () {
+		if(service.selectedProduct == null) {
+			return null;
+		}
+		
+		var next 		= -1;
+		var result		= null;
+		var vendor 		= service.selectedProduct.vendor;
+		
+		for (var i = 0, len = service.products.length; i < len; i++) {
+			if ( service.products[i] === service.selectedProduct ) {
+				if( (i + 1) < len ) {
+					next = i + 1;
+					break;
+				}
+				else {
+					next = 0;
+					break;
+				}
+			}
+		}
+		
+		if(next < 0) {
+			return null;
+		}
+			
+		for (var i = next, len = service.products.length; i < len; i++) {
+			if ( service.products[i].vendor === vendor ) {
+				result =  service.products[i].id;
+				break;
+			}
+		}
+		
+		if(result) {
+			return result;
+		}
+		for (var i = 0, len = next; i < len; i++) {
+			if ( service.products[i].vendor === vendor ) {
+				result =  service.products[i].id;
+				break;
+			}
+		}
+		return result;
+	};
 	
 	service.getPrev = function() {
 		if(service.selectedProduct == null) {
@@ -154,11 +199,11 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 			}
 		}
 		return null;
-	}
+	};
 	
 	service.ordersNumber = function() {
 		return service.orders.length;
-	}
+	};
 	
 	service.ordersSubtotal = function() {
 		var subtotal = 0;
@@ -169,7 +214,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 			})
 		}
 		return subtotal;
-	}
+	};
 	
 	service.ordersTotal = function() {
 		var total = 0;
@@ -180,7 +225,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 			})
 		}
 		return total;
-	}
+	};
 	
 	service.qty = function() {
 		var qty = 0;
@@ -188,7 +233,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 				qty += item.qty;
 		})
 		return qty;
-	}
+	};
 	
 	service.total = function() {
 		var total = 0;
@@ -196,7 +241,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 				total += item.qty * item.cost;
 		})
 		return total;
-	}	
+	};	
 	
 	service.shiping = function() {
 		var shiping = 0;
@@ -207,7 +252,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 			shiping = 0;
 		}
 		return shiping;
-	}
+	};
 	
 	service.tax = function() {
 		var tax = 0;
@@ -215,7 +260,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		tax = service.total() * 20/100;
 		
 		return tax;
-	}
+	};
 	
 	service.setOrder = function(username, firstname, lastname, email, address, address2, city, postal, phone, total, amount, delivery, tax, totalAmount) {
 		
@@ -581,6 +626,7 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'p
 	$scope.nextId		= productFactory.getNext();
 	$scope.prevId		= productFactory.getPrev();
 	$scope.vendor		= productFactory.getVendor($scope.product.vendor);
+	$scope.nextVId		= productFactory.getNextForVendor();
 	
 	$scope.addToCart = function(product) {
 		productFactory.addToCart(product);
