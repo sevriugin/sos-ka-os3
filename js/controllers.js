@@ -87,12 +87,16 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		}
 		
 		var item 	= {};
+		var vendor	= null;
+		
+		vendor		= service.getVendor(product.vendor);
 		item.id		= product.id;
 		item.qty 	= 1;
 		item.title 	= product.title;
 		item.cost 	= product.cost;
 		item.url	= '#/products/' + product.id;
 		item.imgUrl	= product.imageUrl;
+		item.vendor	= vendor.title;
 		
 		service.invoice.items.splice(-1, 0, item);
 	};
