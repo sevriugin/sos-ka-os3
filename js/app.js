@@ -51,6 +51,10 @@ storeApp.config(['$routeProvider',
 								templateUrl: 'views/myorders.html',
 								controller: 'orderListCtrl'
 							}).
+							when('/terms', {
+								templateUrl: 'views/terms-conditions.html',
+								controller: 'MainCtrl'
+							}).
 							when('/orders/:orderId', {
 								templateUrl: 'views/order-detail.html',
 								controller: 'OrderDetailCtrl'
