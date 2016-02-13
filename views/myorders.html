@@ -1,7 +1,7 @@
 <div id="main-nav" class="">
 	<div class="container-fluid">	
 		<div class="nav-header">
-			<a href="#/products" class="nav-brand">YATIM <span>ROSTOV</span></a>
+			<a href="#/products" class="nav-brand"><span>SOS</span>-ka</a>
 			<a class="nav-icon pull-right visible-xs menu-link" href="#/cart" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
 			<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
 		</div>
@@ -34,8 +34,8 @@
 					<tr ng:repeat="order in orders">
 						<td class="vert-align"><a href="#/orders/{{$index}}">{{ order.id }}</a></td>
 						<td class="text-center vert-align"><input type="number" min="1" max="9" ng:model="order.total" ng:required class="form-control form-control-inline" style="width: 52px!important;" disabled></td>
-						<td class="text-right vert-align">{{ order.amount | currency:"₽  ":0 }}</td>
-						<td class="text-right vert-align">{{ order.totalAmount | currency:"₽  ":0 }}</td>
+						<td class="text-right vert-align">{{ order.amount | currency:"₽ ":0 }}</td>
+						<td class="text-right vert-align">{{ order.totalAmount | currency:"₽ ":0 }}</td>
 						<td class="text-center vert-align"><a href="#/orders" ng:click="removeItem($index)" class="remove-item"><i class="icon-close"></i></a></td>
 					</tr>	
 <!-- 				<tr>
@@ -75,12 +75,12 @@
 					<tr>
 						<td>Orders' sub total:</td>
 						<td></td>
-						<td class="text-right">{{ ordersSubtotal() | currency:"₽  ":0 }}</td>
+						<td class="text-right">{{ ordersSubtotal() | currency:"₽ ":0 }}</td>
 					</tr>
 					<tr>
 						<td>Orders' total:</td>
 						<td></td>
-						<td class="text-right">{{ ordersTotal() | currency:"₽  ":0 }}</td>
+						<td class="text-right">{{ ordersTotal() | currency:"₽ ":0 }}</td>
 					</tr>
 				</tbody>
 			</table>
