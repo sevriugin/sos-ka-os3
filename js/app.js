@@ -71,6 +71,9 @@ storeApp.run(['$rootScope', '$location', '$cookieStore', '$http',
 
 storeApp.controller('MainCtrl', ['$scope', '$rootScope', '$location', '$cookieStore', '$http', 'AuthenticationService', 'productFactory', function ($scope, $rootScope, $location, $cookieStore, $http, AuthenticationService, productFactory) {
 	
+	
+	$scope.vendors	 	= productFactory.vendors;
+	
 	// show drop-down menu if user is logged in
 	$scope.dropDown		= function() {
     
