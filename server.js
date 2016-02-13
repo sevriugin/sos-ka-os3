@@ -31,14 +31,14 @@ var MongoClient = mongodb.MongoClient;
 
 //setup e-mail data with unicode symbols
 var mailOptions 		= {
-		from:'<order@yatim-rostov.com>',					// sender address
-		sender:'<order@yatim-rostov.com>',
-		replyTo:'<yatim-rostov@mg.sos-ka.com>',
-		to:'yatim-rostov@mg.sos-ka.com', 					// list of receivers
-		cc:'yatim-rostov@mg.sos-ka.com',
+		from:'<order@sos-ka.com>',					// sender address
+		sender:'<order@sos-ka.com>',
+		replyTo:'<order@mg.sos-ka.com>',
+		to:'order@mg.sos-ka.com', 					// list of receivers
+		cc:'order@mg.sos-ka.com',
 		subject:'New Order #', 								// Subject line
-		text:'Hello world from yatim-rostov.com', 			// plaintext body
-		html: '<b>Hello world from yatim-rostov.com</b>' 	// html body
+		text:'Hello world from SOS-ka.com', 			// plaintext body
+		html: '<b>Hello world from SOS-ka.com</b>' 	// html body
 };
 
 /**
