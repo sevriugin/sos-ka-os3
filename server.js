@@ -216,7 +216,7 @@ var SampleApp = function() {
         	console.log('/POST request to /api/order');
         	
         	var invoice 	= {};
-        	var imgPath		= 'http://yatimrostov-yabe.rhcloud.com/';
+        	var imgPath		= 'http://bimbi-yabe.rhcloud.com/';
         		
         	invoice		 	= req.body.invoice;
         	invoice.id		= 'Order #' + req.body.invoice.phone + '-' + Date(Date.now());
