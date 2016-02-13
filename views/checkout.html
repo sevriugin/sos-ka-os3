@@ -92,7 +92,7 @@
 					</thead>
 					<tbody>
 						<tr ng:repeat="item in invoice.items">
-	  	 					<td class="vert-align">{{ item.title}}</td>
+	  	 					<td class="vert-align">{{ item.vendor }} - {{ item.title}}</td>
 							<td class="vert-align">{{ item.qty}}x</td>
 							<td class="vert-align text-right">{{ item.qty * item.cost | currency:"₽ ":0 }}</td>
 						</tr>
