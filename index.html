@@ -55,7 +55,10 @@
 				</ul>
 				<ul class="nav-list text-center effect visible-xs mt-info">
 					<li class="active"><a href="#/products">Коллекция</a></li>
-					<li><a href="#/vendors">Партнеры</a></li>
+					<li><a href="">Партнеры</a></li>
+					<li role="separator" class="divider"></li>
+					<li ng-repeat="vendor in vendors"><a href="#/vendor/{{vendor.id}}">{{vendor.title}}</a></li>
+					<li role="separator" class="divider"></li>
 					<li><a href="#/about">O~НАС</a></li>
 					<li><a href="#/contact">Контакты</a></li>
 					<li><a href="#/login">Регистрация</a></li>
