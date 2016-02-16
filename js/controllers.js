@@ -206,6 +206,52 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		return null;
 	};
 	
+	service.getPrevForVendor = function () {
+		if(service.selectedProduct == null) {
+			return null;
+		}
+		
+		var prev 		= -1;
+		var result		= null;
+		var vendor 		= service.selectedProduct.vendor;
+		
+		for (var i = 0, len = service.products.length; i < len; i++) {
+			if ( service.products[i] === service.selectedProduct ) {
+				if( (i - 1) < 0 ) {
+					prev = len - 1;
+					break;
+				}
+				else {
+					prev = i - 1;
+					break;
+				}
+			}
+		}
+		
+		if(prev < 0) {
+			return null;
+		}
+			
+		for (var i = prev; i >= 0; i--) {
+			if ( service.products[i].vendor === vendor ) {
+				result =  service.products[i].id;
+				break;
+			}
+		}
+		
+		if(result) {
+			return result;
+		}
+		for (var i = service.products.length - 1; i > prev; i--) {
+			if ( service.products[i].vendor === vendor ) {
+				result =  service.products[i].id;
+				break;
+			}
+		}
+		return result;
+	};
+	
+	
 	service.ordersNumber = function() {
 		return service.orders.length;
 	};
@@ -632,6 +678,7 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'p
 	$scope.prevId		= productFactory.getPrev();
 	$scope.vendor		= productFactory.getVendor($scope.product.vendor);
 	$scope.nextVId		= productFactory.getNextForVendor();
+	$scope.prevVId		= productFactory.getPrevForVendor();
 	
 	$scope.addToCart = function(product) {
 		productFactory.addToCart(product);
