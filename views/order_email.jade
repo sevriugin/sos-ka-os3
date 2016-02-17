@@ -336,14 +336,17 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 													span 
 														| Shop 
 												h3 Интернет-магазин эксклюзивных сосок
-												| Спасибо, что воспользовались нашим интернет-магазином
+												| Уважаемый #{invoice.firstname}, спасибо, что воспользовались нашим интернет-магазином
 												br
 												br
 												h2 Ваш заказ
-												h4 Параметры Вашего заказ
-												| #{invoice.id}
+												h4 #{invoice.id}
+												| ФИО : #{invoice.firstname} #{invoice.lastname}
 												br
-												| Адрес доставки : #{invoice.address} #{invoice.address2}, #{invoice.city}, #{invoice.postal} 
+												| Телефон: #{invoice.phone}  e-mail: #{invoice.email} 
+												br
+												| Адрес доставки : #{invoice.address} #{invoice.address2}
+												|                  #{invoice.city}, #{invoice.postal} 
 												br
 												| Вы заказали следующий товар :
 							tr
