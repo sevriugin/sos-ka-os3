@@ -300,7 +300,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		if(service.total() < 3000 && service.total() > 0) {
 			shiping = 300;
 		} else {
-			shiping = 0;
+			shiping = 300;
 		}
 		return shiping;
 	};
@@ -308,7 +308,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.tax = function() {
 		var tax = 0;
 		
-		tax = service.total() * 20/100;
+		// tax = service.total() * 20/100;
 		
 		return tax;
 	};
@@ -703,7 +703,7 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'p
 
 productControllers.controller('cartController', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {
 	
-	$scope.tax 			= 20;
+	$scope.tax 			= productFactory.tax();
 	$scope.invoice 		= productFactory.invoice;
 	$scope.menuOpen		= false;
 
@@ -736,14 +736,6 @@ productControllers.controller('cartController', ['$scope', '$routeParams', 'prod
 	}		
 
 	$scope.shiping = function() {
-		var shiping = 0;
-		productFactory.invoice.qty = 0;
-
-		if($scope.total() < 100) {
-			shiping = 25;
-		} else {
-			shiping = 0;
-		}
-		return shiping;
+		return productFactory.shiping();
 	}
 }]);
