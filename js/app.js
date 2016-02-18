@@ -2,7 +2,8 @@ var storeApp = angular.module('storeApp', [
                               'Authentication',
                               'ngRoute',
                               'ngCookies',
-                              'productControllers']);
+                              'productControllers', 
+                              'ngSanitize']);
 
 storeApp.config(['$routeProvider',
 	                 	function($routeProvider) {
