@@ -35,6 +35,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.invoice = { items: [] };
 	service.orders	= [];
 	service.error	= {};
+	service.contact	= {};
 	
 	service.loadOrders = function(username) {
 		if(!username) {
@@ -348,8 +349,35 @@ productControllers.factory('productFactory', ['$http', function ($http) {
          	});
      };
      
+     service.setContact = function(username, firstname, lastname, email, message) {
+ 		
+ 		if(username) {
+ 			service.contact.username	= username;
+ 		}
+ 		
+ 		service.contact.firstname		= firstname;
+ 		service.contact.lastname		= lastname;
+ 		service.contact.email			= email;
+ 		service.contact.message			= message;
+ 	};
+     
+     
+     service.SendContactMsg = function (callback) {
+      	
+ 		$http.post('/api/contactmsg', { contact: service.contact })
+          	.then(function (response) {
+          			callback(response); }, 
+          		  function (response) {
+          			callback(response);
+          	});
+      };
+     
      service.empty = function() {
     	 service.invoice.items = [];
+     };
+     
+     service.emptyContact = function() {
+    	 service.contact = {};
      };
      
 	// load products
@@ -495,7 +523,10 @@ productControllers.controller('aboutController', ['$scope','productFactory', fun
     }
 }]);
 
-productControllers.controller('contactController', ['$scope','productFactory', function ($scope, productFactory) {
+productControllers.controller('contactController', ['$scope','productFactory', 'AuthenticationService', function ($scope, productFactory, AuthenticationService) {
+	
+	$scope.success 			= false;
+	$scope.dataLoading 		= false;
 	
 	$scope.qty			= function() { 
     	return productFactory.qty(); 
@@ -512,6 +543,29 @@ productControllers.controller('contactController', ['$scope','productFactory', f
     $scope.menuClass	= function() {
     	return ($scope.menuOpen ? 'menu-wrapper' : 'menu-wrapper');
     }
+    
+    $scope.send = function() {
+		$scope.dataLoading 	= true;
+		$scope.username 	= AuthenticationService.getUsername();
+		productFactory.setContact(	$scope.username, 
+									$scope.firstname, 
+									$scope.lastname, 
+									$scope.email, 
+									$scope.message);
+		
+		
+		productFactory.SendContactMsg(function(response) {
+		    	if(response.status == 200) {
+		            $scope.dataLoading 	= false;
+		            $scope.success 		= true;
+		            productFactory.emptyContact();
+		        //  $location.path('#/checkout');
+		        } else {
+		        	$scope.error 		= response.data.message;
+		            $scope.dataLoading 	= false;
+		        }
+		    });
+	};
 }]);
 
 productControllers.controller('loginController', ['$scope', '$rootScope', '$location', 'AuthenticationService', 'productFactory', function ($scope, $rootScope, $location, AuthenticationService, productFactory) {

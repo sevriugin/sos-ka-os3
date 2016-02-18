@@ -258,6 +258,7 @@ var SampleApp = function() {
           			  mailOptions['subject']	= invoice.id;
           			  mailOptions['html'] 		= html;
           			  mailOptions['to']			= invoice.email;
+          			  mailOptions['cc']			= 'order@mg.sos-ka.com';
           				  
           			  //send mail with defined transport object
           			  transporter.sendMail(mailOptions, function(error, info) {
@@ -352,6 +353,7 @@ var SampleApp = function() {
           				  mailOptions['subject']	= 'New registration';
           				  mailOptions['html'] 		= html;
           				  mailOptions['to']			= user.username;
+          				  mailOptions['cc']			= 'order@mg.sos-ka.com';
           				  
           				  //send mail with defined transport object
           				  transporter.sendMail(mailOptions, function(error, info) {
@@ -371,6 +373,27 @@ var SampleApp = function() {
           	  })
         	})
         });
+       
+        
+        self.app.post('/api/contactmsg', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/contactmsg');
+        				  
+          	// Sending mail
+          	mailOptions['subject']	= 'Message from ' + req.body.contact.firstname + ' ' + req.body.contact.lastname;
+          	mailOptions['to']		= 'order@mg.sos-ka.com';
+        	mailOptions['html'] 	= req.body.contact.message;
+        	mailOptions['cc'] 		= req.body.contact.email;
+          				  
+          	//send mail with defined transport object
+          	transporter.sendMail(mailOptions, function(error, info) {
+          		if(error) {
+          			return console.log(error);
+          		}
+          		console.log('Message sent: ' + info.response);
+          	});
+          	
+          	res.status(200).json({status:"ok"});
+        }); 
         
       //serve static assets
       self.app.use(express.static(__dirname +'/'));
