@@ -12,7 +12,7 @@
 	<div class="container-fluid title">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2>Оформить заказ</h2>
+				<h2>ОФОРМИТЬ ЗАКАЗ</h2>
 			</div>
 		</div>
 	</div>
@@ -21,71 +21,79 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<div ng-show="success" id="alert-contact"> 
-					<div class="alert alert-success" role="alert"><strong>Your order has been sent.</strong></div>
+					<div class="alert alert-success" role="alert"><strong>ВАШ ЗАКАЗ ОТПРАВЛЕН</strong></div>
 				</div>
 				<div ng-show="error" class="alert alert-danger">{{error}}</div>
 				<form name="form" ng-submit="checkout()" role="form" class="myform">
-					<h3 class="text-center">Адрес доставки</h3>
+					<h3 class="text-center">адрес доставки</h3>
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-								<label class="control-label" for="firstname">Имя</label>
+								<label class="control-label" for="firstname">имя</label>
         						<i class="fa fa-key"></i>
-       							<input type="text" name="firstname" id="firstname" placeholder="Имя" class="form-control" ng-model="firstname" required />
-        						<span ng-show="form.firstname.$dirty && form.firstname.$error.required" class="form-control">First name is required</span>
+       							<input type="text" name="firstname" id="firstname" placeholder="имя" class="form-control" ng-model="firstname" required />
+        						<span ng-show="form.firstname.$dirty && form.firstname.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШЕ ИМЯ</span>
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
-								<label class="control-label" for="lastname">Фамилия</label>
+								<label class="control-label" for="lastname">фамилия</label>
         						<i class="fa fa-key"></i>
-       							<input type="text" name="lastname" id="lastname" placeholder="Фамилия" class="form-control" ng-model="lastname" required />
-        						<span ng-show="form.lastname.$dirty && form.lastname.$error.required" class="form-control">Last name is required</span>
+       							<input type="text" name="lastname" id="lastname" placeholder="фамилия" class="form-control" ng-model="lastname" required />
+        						<span ng-show="form.lastname.$dirty && form.lastname.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШЕУ ФАМИЛИЮ</span>
 							</div>
 						</div>
 					</div>	
 					<div class="form-group">
-						<label class="control-label" for="email">EMail</label>
+						<label class="control-label" for="email">email</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="email" id="email" placeholder="EMail" class="form-control" ng-model="email" required />
-        				<span ng-show="form.email.$dirty && form.email.$error.required" class="form-control">EMail is required</span>
+       					<input type="text" name="email" id="email" placeholder="адрес электронной почты" class="form-control" ng-model="email" required />
+        				<span ng-show="form.email.$dirty && form.email.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ</span>
 					</div>							
 					<div class="form-group">
-						<label class="control-label" for="address">Адрес</label>
+						<label class="control-label" for="address">адрес</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="address" id="address" placeholder="Адрес" class="form-control" ng-model="address" required />
-        				<span ng-show="form.address.$dirty && form.address.$error.required" class="form-control">Address is required</span>
+       					<input type="text" name="address" id="address" placeholder="адрес" class="form-control" ng-model="address" required />
+        				<span ng-show="form.address.$dirty && form.address.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ АДРЕС</span>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="address2">Адрес 2</label>
+						<label class="control-label" for="address2">адрес-2</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="address2" id="address2" placeholder="Адрес 2" class="form-control" ng-model="address2" />
+       					<input type="text" name="address2" id="address2" placeholder="адрес-2" class="form-control" ng-model="address2" />
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="city">Город</label>
+						<label class="control-label" for="city">город</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="city" id="city" placeholder="Город" class="form-control" ng-model="city" required />
-        				<span ng-show="form.city.$dirty && form.city.$error.required" class="form-control">City is required</span>
+       					<input type="text" name="city" id="city" placeholder="город" class="form-control" ng-model="city" required />
+        				<span ng-show="form.city.$dirty && form.city.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ ГОРОД</span>
 					</div>
 					<div class="form-group">
-						<label class="control-label" for="postal">Индекс</label>
+						<label class="control-label" for="postal">индекс</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="postal" id="postal" placeholder="Индекс" class="form-control" ng-model="postal" required />
-        				<span ng-show="form.postal.$dirty && form.postal.$error.required" class="form-control">Postal/ZIP Code is required</span>
+       					<input type="text" name="postal" id="postal" placeholder="индекс" class="form-control" ng-model="postal" required />
+        				<span ng-show="form.postal.$dirty && form.postal.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ ПОЧТОВЫЙ ИНДЕКС</span>
 					</div>					
 					<div class="form-group">
-						<label class="control-label" for="phone">Телефон</label>
+						<label class="control-label" for="phone">телефон</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="phone" id="phone" placeholder="Телефон" class="form-control" ng-model="phone" required />
-        				<span ng-show="form.phone.$dirty && form.phone.$error.required" class="form-control">Phone is required</span>
+       					<input type="text" name="phone" id="phone" placeholder="телефон" class="form-control" ng-model="phone" required />
+        				<span ng-show="form.phone.$dirty && form.phone.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ ТЕЛЕФОН</span>
 					</div>
-					<div class="form-group">
-						<label class="control-label" for="terms">Условия и правила</label>
-						<i class="fa fa-key"></i>
-						<select id="terms" class="form-control" ng-model="terms" tabindex="2" required>
-							<option disabled="disabled" selected="selected" value="">Вы принимаете условия и правила?</option>
-							<option value="accepted">Да, я принимаю условия и правила</option>
-						</select>
+					<div class="row">
+						<div class="col-sm-10">
+							<p>Я принимаю <a href="#/terms">условия и правила</a> работы интернет-магазина и даю согласие на обработку персональной информации</p>
+						</div>
+						<div class="col-sm-2">
+							<div class="form-group">
+								<label class="control-label" for="terms">условия</label>
+        						<i class="fa fa-key"></i>
+        						<select id="terms" class="form-control" ng-model="terms" tabindex="2" required>
+									<option disabled="disabled" selected="selected" value="">нет</option>
+									<option value="yes">да</option>
+								</select>
+        						<span ng-show="form.terms.$dirty && form.terms.$error.required" class="form-control">ПОЖАЛУЙСТА, ПРИМИТЕ УСЛОВИЯ И ПРАВИЛА</span>
+							</div>
+						</div>
 					</div>	
 					<p><button type="submit" ng-disabled="form.$invalid || dataLoading || success" class="btn btn-store btn-block">Заказать</button></p>
         			<img ng-if="newdataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>		
@@ -95,7 +103,7 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th colspan="3" class="text-center">Вы купили следующий товар:</th>
+							<th colspan="3" class="text-center">Вы заказали следующий товар:</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -105,22 +113,22 @@
 							<td class="vert-align text-right">{{ item.qty * item.cost | currency:"₽ ":0 }}</td>
 						</tr>
 						<tr>
-							<td class="vert-align"><b>Подитог</b></td>
+							<td class="vert-align"><b>подитог :</b></td>
 							<td class="vert-align"></td>
 							<td class="vert-align text-right"><b>{{total() | currency:"₽ ":0}}</b></td>
 						</tr>
 						<tr>
-							<td class="vert-align">Доставка:</td>
+							<td class="vert-align">доставка :</td>
 							<td class="vert-align"></td>
 							<td class="vert-align text-right">{{shiping() | currency:"₽ ":0}}</td>
 						</tr>
 						<tr>
-							<td class="vert-align">Налоги:</td>
+							<td class="vert-align">налоги :</td>
 							<td class="vert-align"></td>
 							<td class="vert-align text-right">{{tax() | currency:"₽ ":0}}</td>
 						</tr>
 						<tr>
-							<td class="vert-align">Итого:</td>
+							<td class="vert-align"><b>итого :</b></td>
 							<td class="vert-align"></td>
 							<td class="vert-align text-right" id="total">{{(total()+shiping()+tax()) | currency:"₽ ":0}}</td>
 						</tr>

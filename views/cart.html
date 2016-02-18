@@ -12,7 +12,7 @@
 			<div class="container-fluid title">
 				<div class="row">
 					<div class="col-sm-12">
-						<h2>Корзина</h2>
+						<h2>ВАША КОРЗИНА</h2>
 					</div>
 				</div>
 			</div>
@@ -23,10 +23,10 @@
 						<table class="table">
 						  <thead>
 							<tr>
-							  <th>Наименование</th>
-							  <th>Цена</th>
-							  <th class="text-center">Количество</th>
-							  <th class="text-right">Стоимость</th>
+							  <th>товар</th>
+							  <th>₽ / ед.</th>
+							  <th class="text-center">кол-во</th>
+							  <th class="text-right">цена</th>
 							  <th></th>
 							</tr>
 						  </thead>
@@ -47,15 +47,15 @@
 							</tr> -->
 							<tr ng-if="total() == 0">
 								<td colspan="5">
-									<h2 class="text-center">Ваша корзина пуста</h2>
+									<h2 class="text-center">ВАША КОРЗИНА ПУСТА</h2>
 								</td>
 							</tr>
 						  </tbody>
 						</table>
 						
-						<h4>INTERNATIONAL ORDERS</h4>
-						<p>Shipping costs for international orders will be displayed at checkout.<br>
-						All international orders must have a ship-to destination outside of the United States. We cannot support customers with international billing addresses shipping to U.S. addresses.
+						<h4>УСЛОВИЯ ДОСТАВКИ <small>[*]</small></h4>
+						<p>Доставка за пределы МКАД осуществляется по базовой ставке плюс 30 руб./км<br>
+						Доставка за пределы Москвы и Московской области осуществляются почтой по согласованию с Клиентом после полной оплаты товара и стоимости почтовых услуг
 						</p>	
 
 					</div>
@@ -63,27 +63,27 @@
 							<table class="table">
 							  <thead>
 								<tr>
-								  <th colspan="3" class="text-center">Ваш Заказ</th>
+								  <th colspan="3" class="text-center">ваш заказ</th>
 								</tr>
 							  </thead>
 							  <tbody>
 								<tr>
-								  <td>Подитог:</td>
+								  <td>подитог :</td>
 								  <td></td>
 								  <td class="text-right"><b>{{ total() | currency:"₽ ":0 }}</b></td>
 								</tr>								
 								<tr>
-								  <td>Доставка:</td>
+								  <td>доставка <small>[*]</small> :</td>
 								  <td></td>
 								  <td class="text-right">{{ shiping() | currency:"₽ ":0 }}</td>
 								</tr>
 								<tr>
-								  <td>Налог:</td>
+								  <td>налог :</td>
 								  <td></td>
 								  <td class="text-right">{{ tax | currency:"₽ ":0 }}</td>
 								</tr>
 								<tr>
-								  <td>Итого:</td>
+								  <td>итого :</td>
 								  <td></td>
 								  <td id="total" class="text-right">{{ total() + shiping() + tax | currency:"₽ ":0 }}</td>
 								</tr>

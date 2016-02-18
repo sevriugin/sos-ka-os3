@@ -382,7 +382,7 @@ var SampleApp = function() {
           	mailOptions['subject']	= 'Message from ' + req.body.contact.firstname + ' ' + req.body.contact.lastname;
           	mailOptions['to']		= 'order@mg.sos-ka.com';
         	mailOptions['html'] 	= req.body.contact.message;
-        	mailOptions['cc'] 		= req.body.contact.email;
+        	mailOptions['replyTo'] 	= req.body.contact.email;
           				  
           	//send mail with defined transport object
           	transporter.sendMail(mailOptions, function(error, info) {
