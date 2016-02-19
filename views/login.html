@@ -16,42 +16,42 @@
 						<div ng-show="error" class="alert alert-danger">{{error}}</div>
 						<form name="form" ng-submit="login()" role="form" class="myform">
 
-							<h2 class="text-center">Login to shop</h2>
+							<h2 class="text-center">ВОЙТИ</h2>
 							<!-- <h3 class="text-center">Login to shop</h3> -->
 						
 							<div class="form-group">
 								<label class="control-label" for="username">Email</label>
         						<i class="fa fa-key"></i>
-       							<input type="text" name="username" id="username" placeholder="E-Mail" class="form-control" ng-model="username" required />
-        						<span ng-show="form.username.$dirty && form.username.$error.required" class="form-control">Username is required</span>
+       							<input type="text" name="username" id="username" placeholder="адрес электронной почты" class="form-control" ng-model="username" required />
+        						<span ng-show="form.username.$dirty && form.username.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ</span>
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="password">Password</label>
         						<i class="fa fa-lock"></i>
-        						<input type="password" name="password" id="password" placeholder="Password" class="form-control" ng-model="password" required />
-        						<span ng-show="form.password.$dirty && form.password.$error.required" class="form-control">Password is required</span>
+        						<input type="password" name="password" id="password" placeholder="пароль" class="form-control" ng-model="password" required />
+        						<span ng-show="form.password.$dirty && form.password.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ ПАРОЛЬ</span>
 							</div>	
-        					<p><button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-store btn-block">Login</button></p>
+        					<p><button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-store btn-block">Вход</button></p>
         					<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
 						</form>
 					</div>				
 					<div class="col-sm-6">
 						<form name="reg_form" ng-submit="reg()" role="reg_form" class="myform">
-							<h2 class="text-center">Create account</h2>
+							<h2 class="text-center">ЗАРЕГИСТРИРОВАТЬСЯ</h2>
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label class="control-label" for="firstname">First name</label>
 										<i class="fa fa-key"></i>
-										<input type="text" name="firstname" id="firstname" placeholder="First name" class="form-control" ng-model="firstname" required />
-										<span ng-show="reg_form.firstname.$dirty && reg_form.firstname.$error.required" class="form-control">First name is required</span>
+										<input type="text" name="firstname" id="firstname" placeholder="имя" class="form-control" ng-model="firstname" required />
+										<span ng-show="reg_form.firstname.$dirty && reg_form.firstname.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШЕ ИМЯ</span>
 									</div>
 								</div>
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label class="control-label" for="lastname">Last name</label>
 										<i class="fa fa-key"></i>
-										<input type="text" name="lastname" id="lastname" placeholder="Last name" class="form-control" ng-model="lastname" required />
+										<input type="text" name="lastname" id="lastname" placeholder="фамилия" class="form-control" ng-model="lastname" required />
 									</div>
 								</div>
 							</div>
@@ -59,16 +59,16 @@
 							<div class="form-group">
 								<label class="control-label" for="username">Email</label>
         						<i class="fa fa-key"></i>
-       							<input type="text" name="newusername" id="newusername" placeholder="E-Mail" class="form-control" ng-model="newusername" required />
-        						<span ng-show="reg_form.newusername.$dirty && reg_form.newusername.$error.required" class="form-control">Username is required</span>
+       							<input type="text" name="newusername" id="newusername" placeholder="адрес электронной почты" class="form-control" ng-model="newusername" required />
+        						<span ng-show="reg_form.newusername.$dirty && reg_form.newusername.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ</span>
 							</div>
 							<div class="form-group">
 								<label class="control-label" for="password">Password</label>
         						<i class="fa fa-lock"></i>
-        						<input type="password" name="newpassword" id="newpassword" placeholder="Password" class="form-control" ng-model="newpassword" required />
-        						<span ng-show="reg_form.newpassword.$dirty && reg_form.newpassword.$error.required" class="form-control">Password is required</span>
+        						<input type="password" name="newpassword" id="newpassword" placeholder="пароль" class="form-control" ng-model="newpassword" required />
+        						<span ng-show="reg_form.newpassword.$dirty && reg_form.newpassword.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ ПАРОЛЬ</span>
 							</div>	
-							<p><button type="submit" ng-disabled="reg_form.$invalid || dataLoading" class="btn btn-store btn-block">Create an account</button></p>
+							<p><button type="submit" ng-disabled="reg_form.$invalid || dataLoading" class="btn btn-store btn-block">Зарегистрироваться</button></p>
         					<img ng-if="newdataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
 						</form>
 					</div>
@@ -76,7 +76,7 @@
 
 				<div class="row">
 					<div class="col-sm-12 text-center show-more">
-						<a href="index.html" class="btn btn-outline">Cancel and return to store</a>
+						<a href="index.html" class="btn btn-outline">Отменить и вернуться в магазин</a>
 					</div>	
 				</div>	
 
