@@ -194,6 +194,10 @@ var SampleApp = function() {
           	  var select 		= {};
           	  var coll			= db.collection('shop.orders');
           	  select.username 	= user.username;
+          	  
+          	  if(user.username == 'admin') {
+          		  select = {};
+          	  }
         		  
           	  coll.find(select).toArray(function(err, docs) {
           		  if(err) { return res.status(500).json({status:"error", message:err }); }
