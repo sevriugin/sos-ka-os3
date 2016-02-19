@@ -2,10 +2,12 @@ var storeApp = angular.module('storeApp', [
                               'Authentication',
                               'ngRoute',
                               'ngCookies',
-                              'productControllers']);
+                              'productControllers', 
+                              'angulartics', 
+                              'angulartics.google.analytics']);
 
 storeApp.config(['$routeProvider',
-	                 	function($routeProvider) {
+	                 	function($routeProvider, $analyticsProvider) {
 						$routeProvider.
 							when('/products', {
 								templateUrl: 'views/products.html',
