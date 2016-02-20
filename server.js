@@ -31,15 +31,46 @@ var MongoClient = mongodb.MongoClient;
 
 //setup e-mail data with unicode symbols
 var mailOptions 		= {
-		from:'<order@sos-ka.com>',					// sender address
+		from:'<order@sos-ka.com>',							// sender address
 		sender:'<order@sos-ka.com>',
 		replyTo:'<order@mg.sos-ka.com>',
-		to:'order@mg.sos-ka.com', 					// list of receivers
+		to:'order@mg.sos-ka.com', 							// list of receivers
 		cc:'order@mg.sos-ka.com',
 		subject:'New Order #', 								// Subject line
-		text:'Hello world from SOS-ka.com', 			// plaintext body
-		html: '<b>Hello world from SOS-ka.com</b>' 	// html body
+		text:'Hello world from SOS-ka.com', 				// plaintext body
+		html: '<b>Hello world from SOS-ka.com</b>' 			// html body
 };
+
+var google 			= require('googleapis');
+var OAuth2Client 	= google.auth.OAuth2;
+var scopes 			= ['https://www.googleapis.com/auth/content'];
+
+// Client ID and client secret are available at
+// https://code.google.com/apis/console
+var CLIENT_ID 		= '729636733720-hc5tvbtnjmbsr60sh18rsdkr2q8req10.apps.googleusercontent.com';
+var CLIENT_SECRET 	= 'FRFtSJbvj-g5gvwPOEgqIzmv';
+var REDIRECT_URL 	= 'urn:ietf:wg:oauth:2.0:oob';
+
+var oauth2Client 	= new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
+var url 			= oauth2Client.generateAuthUrl({
+	  					access_type: 'online', 		// 'online' (default) or 'offline' (gets refresh_token)
+	  					scope: scopes 				// If you only need one scope you can pass it as string
+					});
+
+// code				= '4/0mn-4tmhyQMPQ_WmAMbaiT4ordE99uUR73ylMQ-ilXA';
+var code			= '4/7T_r0drUMFfjpuZPm3hVsas11LP3FQxbKTJsqP5FwqQ';
+
+oauth2Client.getToken(code, function(err, tokens) {
+	  // Now tokens contains an access_token and an optional refresh_token. Save them.
+	  if(!err) {
+	    oauth2Client.setCredentials(tokens);
+	  }
+	  else {
+		  console.log('setCredentials(tokens) error:', err);
+	  }
+});
+
+var content 		= google.content({ version: 'v2', auth: oauth2Client });
 
 /**
  *  Define the sample application.
@@ -162,6 +193,16 @@ var SampleApp = function() {
         self.routes['/index.html/#/products'] = function(req, res) {
             res.setHeader('Content-Type', 'text/html');
             res.send(self.cache_get('index.html') );
+        };
+        
+        self.routes['/auth'] = function(req, res) {
+        	console.log('/auth');
+        	res.redirect(301, url);
+        };
+        
+        self.routes['/list'] = function(req, res) {
+        	console.log('/list');
+        	res.status(200).json({status:"ok"});
         };
     };
 

@@ -29,7 +29,8 @@
     "mongodb" : "> 1.1.10",
     "nodemailer":"*",
     "body-parser":"*",
-    "jade":"*"
+    "jade":"*",
+    "googleapis":"*"
   },
   
   "devDependencies": {},
