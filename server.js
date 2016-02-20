@@ -50,6 +50,7 @@ var scopes 			= ['https://www.googleapis.com/auth/content'];
 var CLIENT_ID 		= '729636733720-hc5tvbtnjmbsr60sh18rsdkr2q8req10.apps.googleusercontent.com';
 var CLIENT_SECRET 	= 'FRFtSJbvj-g5gvwPOEgqIzmv';
 var REDIRECT_URL 	= 'urn:ietf:wg:oauth:2.0:oob';
+var MERCHANT_ID		= 110063336;
 
 var oauth2Client 	= new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 var url 			= oauth2Client.generateAuthUrl({
@@ -57,8 +58,7 @@ var url 			= oauth2Client.generateAuthUrl({
 	  					scope: scopes 				// If you only need one scope you can pass it as string
 					});
 
-// code				= '4/0mn-4tmhyQMPQ_WmAMbaiT4ordE99uUR73ylMQ-ilXA';
-var code			= '4/7T_r0drUMFfjpuZPm3hVsas11LP3FQxbKTJsqP5FwqQ';
+var code			=   '4/ijtPjDpGXMTidd1NaJ-p76Z8eK_gT5SoubP412wLQ2M';
 
 oauth2Client.getToken(code, function(err, tokens) {
 	  // Now tokens contains an access_token and an optional refresh_token. Save them.
@@ -202,7 +202,15 @@ var SampleApp = function() {
         
         self.routes['/list'] = function(req, res) {
         	console.log('/list');
-        	res.status(200).json({status:"ok"});
+        	content.products.list({ merchantId: MERCHANT_ID }, function(err, response) {
+        		// handle err and response
+        		if(err) {
+        			console.log('/list error: ', err.message);
+        		}
+        		else {
+        			res.status(200).json({status:"ok", result: response });
+        		}
+        	});
         };
     };
 
