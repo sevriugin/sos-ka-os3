@@ -777,8 +777,8 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 		return AuthenticationService.isItAdmin();
 	};
 	
-	
 	$scope.send = function() {
+		$scope.dataLoading 	= true;
 		productFactory.SendProductToGoogle(function(response) {
 		    	if(response.status == 200) {
 		            $scope.dataLoading 	= false;

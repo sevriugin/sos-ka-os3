@@ -195,6 +195,7 @@ var SampleApp = function() {
         		// handle err and response
         		if(err) {
         			console.log('/list error: ', err.message);
+        			res.status(202).json({status:"error", message:err.message });
         		}
         		else {
         			res.status(200).json({status:"ok", result: response });
@@ -226,13 +227,13 @@ var SampleApp = function() {
         		  if(!err) {
         		    oauth2Client.setCredentials(tokens);
         		    console.log('setCredentials(tokens) tokens:', tokens);
+        		    res.redirect(301, "#/products");
         		  }
         		  else {
         			  console.log('setCredentials(tokens) error:', err);
+        			  res.status(202).json({status:"error", message:err.message });
         		  }
         	});
-        	
-        	res.status(200).json({status:"ok"});
         });
         
         self.app.post('/api/orders', jsonParser, function(req, res) {

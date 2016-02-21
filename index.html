@@ -62,6 +62,8 @@
 					<li ng-if ="dropDown()" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">{{loginMenu()}} <span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li ng-if ="admin()"><a href="auth">OAuth</a></li>
+							<li ng-if ="admin()"><a href="list">List</a></li>
 							<li><a href="#/products" ng-click="logout()">logout</a></li>
 						</ul>
 					</li>
@@ -78,6 +80,8 @@
 					<li ng-if ="!dropDown()"><a href="#/login">Регистрация</a></li>
 					<li ng-if ="dropDown()" ><a href="#/orders">Мои заказы</a></li>
 					<li ng-if ="dropDown()" ><a href="">{{loginMenu()}}</a></li>
+					<li ng-if ="admin()"><a href="auth">OAuth</a></li>
+					<li ng-if ="admin()"><a href="list">List</a></li>
 					<li ng-if ="dropDown()"><a href="#/products" ng-click="logout()">logout</a></li>
 				</ul>
 			</div>

@@ -107,6 +107,10 @@ storeApp.controller('MainCtrl', ['$scope', '$rootScope', '$location', '$cookieSt
     	return result;
     }
 	
+	$scope.admin	 = function() {
+		return AuthenticationService.isItAdmin();
+	};
+	
 	$scope.logout		= function() {
 		AuthenticationService.ClearCredentials();
 		productFactory.emptyOrders();
