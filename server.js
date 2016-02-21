@@ -47,9 +47,10 @@ var scopes 			= ['https://www.googleapis.com/auth/content'];
 
 // Client ID and client secret are available at
 // https://code.google.com/apis/console
-var CLIENT_ID 		= '729636733720-hc5tvbtnjmbsr60sh18rsdkr2q8req10.apps.googleusercontent.com';
-var CLIENT_SECRET 	= 'FRFtSJbvj-g5gvwPOEgqIzmv';
-var REDIRECT_URL 	= 'urn:ietf:wg:oauth:2.0:oob';
+var CLIENT_ID 		= '729636733720-oi3nbsa627i2iet6p3joa4af2cdm072j.apps.googleusercontent.com';
+var CLIENT_SECRET 	= '2tjb4LuT8_yV67ZrX_owLnmy';
+//  				  'urn:ietf:wg:oauth:2.0:oob';
+var	REDIRECT_URL 	= 'http://www.sos-ka.com/api/OAuth2';
 var MERCHANT_ID		= 110063336;
 
 var oauth2Client 	= new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
@@ -57,18 +58,6 @@ var url 			= oauth2Client.generateAuthUrl({
 	  					access_type: 'online', 		// 'online' (default) or 'offline' (gets refresh_token)
 	  					scope: scopes 				// If you only need one scope you can pass it as string
 					});
-
-var code			=   '4/ijtPjDpGXMTidd1NaJ-p76Z8eK_gT5SoubP412wLQ2M';
-
-oauth2Client.getToken(code, function(err, tokens) {
-	  // Now tokens contains an access_token and an optional refresh_token. Save them.
-	  if(!err) {
-	    oauth2Client.setCredentials(tokens);
-	  }
-	  else {
-		  console.log('setCredentials(tokens) error:', err);
-	  }
-});
 
 var content 		= google.content({ version: 'v2', auth: oauth2Client });
 
@@ -227,6 +216,24 @@ var SampleApp = function() {
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
         }
+        
+        self.app.get('/api/OAuth2', urlencodedParser, function(req, res) {
+        	console.log('/GET request to /api/OAuth2');
+        	console.log(req.query.code);
+        	
+        	oauth2Client.getToken(req.query.code, function(err, tokens) {
+        		  // Now tokens contains an access_token and an optional refresh_token. Save them.
+        		  if(!err) {
+        		    oauth2Client.setCredentials(tokens);
+        		    console.log('setCredentials(tokens) tokens:', tokens);
+        		  }
+        		  else {
+        			  console.log('setCredentials(tokens) error:', err);
+        		  }
+        	});
+        	
+        	res.status(200).json({status:"ok"});
+        });
         
         self.app.post('/api/orders', jsonParser, function(req, res) {
         	console.log('/POST request to /api/orders');
