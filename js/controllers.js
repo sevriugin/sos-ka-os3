@@ -725,7 +725,7 @@ productControllers.controller('OrderDetailCtrl', ['$scope', '$routeParams', 'pro
     }
 }]);
 
-productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {
+productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'AuthenticationService', 'productFactory', function($scope, $routeParams, AuthenticationService, productFactory) {
 	$scope.productId 	= $routeParams.productId;
 	$scope.product 		= productFactory.setCurrent($scope.productId);
 	$scope.nextId		= productFactory.getNext();
@@ -733,6 +733,11 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'p
 	$scope.vendor		= productFactory.getVendor($scope.product.vendor);
 	$scope.nextVId		= productFactory.getNextForVendor();
 	$scope.prevVId		= productFactory.getPrevForVendor();
+	
+	
+	$scope.admin	 = function() {
+		return AuthenticationService.isItAdmin();
+	};
 	
 	$scope.addToCart = function(product) {
 		productFactory.addToCart(product);

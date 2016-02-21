@@ -92,6 +92,13 @@ Authentication.factory('AuthenticationService',
         	}
         	return result;
         }
+        
+        service.isItAdmin = function() {
+        	if(service.getUsername() == 'admin') {
+        		return true;
+        	}
+        	return false;
+        }
     	
  
         return service;
