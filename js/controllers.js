@@ -372,6 +372,40 @@ productControllers.factory('productFactory', ['$http', function ($http) {
           	});
       };
      
+     service.setGoogleProduct = function() {
+    	 // create from SelectedProduct the product 4 the Google Merchant Center Account
+    	 if(service.selectedProduct == null) {
+ 			return null;
+ 		}
+    	var googleProduct 					= 	{};
+    	 
+    	googleProduct.offerId 				= 	service.selectedProduct.id;
+    	googleProduct.title					= 	service.selectedProduct.title;
+    	googleProduct.link					= 	"#/products/" + service.selectedProduct.id;
+    	googleProduct.imageLink				= 	service.selectedProduct.imageUrl;
+    	googleProduct.contentLanguage		= 	"RU";
+    	googleProduct.targetCountry			= 	"RU";
+    	googleProduct.channel				= 	"online";
+    	googleProduct.availability			= 	"in stock";
+    	googleProduct.condition				= 	"new";
+    	googleProduct.googleProductCategory	= 	"Baby & Toddler > Baby Health > Pacifiers & Teethers";
+    	googleProduct.price					= 	{"value": service.selectedProduct.cost, "currency": "RUB"};
+    	googleProduct.shipping				= 	[{"country": "RU", "service":"Standard shipping", "price": {"value": "300", "currency": "RUB"}}];
+    	googleProduct.shippingWeight		= 	{"value": "50", "unit": "grams"};
+    	
+    	return googleProduct;
+     };
+     
+     service.SendProductToGoogle = function (callback) {
+       	
+  		$http.post('/api/sendtogoogle', { product: service.setGoogleProduct() })
+           	.then(function (response) {
+           			callback(response); }, 
+           		  function (response) {
+           			callback(response);
+           	});
+     };
+      
      service.empty = function() {
     	 service.invoice.items = [];
      };
@@ -733,10 +767,25 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 	$scope.vendor		= productFactory.getVendor($scope.product.vendor);
 	$scope.nextVId		= productFactory.getNextForVendor();
 	$scope.prevVId		= productFactory.getPrevForVendor();
-	
+
+	$scope.success 		= false;
+	$scope.dataLoading 	= false;
 	
 	$scope.admin	 = function() {
 		return AuthenticationService.isItAdmin();
+	};
+	
+	
+	$scope.send = function() {
+		productFactory.SendProductToGoogle(function(response) {
+		    	if(response.status == 200) {
+		            $scope.dataLoading 	= false;
+		            $scope.success 		= true;
+		        } else {
+		        	$scope.error 		= response.data.message;
+		            $scope.dataLoading 	= false;
+		        }
+		    });
 	};
 	
 	$scope.addToCart = function(product) {

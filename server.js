@@ -455,6 +455,14 @@ var SampleApp = function() {
           	res.status(200).json({status:"ok"});
         }); 
         
+        self.app.post('/api/sendtogoogle', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/sendtogoogle');
+        	console.log(req.body.product);			  
+          	// main action place here
+          	res.status(200).json({status:"ok"});
+        });
+        
+        
       //serve static assets
       self.app.use(express.static(__dirname +'/'));
       

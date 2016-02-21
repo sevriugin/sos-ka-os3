@@ -60,8 +60,12 @@
     				{{vendor.details}}
   				</div>
 			</div>
+			<div ng-show="success" id="alert-contact"> 
+				<div class="alert alert-success" role="alert"><strong>Sent to google</strong></div>
+			</div>
+			<div ng-show="error" class="alert alert-danger">{{error}}</div>
 			<div ng-if="admin()" class="paging clearfix">
-				<button class="btn btn-outline" type="button">
+				<button ng-click="send()" class="btn btn-outline" type="button">
 					Add to Google Merchant Account
 				</button>
 			</div>
