@@ -459,7 +459,24 @@ var SampleApp = function() {
         	console.log('/POST request to /api/sendtogoogle');
         	console.log(req.body.product);			  
           	// main action place here
-          	res.status(200).json({status:"ok"});
+        	// update path
+        	
+        	var appPath			= 'http://www.sos-ka.com/';
+        	var product 		= req.body.product;
+        	product.link		= appPath + product.link;
+        	product.imageLink	= appPath + product.imageLink;
+        	
+        	content.products.insert({ merchantId: MERCHANT_ID, resource: product }, function(err, response) {
+        		// handle err and response
+        		if(err) {
+        			console.log('/insert error: ', err.message);
+        			res.status(202).json({status:"error", message:err.message });
+        		}
+        		else {
+        			console.log('/insert : ', response);
+        			res.status(200).json({status:"ok", result: response });
+        		}
+        	});
         });
         
         

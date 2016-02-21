@@ -381,6 +381,8 @@ productControllers.factory('productFactory', ['$http', function ($http) {
     	 
     	googleProduct.offerId 				= 	service.selectedProduct.id;
     	googleProduct.title					= 	service.selectedProduct.title;
+    	googleProduct.description			=	service.selectedProduct.snippet;
+    	googleProduct.productType			=	"Baby & Toddler > Baby Health > Pacifiers & Teethers";
     	googleProduct.link					= 	"#/products/" + service.selectedProduct.id;
     	googleProduct.imageLink				= 	service.selectedProduct.imageUrl;
     	googleProduct.contentLanguage		= 	"RU";
