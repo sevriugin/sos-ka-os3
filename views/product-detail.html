@@ -23,7 +23,7 @@
 		<div class="col-xs-12 text-center">
 			<h2 class="product-title">{{product.title}}</h2>
 				<div class="product-price">
-					<span class="price">{{product.cost | currency:"₽ ":0}}</span>
+					<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПРОДАНО"}}</span>
 				</div>
 		</div>
 	</div>	
@@ -38,7 +38,7 @@
 		<div class="col-sm-4 ">
 			<h2 class="product-title hidden-xs">{{product.title}}</h2>
 			<div class="product-price hidden-xs">
-				<span class="price">{{product.cost | currency:"₽ ":0}}</span>
+				<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПРОДАНО"}}</span>
 			</div>
 			<div class="product-detail">
 				<p>{{product.snippet}}</p>
@@ -46,7 +46,7 @@
 			<form  action="product1.html" method="POST" class="myform">
 				<div class="form-group clearfix">
 				</div>	
-					<div class="product-btn">
+					<div ng-if="product.qty>0" class="product-btn">
 						<a ng-click="addToCart(product)" href="" class="btn">Добавить в корзину</a>
 					</div>	
 			</form>
