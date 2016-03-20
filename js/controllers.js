@@ -9,6 +9,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                    	"qty": 1,
 	                    	"cost": 2300,
 	                        "id": "tessa-turtle",
+	                        "age": "0-6 мес", 
 	                        "vendor": "mary-meyer",
 	                        "imageUrl": "img/tessa-turtle.jpg", 
 	                        "title": "Черепаха", 
