@@ -195,6 +195,19 @@
         "style" : "col-sm-8"
     },
     {
+    	"key": 115,
+    	"qty": 1,
+    	"cost": 2300,
+        "id": "bella-bunny",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/bella-bunny.jpg", 
+        "title": "Голубой щенок", 
+        "snippet": "Весёлый Зайка не даст скучать Вашему малышу. А за его длинные ушки так легко держать игрушку. Универсальная расцветка подойдет как мальчику, так и девочке.",
+        "images": ["img/bella-bunny.jpg", "img/bella-bunny-1.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 200,
     	"qty": 1,
     	"cost": 2200,
