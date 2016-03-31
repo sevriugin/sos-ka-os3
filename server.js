@@ -175,8 +175,10 @@ var SampleApp = function() {
         };
 
         self.routes['/'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.html') );
+        	console.log('/SEND redirect');
+           	res.redirect(301, 'https://www.sos-ka.com/index.html');
+            //res.setHeader('Content-Type', 'text/html');
+            //res.send(self.cache_get('index.html') );
         };
         
         self.routes['/index.html/#/products'] = function(req, res) {
