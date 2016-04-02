@@ -30,6 +30,20 @@ Authentication.factory('AuthenticationService',
             	});
         };
         
+        service.SendPassword = function (username, callback) {
+        	
+        	var raw = Base64.encode(username + '0!23456');
+        	var password = raw.slice(0,7);
+        	var authdata = Base64.encode(username + ':' + password);
+            
+       	 	$http.post('/api/sendpassword', { username: username, password: password, authdata : authdata })
+               	.then(function (response) {
+               			callback(response); }, 
+               		  function (response) {
+               			callback(response);
+               	});
+        };
+        
         service.Registration = function (firstname, lastname, username, password, callback) {
         	var authdata = Base64.encode(username + ':' + password);
 

@@ -610,6 +610,26 @@ productControllers.controller('loginController', ['$scope', '$rootScope', '$loca
     	return productFactory.qty(); 
     };
     
+    $scope.success 		= false;
+	$scope.dataLoading 	= false;
+	
+	$scope.admin	 = function() {
+		return AuthenticationService.isItAdmin();
+	};
+	
+	$scope.SendPassword = function() {
+		$scope.dataLoading 	= true;
+		AuthenticationService.SendPassword($scope.username, function(response) {
+		    	if(response.status == 200) {
+		            $scope.dataLoading 	= false;
+		            $scope.success 		= true;
+		        } else {
+		        	$scope.error 		= response.data.message;
+		            $scope.dataLoading 	= false;
+		        }
+		    });
+	};
+	
     $scope.menuOpen		= false;
     $scope.menuToggle	= function() {
     	$scope.menuOpen	= $scope.menuOpen ? false : true;

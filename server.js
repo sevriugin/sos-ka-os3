@@ -191,6 +191,42 @@ var SampleApp = function() {
         	res.redirect(301, url);
         };
         
+        self.routes['/users'] = function(req, res) {
+        	console.log('/users');
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+            	  if(err) { return res.status(500).json({status:"error", message:err }); }
+            	  
+            	  var coll	= db.collection('shop.users');
+          		  
+            	  coll.find().toArray(function(err, docs) {
+            		  if(err) { return res.status(500).json({status:"error", message:err }); }
+            		  
+            		  var count 	= docs.length;
+            		  var result	= [];
+            		  var number	= 0;
+            		  
+            		  for(i = 0; i < count; i++) {
+            			
+            			  var user		= {};
+            			  
+            			  user.firstname 	= docs[i].firstname;
+            			  user.lastname		= docs[i].lastname;
+            			  user.username		= docs[i].username;
+            			  
+            			  if(user.username) {
+            				  result.push(user);
+            				  number++;
+            			  }
+            		  }
+            		  
+            		  console.log('/api/userlist/user count : %d', count );
+            		  res.status(200).json({status:"ok", number:number, users:result});  
+            		  db.close();
+            	  })
+          	})
+        };
+        
         self.routes['/list'] = function(req, res) {
         	console.log('/list');
         	content.products.list({ merchantId: MERCHANT_ID }, function(err, response) {
@@ -337,6 +373,56 @@ var SampleApp = function() {
           	  })
         	})
         });
+        
+        self.app.post('/api/sendpassword', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/sendpassword');
+        	
+        	var user = {};
+    		
+        	user.username	= req.body.username;
+        	user.password	= req.body.password;
+        	user.authdata	= req.body.authdata;
+        	
+        	console.log('api/sendpassword/user : ', user);
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+          	  if(err) { return res.status(500).json({status:"error", message:err }); }
+        		  
+          	  var select 		= {username:user.username};
+          	  var update		= {$set:{authdata:user.authdata}};
+          	  var coll			= db.collection('shop.users');
+        		  
+          	  coll.updateOne(select, update, function(err, r) {
+          		  if(err) { return res.status(500).json({status:"error", message:err }); }
+          		  console.log('api/sendpassword/user : %d', r.modifiedCount );
+
+          		  // Compile a function
+          		  var fn = jade.compileFile('./views/sendpassword_email.jade');
+
+          		  // Render the function
+          		  var html = fn({user:user});
+         				  
+          		  // Sending mail
+          		  mailOptions['subject']	= 'New password';
+          		  mailOptions['html'] 		= html;
+          		  mailOptions['to']			= user.username;
+          		  mailOptions['cc']			= '';
+         				  
+          		  //send mail with defined transport object
+          		  transporter.sendMail(mailOptions, function(error, info) {
+          			  if(error) {
+          				  return console.log(error);
+          			  }
+          			  else {
+          				  console.log('Message sent: ' + info.response);
+          			  }
+          		  });	  
+          		  res.status(200).json({status:"ok"});
+          		  db.close();
+          	  })
+        	})
+        });
+        
         
         self.app.post('/api/authenticate', jsonParser, function(req, res) {
         	console.log('/POST request to /api/authenticate');
