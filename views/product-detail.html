@@ -21,7 +21,7 @@
 <div class="container-fluid product">
 	<div class="row visible-xs product-mobile">
 		<div class="col-xs-12 text-center">
-			<h2 class="product-title">{{product.title}}</h2>
+				<h3>{{product.productType}} {{vendor.title}} {{product.title}}</h3>
 				<div class="product-price">
 					<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПРОДАНО"}}</span>
 				</div>
@@ -41,7 +41,7 @@
     		</ul>
 		</div>
 		<div class="col-sm-4 ">
-			<h2 class="product-title hidden-xs">{{product.title}}</h2>
+			<h3 class="product-title hidden-xs">{{product.productType}} {{vendor.title}} {{product.title}}</h3>
 			<div class="product-price hidden-xs">
 				<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПРОДАНО"}}</span>
 			</div>
@@ -89,4 +89,15 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div ng-show="false" itemscope itemtype="http://schema.org/Product">
+    <span itemprop="name">{{product.productType}} {{vendor.title}} {{product.title}}</span>
+
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <meta itemprop="priceCurrency" content="RUB" />₽
+      <span itemprop="price">{{product.cost}}</span>
+      <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"/>New
+      <meta itemprop="availability" content="http://schema.org/InStock"/>Available online
+    </div>
 </div>

@@ -9,6 +9,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                    	"qty": 1,
 	                    	"cost": 2300,
 	                        "id": "tessa-turtle",
+	                        "productType" : "Соска",
 	                        "age": "0-6 мес", 
 	                        "vendor": "mary-meyer",
 	                        "imageUrl": "img/tessa-turtle.jpg", 
@@ -378,11 +379,14 @@ productControllers.factory('productFactory', ['$http', function ($http) {
     	 if(service.selectedProduct == null) {
  			return null;
  		}
+    	var	vendor							= 	service.getVendor(service.selectedProduct.vendor);
     	var googleProduct 					= 	{};
     	 
     	googleProduct.offerId 				= 	service.selectedProduct.id;
-    	googleProduct.title					= 	service.selectedProduct.title;
+    	googleProduct.title					= 	service.selectedProduct.productType + " " + vendor.title + " " + service.selectedProduct.title;
     	googleProduct.description			=	service.selectedProduct.snippet;
+    	googleProduct.brand					=	vendor.title;
+    	googleProduct.ageGroup				= 	"newborn";
     	googleProduct.productType			=	"Baby & Toddler > Baby Health > Pacifiers & Teethers";
     	googleProduct.link					= 	"#/products/" + service.selectedProduct.id;
     	googleProduct.imageLink				= 	service.selectedProduct.imageUrl;
