@@ -2,7 +2,7 @@
     {
     	"key": 100,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "tessa-turtle",
         "age": "0-6 мес",
         "productType" : "Соска",
@@ -16,7 +16,7 @@
     {
     	"key": 101,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "afrique-elefant",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -30,7 +30,7 @@
     {
     	"key": 102,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "little-nuzzles-kitty",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -44,7 +44,7 @@
     {
     	"key": 103,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "little-camo-fox",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -58,7 +58,7 @@
     {
     	"key": 104,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "little-stretch-giraffe",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -72,7 +72,7 @@
     {
     	"key": 105,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "baby-buccaneer",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -86,7 +86,7 @@
     {
     	"key": 106,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "oatmeal-bunny",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -100,7 +100,7 @@
     {
     	"key": 107,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "jasmin-giraffe",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -114,7 +114,7 @@
     {
     	"key": 108,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "levi-lion",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -128,7 +128,7 @@
     {
     	"key": 109,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "kiwi-frog",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -142,7 +142,7 @@
     {
     	"key": 110,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "cutsie-caterpillar",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -156,7 +156,7 @@
     {
     	"key": 111,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "mango-monkey",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -170,7 +170,7 @@
     {
     	"key": 112,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "ella-bella",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -184,7 +184,7 @@
     {
     	"key": 113,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "okey-dokey-dino",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -198,7 +198,7 @@
     {
     	"key": 114,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "peaceful-puppy",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -212,7 +212,7 @@
     {
     	"key": 115,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 2000,
         "id": "bella-bunny",
         "productType" : "Соска",
         "age": "0-6 мес",
@@ -226,7 +226,7 @@
     {
     	"key": 200,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "ella-elefant",
         "productType" : "Соска",
         "age": "0+",
@@ -240,7 +240,7 @@
     {
     	"key": 201,
     	"qty": 0,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "happy-hippo",
         "productType" : "Соска",
         "age": "0+",
@@ -254,7 +254,7 @@
     {
     	"key": 202,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "peaches-puppy",
         "productType" : "Соска",
         "age": "0+",
@@ -268,7 +268,7 @@
     {
     	"key": 203,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "paisley-panda",
         "productType" : "Соска",
         "age": "0+",
@@ -282,7 +282,7 @@
     {
     	"key": 204,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "unity-unicorn",
         "productType" : "Соска",
         "age": "0+",
@@ -296,7 +296,7 @@
     {
     	"key": 205,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "dimpless-dragon",
         "productType" : "Соска",
         "age": "0+",
@@ -310,7 +310,7 @@
     {
     	"key": 206,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "lovie-lamb",
         "productType" : "Соска",
         "age": "0+",
@@ -324,7 +324,7 @@
     {
     	"key": 207,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "jaspie-giraffe",
         "productType" : "Соска",
         "age": "0+",
@@ -338,7 +338,7 @@
     {
     	"key": 208,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "snow-leopard",
         "productType" : "Соска",
         "age": "0+",
@@ -352,7 +352,7 @@
     {
     	"key": 209,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "lovie-lamb-lovies",
         "productType" : "Соска",
         "age": "0+",
@@ -366,7 +366,7 @@
     {
     	"key": 210,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "jaxon-giraffe",
         "productType" : "Соска",
         "age": "0+",
@@ -380,7 +380,7 @@
     {
     	"key": 211,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "paisley-panda-lovies",
         "productType" : "Соска",
         "age": "0+",
@@ -394,7 +394,7 @@
     {
     	"key": 212,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "milo-monkey",
         "productType" : "Соска",
         "age": "0+",
@@ -408,7 +408,7 @@
     {
     	"key": 213,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "cutsie-cow",
         "productType" : "Соска",
         "age": "0+",
@@ -422,7 +422,7 @@
     {
     	"key": 214,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "pepper-penguin",
         "productType" : "Соска",
         "age": "0+",
@@ -436,7 +436,7 @@
     {
     	"key": 215,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "lexi-lobster",
         "productType" : "Соска",
         "age": "0+",
@@ -450,7 +450,7 @@
     {
     	"key": 216,
     	"qty": 1,
-    	"cost": 2200,
+    	"cost": 1500,
         "id": "ollie-octopus",
         "productType" : "Соска",
         "age": "0+",
@@ -486,7 +486,7 @@
     {
     	"key": 401,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Purr-ty-Kitty",
         "productType" : "Соска",
         "age": "0+", 
@@ -500,7 +500,7 @@
     {
     	"key": 402,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Best-friend-Skipit",
         "productType" : "Соска",
         "age": "0+", 
@@ -514,7 +514,7 @@
     {
     	"key": 403,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Kiddo",
         "productType" : "Соска",
         "age": "0+", 
@@ -528,7 +528,7 @@
     {
     	"key": 404,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Peanut-blue",
         "productType" : "Соска",
         "age": "0+", 
@@ -542,7 +542,7 @@
     {
     	"key": 405,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Peanut-pink",
         "productType" : "Соска",
         "age": "0+", 
@@ -556,7 +556,7 @@
     {
     	"key": 406,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Blossom-s-pink",
         "productType" : "Соска",
         "age": "0+", 
@@ -570,7 +570,7 @@
     {
     	"key": 407,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Bud-s-blue",
         "productType" : "Соска",
         "age": "0+", 
@@ -584,7 +584,7 @@
     {
     	"key": 408,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Warm-white",
         "productType" : "Соска",
         "age": "0+", 
@@ -598,7 +598,7 @@
     {
     	"key": 409,
     	"qty": 1,
-    	"cost": 2300,
+    	"cost": 1800,
         "id": "Skipit-s-Silly-Buddy",
         "productType" : "Соска",
         "age": "0+", 
