@@ -215,7 +215,7 @@ var SampleApp = function() {
             			  user.username		= docs[i].username;
             			  
             			  if(user.username) {
-            				  result.push(user);
+            				  result.push(user.username);
             				  number++;
             			  }
             		  }
