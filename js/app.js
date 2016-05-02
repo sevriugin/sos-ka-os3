@@ -37,6 +37,10 @@ storeApp.config(['$routeProvider',
 								templateUrl: 'views/about.html',
 								controller: 'aboutController'
 							}).
+							when('/articles', {
+								templateUrl: 'views/article-01.html',
+								controller: 'aboutController'
+							}).
 							when('/contact', {
 								templateUrl: 'views/contact.html',
 								controller: 'contactController'
