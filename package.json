@@ -30,7 +30,8 @@
     "nodemailer":"*",
     "body-parser":"*",
     "jade":"*",
-    "googleapis":"*"
+    "googleapis":"*",
+    "dateformat":"*"
   },
   
   "devDependencies": {},

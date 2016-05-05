@@ -7,7 +7,8 @@ var mongodb 	= require('mongodb');
 var nodemailer 	= require('nodemailer');
 var bodyParser	= require('body-parser');
 
-var jade 		= require('jade'); 
+var jade 		= require('jade');
+var dateFormat 	= require('dateformat');
 
 //create application/json parser 
 var jsonParser 			= bodyParser.json()
@@ -542,7 +543,36 @@ var SampleApp = function() {
           	});
           	
           	res.status(200).json({status:"ok"});
+        });
+        
+        self.app.post('/api/yml', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/yml');
+        	
+        	var xml_date = dateFormat(Date.now(),"yyyy-mm-dd hh:MM");
+        	var products = req.body.products;
+        	// Compile a function
+			var fn = jade.compileFile('./views/yml.jade');
+
+			// Render the function
+			var xml = fn({date:xml_date, products:products});
+        	
+          	// Sending mail
+          	mailOptions['subject']	= 'YML SOS-ka Shop';
+          	mailOptions['to']		= 'test@mg.sos-ka.com';
+        	mailOptions['text'] 	= xml;
+        	mailOptions['html'] 	= '';
+          				  
+          	//send mail with defined transport object
+          	transporter.sendMail(mailOptions, function(error, info) {
+          		if(error) {
+          			return console.log(error);
+          		}
+          		console.log('Message sent: ' + info.response);
+          	});
+          	
+          	res.status(200).json({status:"ok"});
         }); 
+        
         
         self.app.post('/api/sendtogoogle', jsonParser, function(req, res) {
         	console.log('/POST request to /api/sendtogoogle');

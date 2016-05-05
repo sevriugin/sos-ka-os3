@@ -412,6 +412,51 @@ productControllers.factory('productFactory', ['$http', function ($http) {
            			callback(response);
            	});
      };
+     
+     service.setYandexProducts = function() {
+    	 // create array of products for Yandex Shopping
+    	 
+    	 var products = [];
+    	 for (var i = 0, len = service.products.length; i < len; i++) {
+    	
+    		 var product							= service.products[i];
+    		 var vendor								= service.getVendor(product.vendor);
+    		 var yandexProduct 						= {};
+    	 	 
+    		 yandexProduct.id 						= product.key;
+    		 yandexProduct.available				= product.qty > 0 ? "true" : "false";
+    		 yandexProduct.bid						= "23";
+    		 yandexProduct.cbid						= "43";
+    		 yandexProduct.url						= "https://www.sos-ka.com/index.html#/products/" + product.id;
+    		 yandexProduct.price					= product.cost;
+    		 yandexProduct.currencyId				= "RUR";
+    		 yandexProduct.categoryId				= "1100";
+    		 yandexProduct.picture					= "https://www.sos-ka.com/" + product.imageUrl;
+    		 yandexProduct.store					= "false";
+    		 yandexProduct.delivery					= "true";
+    		 yandexProduct.name						= product.productType + " " + vendor.title + " " + product.title;
+    		 yandexProduct.vendor					= vendor.title;
+    		 yandexProduct.model					= product.productType;
+    		 yandexProduct.description				= product.snippet;
+    		 yandexProduct.sales_notes				= "Оплата курьеру";
+    		 yandexProduct.age						= 0;
+    		 yandexProduct.manufacturer_warranty 	= "false";
+    		 yandexProduct.shippingWeight			= {"value": "50", "unit": "grams"};	 
+    	
+    		 products.push(yandexProduct);
+    	}
+    	return products;
+     };
+     
+     service.SendProductToYandex = function (callback) {
+        	
+   		$http.post('/api/yml', { products: service.setYandexProducts() })
+            	.then(function (response) {
+            			callback(response); }, 
+            		  function (response) {
+            			callback(response);
+            	});
+      };
       
      service.empty = function() {
     	 service.invoice.items = [];
@@ -675,7 +720,26 @@ productControllers.controller('loginController', ['$scope', '$rootScope', '$loca
 	 };
 }]);
 
-productControllers.controller('ProductListCtrl', ['$scope', '$routeParams', 'productFactory', function ($scope, $routeParams, productFactory) {
+productControllers.controller('ProductListCtrl', ['$scope', '$routeParams', 'AuthenticationService', 'productFactory', function ($scope, $routeParams, AuthenticationService, productFactory) {
+	$scope.success 		= false;
+	$scope.dataLoading 	= false;
+	
+	$scope.admin	 = function() {
+		return AuthenticationService.isItAdmin();
+	};
+	
+	$scope.send = function() {
+		$scope.dataLoading 	= true;
+		productFactory.SendProductToYandex(function(response) {
+		    	if(response.status == 200) {
+		            $scope.dataLoading 	= false;
+		            $scope.success 		= true;
+		        } else {
+		        	$scope.error 		= response.data.message;
+		            $scope.dataLoading 	= false;
+		        }
+		    });
+	};
 	
 	$scope.productClass = function(product) {
 		return product.style;

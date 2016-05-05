@@ -1,0 +1,37 @@
+doctype xml
+yml_catalog(date="#{date}")
+	shop
+		name SOS-ka Shop
+		company SOS-ka Shop
+		| <url>https://www.sos-ka.com </url>
+		currencies
+			currency(id="RUR" rate="1")
+			currency(id="USD" rate="70")
+		categories
+			category(id="1000")
+				| Товары по уходу за тетьми от 0 до 3 лет
+			category(id="1100" parentId="1000")
+				| Соски-пустышки
+			category(id="1200" parentId="1000")
+				| Держатели для сосок
+		delivery-options
+			option(cost="300" days="1" order-before="15")
+		cpa 1
+		offers
+			each product in products
+				offer(id="#{product.id}" available="#{product.available}" bid="#{product.bid}" cbid="#{product.cbid}")
+					| <url>#{product.url} </url>
+					price #{product.price}
+					currencyId #{product.currencyId}
+					categoryId #{product.categoryId}
+					picture #{product.picture}
+					store #{product.store}
+					delivery #{product.delivery}
+					name #{product.name}
+					vendor #{product.vendor}
+					model #{product.model}
+					description #{product.description}
+					sales_notes #{product.sales_notes}
+					age #{product.age}
+					manufacturer_warranty #{product.manufacturer_warranty}
+					param(name="Вес" unit="гр") #{product.shippingWeight.value}			
