@@ -37,9 +37,17 @@ storeApp.config(['$routeProvider',
 								templateUrl: 'views/about.html',
 								controller: 'aboutController'
 							}).
-							when('/articles', {
+							when('/article-01', {
 								templateUrl: 'views/article-01.html',
-								controller: 'aboutController'
+								controller: 'ArticleListCtrl'
+							}).
+							when('/article/:articleId', {
+								templateUrl: 'views/articles.html',
+								controller: 'ArticleListCtrl'
+							}).
+							when('/articles', {
+								templateUrl: 'views/articles.html',
+								controller: 'ArticleListCtrl'
 							}).
 							when('/contact', {
 								templateUrl: 'views/contact.html',
@@ -59,10 +67,6 @@ storeApp.config(['$routeProvider',
 							}).
 							when('/terms', {
 								templateUrl: 'views/terms-conditions.html',
-								controller: 'MainCtrl'
-							}).
-							when('/yml', {
-								templateUrl: 'views/yml.html',
 								controller: 'MainCtrl'
 							}).
 							when('/orders/:orderId', {

@@ -34,6 +34,20 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                    }
 	                ];
 	
+	service.articles = [
+	                    {
+	                       	"key": 0,
+	                        "id": "article-01",
+	                        "imageUrl": "img/article-01.jpg", 
+	                        "title": "Приучение к соске", 
+	                        "snippet": "Эту статью я решила написать для мам, которые столкнулись с проблемой нежелания малыша  брать соску. Есть ряд очевидных преимуществ соски, ради которых, всё же, стоит попытаться приучить ребёнка к пустышке.",
+	                        "images": ["img/article-01.jpg","img/max.jpg"],
+	                        "web": "https://www.sos-ka.com/article-01",
+	                        "style" : "col-sm-8",
+	                        "details" : "С первых минут жизни у ребёнка очень сильно развит врождённый сосательный рефлекс, который сохраняется у малышей до полутора-двух, а у некоторых и до трёх лет. Для его удовлетворения малыш либо ест, либо сосёт пустышку. Естественно, что ребёнок не в состоянии есть всё время, и в момент, когда он не голоден, но нуждается в сосании, целесообразно предложить ему соску."
+	                    }
+	                ];
+	
 	service.invoice = { items: [] };
 	service.orders	= [];
 	service.error	= {};
@@ -822,6 +836,39 @@ productControllers.controller('VendorListCtrl', ['$scope', '$routeParams', 'prod
     	$scope.query	= $routeParams.vendorId;
     }
 }]);
+
+productControllers.controller('ArticleListCtrl', ['$scope', '$routeParams', 'productFactory', function ($scope, $routeParams, productFactory) {
+	
+	$scope.productClass = function(product) {
+		return product.style;
+	};
+	
+	$scope.qty			= function() { 
+    	return productFactory.qty(); 
+    };
+	
+    $scope.menuOpen		= false;
+    $scope.menuToggle	= function() {
+    	$scope.menuOpen	= $scope.menuOpen ? false : true;
+    }
+    
+    $scope.viewClass	= function() {
+    	return ($scope.menuOpen ? 'menu-open' : '');
+    }
+    
+    $scope.menuClass	= function() {
+    	return ($scope.menuOpen ? 'menu-wrapper menu-front' : 'menu-wrapper');
+    }
+    
+	$scope.articles	 	= productFactory.articles;
+	$scope.query		= '';
+    
+    if($routeParams.articleId) {
+    	$scope.query	= $routeParams.articleId;
+    }
+}]);
+
+
 
 productControllers.controller('OrderDetailCtrl', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {
 	$scope.orderId 		= $routeParams.orderId;
