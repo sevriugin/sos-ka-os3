@@ -3,7 +3,7 @@ yml_catalog(date="#{date}")
 	shop
 		name SOS-ka Shop
 		company SOS-ka Shop
-		| <url>https://www.sos-ka.com </url>
+		| <url>https://www.sos-ka.com</url>
 		currencies
 			currency(id="RUR" rate="1")
 			currency(id="USD" rate="70")
@@ -20,7 +20,7 @@ yml_catalog(date="#{date}")
 		offers
 			each product in products
 				offer(id="#{product.id}" available="#{product.available}" bid="#{product.bid}" cbid="#{product.cbid}")
-					| <url>#{product.url} </url>
+					| <url>#{product.url}</url>
 					price #{product.price}
 					currencyId #{product.currencyId}
 					categoryId #{product.categoryId}

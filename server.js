@@ -561,6 +561,7 @@ var SampleApp = function() {
           	mailOptions['to']		= 'test@mg.sos-ka.com';
         	mailOptions['text'] 	= xml;
         	mailOptions['html'] 	= '';
+        	mailOptions['cc'] 		= '';
           				  
           	//send mail with defined transport object
           	transporter.sendMail(mailOptions, function(error, info) {
