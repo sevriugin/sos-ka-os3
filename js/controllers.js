@@ -44,7 +44,12 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                        "images": ["img/article-01.jpg","img/max.jpg"],
 	                        "web": "https://www.sos-ka.com/article-01",
 	                        "style" : "col-sm-8",
-	                        "details" : "С первых минут жизни у ребёнка очень сильно развит врождённый сосательный рефлекс, который сохраняется у малышей до полутора-двух, а у некоторых и до трёх лет. Для его удовлетворения малыш либо ест, либо сосёт пустышку. Естественно, что ребёнок не в состоянии есть всё время, и в момент, когда он не голоден, но нуждается в сосании, целесообразно предложить ему соску."
+	                        "details" : "С первых минут жизни у ребёнка очень сильно развит врождённый сосательный рефлекс, который сохраняется у малышей до полутора-двух, а у некоторых и до трёх лет. Для его удовлетворения малыш либо ест, либо сосёт пустышку. Естественно, что ребёнок не в состоянии есть всё время, и в момент, когда он не голоден, но нуждается в сосании, целесообразно предложить ему соску.",
+	                        "likes": 0,
+	                        "comments" : 0,
+	                        "success" : false,
+	                        "dataLoading" : false,
+	                        "isComment:" : false,
 	                    }
 	                ];
 	
@@ -116,6 +121,27 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		item.vendor	= vendor.title;
 		
 		service.invoice.items.splice(-1, 0, item);
+	};
+	
+	service.addLike = function(article) {
+		for(var i = 0, len = service.articles.length; i < len; i++) {
+			if(service.articles[i].id === article.id) {
+				service.articles[i].likes = service.articles[i].likes + 1;
+				service.articles[i].isComment = true;
+				return;
+			}
+		}
+	};
+	
+	service.addComment = function(article) {
+		for(var i = 0, len = service.articles.length; i < len; i++) {
+			if(service.articles[i].id === article.id) {
+				service.articles[i].comments = service.articles[i].comments + 1;
+				service.articles[i].dataLoading = false;
+				service.articles[i].success = true;
+				return;
+			}
+		}
 	};
 	
 	service.selectedProduct = null;
@@ -837,10 +863,41 @@ productControllers.controller('VendorListCtrl', ['$scope', '$routeParams', 'prod
     }
 }]);
 
-productControllers.controller('ArticleListCtrl', ['$scope', '$routeParams', 'productFactory', function ($scope, $routeParams, productFactory) {
+productControllers.controller('ArticleListCtrl', ['$scope', '$rootScope', '$routeParams', 'AuthenticationService', 'productFactory', function ($scope, $rootScope, $routeParams, AuthenticationService, productFactory) {
 	
 	$scope.productClass = function(product) {
 		return product.style;
+	};
+	
+	$scope.username = AuthenticationService.getUsername();
+	
+	$scope.registered	= function() {
+	    
+		var result = false;
+	
+    	if($rootScope.globals) {
+    		if($rootScope.globals.currentUser) {
+    			result = true;
+    		}
+    	}
+    	return result;
+    }
+	
+	$scope.default_comment = function() {
+		return ($scope.registered() ? 'ваш комментарий' : 'для того, чтобы оставить комментарий войдите или зарегистрируйтесь');
+	}
+	
+	$scope.addLike = function(article) {
+		if(article.isComment) {
+			productFactory.addComment(article);	
+		}
+		else {
+			productFactory.addLike(article);
+		}
+	};
+	
+	$scope.likeOrComment	= function(article) {
+		return (article.isComment ? 'Comment' : 'Like');
 	};
 	
 	$scope.qty			= function() { 

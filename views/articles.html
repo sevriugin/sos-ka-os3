@@ -35,6 +35,28 @@
 			<div class="product-detail">
 				<p>{{article.snippet}}</p>
 			</div>
+			<div ng-show="article.success && article.isComment" id="alert-contact"> 
+				<div class="alert alert-success" role="alert"><strong>ВАШЕ КОММЕНТАРИЙ ОТПРАВЛЕН</strong></div>
+			</div>
+			<div ng-show="error" class="alert alert-danger">{{error}}</div>
+			<div class="paging clearfix pull-right">
+				<span>
+					<img src="img/likes.png">&nbsp;&nbsp;&nbsp;{{article.likes}}&nbsp;&nbsp;&nbsp;
+					<img src="img/comments.png">&nbsp;&nbsp;&nbsp;{{article.comments}}&nbsp;&nbsp;&nbsp;
+				</span>
+			</div>
+			<form  name="form" action="articles.html" method="POST" class="myform">
+				<div class="form-group">
+					<label class="control-label" for="message">Comment</label>
+        			<i class="fa fa-key"></i>
+					<textarea ng-disabled="!registered()" name="comment" id="comment" placeholder="{{default_comment()}}" class="form-control" ng-model="comment" required></textarea>
+        			<span ng-show="form.comment.$dirty && form.comment.$error.required" class="form-control">ПОЖАЛУЙСТА, НАПИШИТЕ ВАШЕ КОММЕНТАРИЙ</span>
+				</div>
+				<div class="product-btn">
+					<a ng-click="addLike(article)" ng-disabled="article.isComment && form.$invalid || article.dataLoading || article.success" href="" class="btn">{{likeOrComment(article)}}</a>
+					<img ng-if="article.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+				</div>	
+			</form>
 		</div>
 	</div>
 	<div class="row">
