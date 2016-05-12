@@ -524,6 +524,26 @@ var SampleApp = function() {
         	})
         });
        
+        self.app.post('/api/comment', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/comment');
+        				  
+          	// Sending mail
+          	mailOptions['subject']	= 'New comment for ' + req.body.comment.article.title;
+          	mailOptions['to']		= 'order@mg.sos-ka.com';
+        	mailOptions['html'] 	= req.body.comment.message;
+        	mailOptions['replyTo'] 	= req.body.comment.email;
+        	mailOptions['cc'] 		= '';
+          				  
+          	//send mail with defined transport object
+          	transporter.sendMail(mailOptions, function(error, info) {
+          		if(error) {
+          			return console.log(error);
+          		}
+          		console.log('Message sent: ' + info.response);
+          	});
+          	
+          	res.status(200).json({status:"ok"});
+        });
         
         self.app.post('/api/contactmsg', jsonParser, function(req, res) {
         	console.log('/POST request to /api/contactmsg');
@@ -533,6 +553,7 @@ var SampleApp = function() {
           	mailOptions['to']		= 'order@mg.sos-ka.com';
         	mailOptions['html'] 	= req.body.contact.message;
         	mailOptions['replyTo'] 	= req.body.contact.email;
+        	mailOptions['cc'] 		= '';
           				  
           	//send mail with defined transport object
           	transporter.sendMail(mailOptions, function(error, info) {

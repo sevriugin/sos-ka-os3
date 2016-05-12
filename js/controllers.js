@@ -50,6 +50,24 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                        "success" : false,
 	                        "dataLoading" : false,
 	                        "isComment:" : false,
+	                        "comment":""
+	                    },
+	                    {
+	                       	"key": 2,
+	                        "id": "article-02",
+	                        "imageUrl": "img/article-02.jpg", 
+	                        "title": "Пережиток прошлого или необходимость", 
+	                        "snippet": "Будете ли вы пеленать ребёнка или нет, лучше всего решить заранее. Дело в том, что малыш привыкает к тому, что предоставляют ему с первых дней, и изменить решение будет довольно трудно.",
+	                        "images": ["img/article-02.jpg","img/article-02-09.jpg"],
+	                        "web": "https://www.sos-ka.com/article-02",
+	                        "style" : "col-sm-8",
+	                        "details" : "Пеленать или нет? Я уверена, что каждая мама в ожидании малыша задумывается над этим вопросом. Не ошибусь, если предположу, что большая часть мам заочно принимает решение никогда не пеленать, не ограничивать свободу малышу. Но, как показывает практика, 90% из этих числа мам с появлением малыша меняют своё решение в сторону пеленания на первые 1-3 месяца, а может и дольше, в зависимости от необходимости.",
+	                        "likes": 0,
+	                        "comments" : 0,
+	                        "success" : false,
+	                        "dataLoading" : false,
+	                        "isComment:" : false,
+	                        "comment":""
 	                    }
 	                ];
 	
@@ -57,6 +75,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.orders	= [];
 	service.error	= {};
 	service.contact	= {};
+	service.comment = {};
 	
 	service.loadOrders = function(username) {
 		if(!username) {
@@ -391,6 +410,23 @@ productControllers.factory('productFactory', ['$http', function ($http) {
          	});
      };
      
+     service.setComment = function(username, message, article) {
+  		
+  		service.comment.email			= username;
+  		service.comment.message			= message;
+  		service.comment.article			= article;
+  	};
+     
+  	service.SendComment = function (callback) {
+      	
+ 		$http.post('/api/comment', { comment: service.comment })
+          	.then(function (response) {
+          			callback(response); }, 
+          		  function (response) {
+          			callback(response);
+          	});
+      };
+  	
      service.setContact = function(username, firstname, lastname, email, message) {
  		
  		if(username) {
@@ -504,6 +540,10 @@ productControllers.factory('productFactory', ['$http', function ($http) {
      
      service.emptyContact = function() {
     	 service.contact = {};
+     };
+     
+     service.emptyComment = function() {
+    	 service.comment = {};
      };
      
 	// load products
@@ -889,7 +929,15 @@ productControllers.controller('ArticleListCtrl', ['$scope', '$rootScope', '$rout
 	
 	$scope.addLike = function(article) {
 		if(article.isComment) {
-			productFactory.addComment(article);	
+			productFactory.setComment($scope.username, article.comment, article);
+			productFactory.SendComment(function(response) {
+		    	if(response.status == 200) {
+		    		productFactory.addComment(article);
+		        } else {
+		        	$scope.error 		= response.data.message;
+		            article.dataLoading = false;
+		        }
+		    });
 		}
 		else {
 			productFactory.addLike(article);
