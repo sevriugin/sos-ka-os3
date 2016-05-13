@@ -526,23 +526,80 @@ var SampleApp = function() {
        
         self.app.post('/api/comment', jsonParser, function(req, res) {
         	console.log('/POST request to /api/comment');
-        				  
-          	// Sending mail
-          	mailOptions['subject']	= 'New comment for ' + req.body.comment.article.title;
-          	mailOptions['to']		= 'order@mg.sos-ka.com';
-        	mailOptions['html'] 	= req.body.comment.message;
-        	mailOptions['replyTo'] 	= req.body.comment.email;
-        	mailOptions['cc'] 		= '';
-          				  
-          	//send mail with defined transport object
-          	transporter.sendMail(mailOptions, function(error, info) {
-          		if(error) {
-          			return console.log(error);
-          		}
-          		console.log('Message sent: ' + info.response);
-          	});
-          	
-          	res.status(200).json({status:"ok"});
+        	
+        	var comment 		= {};
+    		
+        	comment.id			= req.body.comment.article.id;
+        	comment.likes		= 1;
+        	comment.comments	= 1;
+        	comment.messages	= [{user:req.body.comment.email, message:req.body.comment.message}];
+        	
+        	console.log('api/comment/comment : ', comment);
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+        		if(err) { return res.status(500).json({status:"error", message:err }); }
+        		
+        		var select 		= {id:comment.id};
+          	  	var update		= {$inc:{likes:1, comments:1}, $push:{messages:comment.messages[0]}};
+          	  	var coll		= db.collection('shop.comments');
+        	
+          	  	coll.find(select).toArray(function(err, docs) {
+          	  		if(err) { return res.status(500).json({status:"error", message:err }); }
+          	  		
+          	  		var count = docs.length;
+          	  		console.log('/api/comment/comment find count : %d', count );
+          	  		
+          	  		if(count == 0) {
+          	  			// insert new comment
+          	  			coll.insertOne(comment, function(err, r) {
+          	  				if(err) { return res.status(500).json({status:"error", message:err }); }
+          	  				console.log('/api/comment/comment inserted : %d', r.insertedCount );
+
+          	  				// Sending mail
+          	  				mailOptions['subject']	= 'New comment for ' + req.body.comment.article.title;
+          	  				mailOptions['to']		= 'order@mg.sos-ka.com';
+          	  				mailOptions['html'] 	= req.body.comment.message;
+          	  				mailOptions['replyTo'] 	= req.body.comment.email;
+          	  				mailOptions['cc'] 		= '';
+            				  
+          	  				//send mail with defined transport object
+          	  				transporter.sendMail(mailOptions, function(error, info) {
+          	  					if(error) {
+          	  						return console.log(error);
+          	  					}
+          	  					console.log('Message sent: ' + info.response);
+          	  				});
+          	  				res.status(200).json({status:"ok"});
+          	  				db.close();
+      	  				})
+          	  		}
+          	  		else {
+          	  			console.log('/api/comment/comment before update : ', docs[0] );
+          	  			// update selected comment
+          	  			coll.updateOne(select, update, function(err, r) {
+          	  				if(err) { return res.status(500).json({status:"error", message:err }); }
+          	  				console.log('api/comments/comment updated : %d', r.modifiedCount );
+
+          	  				// Sending mail
+          	  				mailOptions['subject']	= 'New comment for ' + req.body.comment.article.title;
+          	  				mailOptions['to']		= 'order@mg.sos-ka.com';
+          	  				mailOptions['html'] 	= req.body.comment.message;
+          	  				mailOptions['replyTo'] 	= req.body.comment.email;
+          	  				mailOptions['cc'] 		= '';
+                				  
+          	  				//send mail with defined transport object
+          	  				transporter.sendMail(mailOptions, function(error, info) {
+          	  					if(error) {
+          	  						return console.log(error);
+          	  					}
+          	  					console.log('Message sent: ' + info.response);
+          	  				});
+          	  				res.status(200).json({status:"ok"});
+          	  				db.close();
+          	  			})
+          	  		}
+          	  	})
+        	})
         });
         
         self.app.post('/api/contactmsg', jsonParser, function(req, res) {
