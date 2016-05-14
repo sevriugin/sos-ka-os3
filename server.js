@@ -523,6 +523,32 @@ var SampleApp = function() {
           	  })
         	})
         });
+        
+        self.app.post('/api/comments', jsonParser, function(req, res) {
+        	console.log('/POST request to /api/comments');
+        	
+        	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
+          	  if(err) { return res.status(500).json({status:"error", message:err }); }
+        		  
+          	  var select 		= {};
+          	  var coll			= db.collection('shop.comments');
+          	    
+          	  coll.find(select).toArray(function(err, docs) {
+          		  if(err) { return res.status(500).json({status:"error", message:err }); }
+          		  
+          		  var count = docs.length;
+          		  console.log('/api/comments/number of comments : %d', count );
+        			  
+          		  if(count > 0) {
+          			  res.status(200).json({status:"ok", comments:docs});
+          		  }
+          		  else {
+          			  res.status(202).json({status:"error", message:"No comments selected" });
+          		  }
+          		  db.close();
+          	  })
+        	})	
+        });
        
         self.app.post('/api/comment', jsonParser, function(req, res) {
         	console.log('/POST request to /api/comment');

@@ -50,7 +50,8 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                        "success" : false,
 	                        "dataLoading" : false,
 	                        "isComment:" : false,
-	                        "comment":""
+	                        "comment":"",
+	                        "messages":[]
 	                    },
 	                    {
 	                       	"key": 2,
@@ -67,7 +68,8 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                        "success" : false,
 	                        "dataLoading" : false,
 	                        "isComment:" : false,
-	                        "comment":""
+	                        "comment":"",
+	                        "messages":[]
 	                    }
 	                ];
 	
@@ -76,6 +78,27 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.error	= {};
 	service.contact	= {};
 	service.comment = {};
+	
+	service.loadComments = function() {
+		
+		$http.post('/api/comments')
+    	.then(function(response) {
+	    	if(response.status == 200) {
+	    		if(response.data.comments) {
+	    			angular.forEach(response.data.comments, function(comment) {
+	    				for(var i = 0, len = service.articles.length; i < len; i++) {
+	    					if(service.articles[i].id === comment.id) {
+	    						service.articles[i].comments 	= comment.comments;
+	    						service.articles[i].likes 		= comment.likes;
+	    						angular.copy(comment.messages, service.articles[i].messages);
+	    						return;
+	    					}
+	    				}
+	    			})
+	    		}
+	        }
+	    });
+	};
 	
 	service.loadOrders = function(username) {
 		if(!username) {
@@ -908,6 +931,8 @@ productControllers.controller('ArticleListCtrl', ['$scope', '$rootScope', '$rout
 	$scope.productClass = function(product) {
 		return product.style;
 	};
+	
+	productFactory.loadComments();
 	
 	$scope.username = AuthenticationService.getUsername();
 	
