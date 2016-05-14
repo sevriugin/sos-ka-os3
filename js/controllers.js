@@ -948,6 +948,14 @@ productControllers.controller('ArticleListCtrl', ['$scope', '$rootScope', '$rout
     	return result;
     }
 	
+	$scope.getMessages = function(messages) {
+		result = '';
+		angular.forEach(messages, function(message) {
+			result = result + message.user.substr(0,5) + '**** : '+ message.message + ' \n\n';
+		})
+		return result;
+	}
+	
 	$scope.default_comment = function() {
 		return ($scope.registered() ? 'ваш комментарий' : 'для того, чтобы оставить комментарий войдите или зарегистрируйтесь');
 	}

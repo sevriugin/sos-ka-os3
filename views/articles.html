@@ -35,6 +35,16 @@
 			<div class="product-detail">
 				<p>{{article.snippet}}</p>
 			</div>
+			<div class="paging clearfix">
+				<button class="btn btn-outline" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Читать комментарии
+				</button>
+			</div>
+			<div class="collapse" id="collapseExample">
+  				<div class="well">
+    				<pre>{{getMessages(article.messages)}}</pre>
+  				</div>
+			</div>
 			<div ng-show="article.success && article.isComment" id="alert-contact"> 
 				<div class="alert alert-success" role="alert"><strong>ВАШЕ КОММЕНТАРИЙ ОТПРАВЛЕН</strong></div>
 			</div>
