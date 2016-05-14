@@ -36,11 +36,11 @@
 				<p>{{article.snippet}}</p>
 			</div>
 			<div class="paging clearfix">
-				<button class="btn btn-outline" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+				<button class="btn btn-outline" type="button" data-toggle="collapse" data-target="#collapseExample-{{$index}}" aria-expanded="false" aria-controls="collapseExample-{{$index}}">
 					Читать комментарии
 				</button>
 			</div>
-			<div class="collapse" id="collapseExample">
+			<div class="collapse" id="collapseExample-{{$index}}">
   				<div class="well">
     				<pre>{{getMessages(article.messages)}}</pre>
   				</div>
