@@ -966,6 +966,7 @@ productControllers.controller('ArticleListCtrl', ['$scope', '$rootScope', '$rout
 			productFactory.SendComment(function(response) {
 		    	if(response.status == 200) {
 		    		productFactory.addComment(article);
+		    		productFactory.loadComments();
 		        } else {
 		        	$scope.error 		= response.data.message;
 		            article.dataLoading = false;
