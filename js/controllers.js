@@ -56,10 +56,10 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                    {
 	                       	"key": 2,
 	                        "id": "article-02",
-	                        "imageUrl": "img/article-02.jpg", 
-	                        "title": "Пережиток прошлого или необходимость", 
+	                        "imageUrl": "img/article-02-14.jpg", 
+	                        "title": "Пережиток прошлого или необходимость?", 
 	                        "snippet": "Будете ли вы пеленать ребёнка или нет, лучше всего решить заранее. Дело в том, что малыш привыкает к тому, что предоставляют ему с первых дней, и изменить решение будет довольно трудно.",
-	                        "images": ["img/article-02.jpg","img/article-02-09.jpg"],
+	                        "images": ["img/article-02-14.jpg","img/article-02-13.jpg"],
 	                        "web": "https://www.sos-ka.com/article-02",
 	                        "style" : "col-sm-8",
 	                        "details" : "Пеленать или нет? Я уверена, что каждая мама в ожидании малыша задумывается над этим вопросом. Не ошибусь, если предположу, что большая часть мам заочно принимает решение никогда не пеленать, не ограничивать свободу малышу. Но, как показывает практика, 90% из этих числа мам с появлением малыша меняют своё решение в сторону пеленания на первые 1-3 месяца, а может и дольше, в зависимости от необходимости.",
@@ -953,6 +953,9 @@ productControllers.controller('ArticleListCtrl', ['$scope', '$rootScope', '$rout
 		angular.forEach(messages, function(message) {
 			result = result + message.user.substr(0,5) + '**** : '+ message.message + ' \n\n';
 		})
+		if(result == '') {
+			result = 'НЕТ КОММЕНТАРИЕВ';
+		}
 		return result;
 	}
 	
