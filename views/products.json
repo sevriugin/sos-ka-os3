@@ -3,6 +3,7 @@
     	"key": 100,
     	"qty": 1,
     	"cost": 2000,
+    	"oldCost": 2200,
         "id": "tessa-turtle",
         "age": "0-6 мес",
         "productType" : "Соска",

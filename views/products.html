@@ -35,6 +35,7 @@
 					<span class="productlist-price-container">
 						<span class="product-price">
 							<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "продано"}}</span>
+							<span ng-if="product.oldCost" class="original-price">{{product.oldCost | currency:"₽ ":0 }}</span>
 						</span>
 					</span> 
 				</a>
