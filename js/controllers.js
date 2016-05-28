@@ -34,6 +34,20 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                    }
 	                ];
 	
+	service.partners = [
+	                    {
+	                       	"key": 0,
+	                        "id": "mariya-lugovaya",
+	                        "imageUrl": "img/mariya-lugovaya.jpg", 
+	                        "title": "Mariya Lugovaya", 
+	                        "snippet": "Мария Луговая  будет рада приветствовать Вас на своём сайте www.newbornstory.ru Мария - детский и семейный фотограф с 2008 года. Живёт и работает в Москве и МО. Мария очень рада, что её хобби переросло в самую любимую работу! Она мама двух замечательных девочек, с их рождением, Мария поняла, как важны и дороги фотографии детей! Как хочется запомнить и сохранить в памяти каждый день, каждое достижение! 'Особое место для меня занимает съемка новорожденных. Каждый малыш уникален, я рада,  что имею возможность подарить Вам на долгую память воспоминания о том, каким крошечным он был. Ведь растут они очень быстро, и уже через месяц он будет другим.' - говорит Мария о своей работе.",
+	                        "images": ["img/mariya-lugovaya.jpg"],
+	                        "web": "http://www.newbornstory.ru",
+	                        "style" : "col-sm-8",
+	                        "details" : "Мария Луговая  будет рада приветствовать Вас на своём сайте www.newbornstory.ru Мария - детский и семейный фотограф с 2008 года. Живёт и работает в Москве и МО. Мария очень рада, что её хобби переросло в самую любимую работу! Она мама двух замечательных девочек, с их рождением, Мария поняла, как важны и дороги фотографии детей! Как хочется запомнить и сохранить в памяти каждый день, каждое достижение! 'Особое место для меня занимает съемка новорожденных. Каждый малыш уникален, я рада,  что имею возможность подарить Вам на долгую память воспоминания о том, каким крошечным он был. Ведь растут они очень быстро, и уже через месяц он будет другим.' - говорит Мария о своей работе."
+	                     }
+	                ];
+	
 	service.articles = [
 	                    {
 	                       	"key": 0,
@@ -925,6 +939,38 @@ productControllers.controller('VendorListCtrl', ['$scope', '$routeParams', 'prod
     	$scope.query	= $routeParams.vendorId;
     }
 }]);
+
+productControllers.controller('PartnerListCtrl', ['$scope', '$routeParams', 'productFactory', function ($scope, $routeParams, productFactory) {
+	
+	$scope.productClass = function(product) {
+		return product.style;
+	};
+	
+	$scope.qty			= function() { 
+    	return productFactory.qty(); 
+    };
+	
+    $scope.menuOpen		= false;
+    $scope.menuToggle	= function() {
+    	$scope.menuOpen	= $scope.menuOpen ? false : true;
+    }
+    
+    $scope.viewClass	= function() {
+    	return ($scope.menuOpen ? 'menu-open' : '');
+    }
+    
+    $scope.menuClass	= function() {
+    	return ($scope.menuOpen ? 'menu-wrapper menu-front' : 'menu-wrapper');
+    }
+    
+	$scope.partners	 	= productFactory.partners;
+	$scope.query		= '';
+    
+    if($routeParams.partnerId) {
+    	$scope.query	= $routeParams.partnerId;
+    }
+}]);
+
 
 productControllers.controller('ArticleListCtrl', ['$scope', '$rootScope', '$routeParams', 'AuthenticationService', 'productFactory', function ($scope, $rootScope, $routeParams, AuthenticationService, productFactory) {
 	

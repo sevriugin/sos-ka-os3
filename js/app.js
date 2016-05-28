@@ -21,6 +21,10 @@ storeApp.config(['$routeProvider',
 								templateUrl: 'views/vendors.html',
 								controller: 'VendorListCtrl'
 							}).
+							when('/partners', {
+								templateUrl: 'views/partners.html',
+								controller: 'PartnerListCtrl'
+							}).
 							when('/vendorProducts/:vendorId', {
 								templateUrl: 'views/products.html',
 								controller: 'ProductListCtrl'
@@ -28,6 +32,10 @@ storeApp.config(['$routeProvider',
 							when('/vendor/:vendorId', {
 								templateUrl: 'views/vendors.html',
 								controller: 'VendorListCtrl'
+							}).
+							when('/partner/:partnerId', {
+								templateUrl: 'views/partners.html',
+								controller: 'PartnerListCtrl'
 							}).
 							when('/cart', {
 								templateUrl: 'views/cart.html',
