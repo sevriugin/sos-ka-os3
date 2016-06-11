@@ -6,7 +6,6 @@ yml_catalog(date="#{date}")
 		| <url>https://www.sos-ka.com</url>
 		currencies
 			currency(id="RUR" rate="1")
-			currency(id="USD" rate="70")
 		categories
 			category(id="1000")
 				| Товары по уходу за тетьми от 0 до 3 лет
@@ -22,6 +21,7 @@ yml_catalog(date="#{date}")
 				offer(id="#{product.id}" available="#{product.available}" bid="#{product.bid}" cbid="#{product.cbid}")
 					| <url>#{product.url}</url>
 					price #{product.price}
+					oldprice #{product.oldprice}
 					currencyId #{product.currencyId}
 					categoryId #{product.categoryId}
 					picture #{product.picture}

@@ -571,6 +571,9 @@ productControllers.factory('productFactory', ['$http', function ($http) {
     		 yandexProduct.cbid						= "43";
     		 yandexProduct.url						= "https://www.sos-ka.com/index.html#/products/" + product.id;
     		 yandexProduct.price					= product.cost;
+    		 if(product.oldCost) {
+    			 yandexProduct.oldprice				= product.oldCost; 
+    		 }
     		 yandexProduct.currencyId				= "RUR";
     		 yandexProduct.categoryId				= "1100";
     		 yandexProduct.picture					= "https://www.sos-ka.com/" + product.imageUrl;
