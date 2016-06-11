@@ -241,7 +241,7 @@
     },
     {
     	"key": 200,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1200,
     	"oldCost": 1500,
         "id": "ella-elefant",
@@ -256,7 +256,7 @@
     },
     {
     	"key": 201,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1200,
     	"oldCost": 1500,
         "id": "happy-hippo",
