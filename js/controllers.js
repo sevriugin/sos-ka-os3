@@ -99,10 +99,10 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	                    {
 	                       	"key": 3,
 	                        "id": "article-03",
-	                        "imageUrl": "img/article-03-01.jpg", 
+	                        "imageUrl": "img/nookums-04.jpg", 
 	                        "title": "Почему малыш может срыгивать и что с этим делать?", 
 	                        "snippet": "Молодых мам часто пугает срыгивания малыша и присутствует страх, что малыш во сне может захлебнуться срыгиваемой массой. Разберёмся что это и как быть.",
-	                        "images": ["img/article-03-01.jpg"],
+	                        "images": ["img/nookums-04.jpg"],
 	                        "web": "https://www.sos-ka.com/article-03",
 	                        "style" : "col-sm-8",
 	                        "details" : "Молодых мам часто пугает срыгивания малыша и присутствует страх, что малыш во сне может захлебнуться срыгиваемой массой. Разберёмся что это и как быть.",
