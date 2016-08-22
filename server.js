@@ -107,11 +107,12 @@ var SampleApp = function() {
      */
     self.populateCache = function() {
         if (typeof self.zcache === "undefined") {
-            self.zcache = { 'index.html': '' };
+            self.zcache = { 'index.html': '', 'mail.html': '' };
         }
 
         //  Local cache for static content.
         self.zcache['index.html'] = fs.readFileSync('./index.html');
+        self.zcache['mail.html'] = fs.readFileSync('./views/minty/index.html');
     };
 
 
@@ -241,10 +242,32 @@ var SampleApp = function() {
         		}
         	});
         };
+        
+        self.routes['/mail'] = function(req, res) {
+        	
+        	console.log('/mail');
+        	
+        	// Sending mail
+          	mailOptions['subject']	= 'SOS-ka Shop Info';
+          	mailOptions['to']		= 'test@mg.sos-ka.com';
+        	mailOptions['text'] 	= '';
+        	mailOptions['html'] 	= self.cache_get('mail.html');
+        	mailOptions['cc'] 		= '';
+          				  
+          	//send mail with defined transport object
+          	transporter.sendMail(mailOptions, function(error, info) {
+          		if(error) {
+          			return console.log(error);
+          		}
+          		console.log('Message sent: ' + info.response);
+          	});
+          	
+          	res.setHeader('Content-Type', 'text/html');
+            res.send(self.cache_get('mail.html') );
+        	
+        };
     };
 
-
-    
     self.redirectSec = function(req, res, next) {
     	  if (req.headers['x-forwarded-proto'] == 'http') {
     	      res.redirect('https://' + req.headers.host + req.path);
