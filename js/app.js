@@ -4,7 +4,8 @@ var storeApp = angular.module('storeApp', [
                               'ngCookies',
                               'productControllers', 
                               'angulartics', 
-                              'angulartics.google.analytics']);
+                              'angulartics.google.analytics',
+                              'angularMoment']);
 
 storeApp.config(['$routeProvider',
 	                 	function($routeProvider, $analyticsProvider) {
@@ -98,8 +99,9 @@ storeApp.config(['$routeProvider',
 							});
 }]);
 
-storeApp.run(['$rootScope', '$location', '$cookieStore', '$http',
+storeApp.run(['$rootScope', '$location', '$cookieStore', '$http', 'amMoment',
       function ($rootScope, $location, $cookieStore, $http, amMoment) {
+		amMoment.changeLocale('ru');
           // keep user logged in after page refresh
           $rootScope.globals = $cookieStore.get('globals') || {};
           if ($rootScope.globals.currentUser) {

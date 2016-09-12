@@ -345,8 +345,26 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 												br
 												| Телефон: #{invoice.phone}  e-mail: #{invoice.email} 
 												br
-												| Адрес доставки : #{invoice.address} #{invoice.address2}
-												|                  #{invoice.city}, #{invoice.postal} 
+												if invoice.delivery_option == "takeaway"
+													| Адрес самовывоза : 125466, г.Москва, ул. Родионовская дом 10, кор. 1, Магазин "Детский", тел.: +7 (499) 401-96-86
+													br
+												else
+													| Адрес доставки : #{invoice.address} #{invoice.address2}
+													|                  #{invoice.city}, #{invoice.postal} 
+													br
+												| Предпочтительная дата 
+												if invoice.delivery_option == "takeaway"
+													| самовывоза
+												else
+													| доставки 
+												| : #{invoice.delivery_date}
+												br
+												| Предпочтительное время 
+												if invoice.delivery_option == "takeaway"
+													| самовывоза
+												else
+													| доставки 
+												| : #{invoice.delivery_time}
 												br
 												| Вы заказали следующий товар :
 							tr

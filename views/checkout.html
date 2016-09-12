@@ -82,6 +82,61 @@
         				<span ng-show="form.phone.$error.pattern || form.phone.$error.minlength" class="form-control">НЕПРАВИЛЬНЫЙ ФОРМАТ ТЕЛЕФОНА</span>
 					</div>
 					<div class="row">
+						<div class="col-sm-6">
+							<p>Способ доставки</p>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label" for="takeaway">способ доставки</label>
+        						<i class="fa fa-key"></i>
+        						<select id="delivery" class="form-control" ng-model="takeaway" tabindex="3" required>
+									<option disabled="disabled" selected="selected" value="">способ доставки</option>
+									<option value="delivery">курьер</option>
+									<option value="takeaway">самовывоз</option>
+								</select>
+        						<span ng-show="form.delivery.$dirty && form.delivery.$error.required" class="form-control">ПОЖАЛУЙСТА, СПОСОБ ДОСТАВКИ</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<p>Предпочтительный день доставки / самовывоза</p>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label" for="delivery">день доставки</label>
+        						<i class="fa fa-key"></i>
+        						<select id="delivery" class="form-control" ng-model="delivery" tabindex="7" required>
+									<option disabled="disabled" selected="selected" value="">день доставки</option>
+									<option value="2">{{moment | amAdd : '2' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="3">{{moment | amAdd : '3' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="4">{{moment | amAdd : '4' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="5">{{moment | amAdd : '5' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="6">{{moment | amAdd : '6' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="7">{{moment | amAdd : '7' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+								</select>
+        						<span ng-show="form.delivery.$dirty && form.delivery.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ДЕНЬ ДОСТАВКИ</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<p>Предпочтительный время доставки / самовывоза</p>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="control-label" for="time">время доставки</label>
+        						<i class="fa fa-key"></i>
+        						<select id="time" class="form-control" ng-model="time" tabindex="3" required>
+									<option disabled="disabled" selected="selected" value="">время доставки</option>
+									<option value="с 10 до 14">с 10 до 14</option>
+									<option value="с 14 до 19">с 14 до 19</option>
+								</select>
+        						<span ng-show="form.time.$dirty && form.time.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВРЕМЯ ДОСТАВКИ</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
 						<div class="col-sm-10">
 							<p>Я принимаю <a href="#/terms">условия и правила</a> работы интернет-магазина и даю согласие на обработку персональной информации</p>
 						</div>

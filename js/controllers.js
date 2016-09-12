@@ -459,7 +459,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		return tax;
 	};
 	
-	service.setOrder = function(username, firstname, lastname, email, address, address2, city, postal, phone, total, amount, delivery, tax, totalAmount) {
+	service.setOrder = function(username, firstname, lastname, email, address, address2, city, postal, phone, total, amount, delivery, tax, totalAmount, delivery_option, delivery_date, delivery_time) {
 		
 		if(username) {
 			service.invoice.username	= username;
@@ -482,6 +482,9 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		service.invoice.delivery		= delivery;
 		service.invoice.tax				= tax;
 		service.invoice.totalAmount		= totalAmount;
+		service.invoice.delivery_option	= delivery_option;
+		service.invoice.delivery_date	= delivery_date;
+		service.invoice.delivery_time	= delivery_time;
 	};
 	
 	service.order = function (callback) {
@@ -688,12 +691,17 @@ productControllers.controller('orderListCtrl', ['$scope', '$location', 'productF
 }]);
 
 
-productControllers.controller('checkoutController', ['$scope', '$location', 'productFactory', 'AuthenticationService', function ($scope, $location, productFactory, AuthenticationService) {
+productControllers.controller('checkoutController', ['$scope', '$location', 'productFactory', 'AuthenticationService', 'moment', function ($scope, $location, productFactory, AuthenticationService, moment) {
 	
 	$scope.tax 				= 20;
 	$scope.invoice 			= productFactory.invoice;
 	$scope.success 			= false;
 	$scope.dataLoading 		= false;
+	$scope.takeaway 		= '';
+	$scope.delivery			= '';
+	$scope.time				= '';
+	
+	$scope.moment			= moment();
 	
 	
 	$scope.total = function() {
@@ -716,7 +724,10 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 								$scope.total(),
 								$scope.shiping(),
 								$scope.tax(),
-								$scope.total() + $scope.shiping() + $scope.tax()
+								$scope.total() + $scope.shiping() + $scope.tax(),
+								$scope.takeaway,
+								moment().add($scope.delivery, 'days').format('dddd Do MMMM YYYY'),
+								$scope.time
 								);
 		
 		
@@ -734,6 +745,9 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 	};
 
 	$scope.shiping = function() {
+		if($scope.takeaway == 'takeaway') {
+			return 0
+		}
 		return productFactory.shiping();
 	}
 	
