@@ -99,7 +99,7 @@ storeApp.config(['$routeProvider',
 }]);
 
 storeApp.run(['$rootScope', '$location', '$cookieStore', '$http',
-      function ($rootScope, $location, $cookieStore, $http) {
+      function ($rootScope, $location, $cookieStore, $http, amMoment) {
           // keep user logged in after page refresh
           $rootScope.globals = $cookieStore.get('globals') || {};
           if ($rootScope.globals.currentUser) {

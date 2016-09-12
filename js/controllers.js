@@ -695,6 +695,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 	$scope.success 			= false;
 	$scope.dataLoading 		= false;
 	
+	
 	$scope.total = function() {
 		return productFactory.total();
 	}
