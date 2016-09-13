@@ -11,8 +11,11 @@
 
 	<div class="container-fluid title">
 		<div class="row">
-			<div class="col-sm-12">
+			<div ng-if="!itsUpdate" class="col-sm-12">
 				<h2>ОФОРМИТЬ ЗАКАЗ</h2>
+			</div>
+			<div ng-if="itsUpdate" class="col-sm-12">
+				<h2>ИЗМЕНИТЬ ЗАКАЗ {{updateId()}}</h2>
 			</div>
 		</div>
 	</div>

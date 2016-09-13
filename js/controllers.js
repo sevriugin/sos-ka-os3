@@ -139,6 +139,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.error	= {};
 	service.contact	= {};
 	service.comment = {};
+	service.update 	= {};
 	
 	service.loadComments = function() {
 		
@@ -459,7 +460,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		return tax;
 	};
 	
-	service.setOrder = function(username, firstname, lastname, email, address, address2, city, postal, phone, total, amount, delivery, tax, totalAmount, delivery_option, delivery_date, delivery_time) {
+	service.setOrder = function(username, firstname, lastname, email, address, address2, city, postal, phone, total, amount, delivery, tax, totalAmount, delivery_option, delivery_date, delivery_time, updateId) {
 		
 		if(username) {
 			service.invoice.username	= username;
@@ -485,6 +486,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		service.invoice.delivery_option	= delivery_option;
 		service.invoice.delivery_date	= delivery_date;
 		service.invoice.delivery_time	= delivery_time;
+		service.invoice.updateId		= updateId;
 	};
 	
 	service.order = function (callback) {
@@ -700,9 +702,33 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 	$scope.takeaway 		= '';
 	$scope.delivery			= '';
 	$scope.time				= '';
+	$scope.itsUpdate		= false;
 	
 	$scope.moment			= moment();
 	
+	if(productFactory.update.phone) {
+		$scope.itsUpdate	= true;
+	}
+	
+	if(productFactory.update.phone) {
+		$scope.username		= productFactory.update.username;
+		$scope.firstname 	= productFactory.update.firstname; 
+		$scope.lastname 	= productFactory.update.lastname;
+		$scope.email 		= productFactory.update.email; 
+		$scope.address 		= productFactory.update.address; 
+		$scope.address2 	= productFactory.update.address2;
+		$scope.city			= productFactory.update.city; 
+		$scope.postal 		= productFactory.update.postal; 
+		$scope.phone		= productFactory.update.phone;
+		$scope.takeaway		= productFactory.update.takeaway;
+	}
+	
+	$scope.updateId	= function() {
+		if($scope.itsUpdate) {
+			return productFactory.update.id;
+		}
+		return null;
+	}
 	
 	$scope.total = function() {
 		return productFactory.total();
@@ -727,9 +753,9 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 								$scope.total() + $scope.shiping() + $scope.tax(),
 								$scope.takeaway,
 								moment().add($scope.delivery, 'days').format('dddd Do MMMM YYYY'),
-								$scope.time
+								$scope.time,
+								$scope.updateId()
 								);
-		
 		
 		productFactory.order(function(response) {
 		    	if(response.status == 200) {
@@ -1130,7 +1156,7 @@ productControllers.controller('OrderDetailCtrl', ['$scope', '$routeParams', 'pro
 	$scope.dataLoading 	= false;
 	
 	$scope.changeStatus	= function() {
-		
+		productFactory.update = $scope.order
 	};
 	
 	$scope.qty			= function() { 
@@ -1205,7 +1231,16 @@ productControllers.controller('cartController', ['$scope', '$routeParams', 'prod
 	$scope.tax 			= productFactory.tax();
 	$scope.invoice 		= productFactory.invoice;
 	$scope.menuOpen		= false;
+	$scope.itsUpdate	= false; 
 
+	if(productFactory.update.phone) {
+		$scope.itsUpdate	= true;
+	}
+	
+	$scope.skipUpdate	= function() {
+		productFactory.update = {}
+	}
+	
 	$scope.qty			= function() { 
     	return productFactory.qty(); 
     };

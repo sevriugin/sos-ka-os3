@@ -94,7 +94,8 @@
 							  </tbody>
 							</table>
 						
-							<a analytics-on analytics-event="CHECKOUT" href="#/checkout" class="btn btn-right">Оформить заказ</a>
+							<a analytics-on analytics-event="CHECKOUT" href="#/checkout" class="btn btn-right" ng-click="skipUpdate()">Оформить заказ</a>
+							<a ng-if="itsUpdate" analytics-on analytics-event="UPDATEORDER" href="#/checkout" class="btn btn-right">Изменить заказ</a>
 					</div>	
 				</div>
 

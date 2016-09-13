@@ -339,7 +339,10 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 												| #{invoice.firstname}, спасибо, что воспользовались нашим интернет-магазином
 												br
 												br
-												h2 Ваш заказ
+												if invoice.updateId
+													h2 Ваш заказ изменен
+												else
+													h2 Ваш заказ
 												h4 #{invoice.id}
 												| ФИО : #{invoice.firstname} #{invoice.lastname}
 												br

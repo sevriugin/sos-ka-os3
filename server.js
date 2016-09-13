@@ -351,7 +351,13 @@ var SampleApp = function() {
         	var imgPath		= 'http://bimbi-yabe.rhcloud.com/';
         		
         	invoice		 	= req.body.invoice;
-        	invoice.id		= 'Order #' + req.body.invoice.phone + '-' + Date(Date.now());
+        	
+        	if(req.body.invoice.updateId) {
+        		invoice.id	= req.body.invoice.updateId + '*';
+        	}
+        	else {
+        		invoice.id	= 'Order #' + req.body.invoice.phone + '-' + dateFormat(Date.now(),"yyyy-mm-dd hh:MM");
+        	}
         	
         	for (var i = 0, len = invoice.items.length; i < len; i++) {
         		invoice.items[i].imgUrl	= imgPath + invoice.items[i].imgUrl;
