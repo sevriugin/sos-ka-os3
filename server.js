@@ -323,7 +323,7 @@ var SampleApp = function() {
           	  var coll			= db.collection('shop.orders');
           	  select.username 	= user.username;
           	  
-          	  if(user.username == 'admin') {
+          	  if(user.username == 'admin' || user.username == 'sevriugin@gmail.com' || user.username == 'sevriugina@gmail.com') {
           		  select = {};
           	  }
         		  
@@ -376,7 +376,7 @@ var SampleApp = function() {
         		  
           	  var select 		= {};
           	  var coll			= db.collection('shop.orders');
-          	  select.username 	= invoice.username;
+          	  select.email	 	= invoice.email;
         		  
           	  coll.find(select).count(function(err, count) {
           		  if(err) { return res.status(500).json({status:"error", message:err }); }
@@ -390,7 +390,7 @@ var SampleApp = function() {
           			  var fn = jade.compileFile('./views/order_email.jade');
 
           			  // Render the function
-          			  var html = fn({invoice:invoice});
+          			  var html = fn({invoice:invoice, count:count + 1});
           				  
           			  // Sending mail
           			  mailOptions['subject']	= invoice.id;

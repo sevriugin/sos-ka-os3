@@ -185,13 +185,13 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	}
 	
 	service.getOrderBy	= function(orderId) {
-		return service.orders[orderId];
-	//	for (var i = 0, len = service.orders.length; i < len; i++) {
-	//		if (service.orders[i].id === orderId) {
-	//			return service.orders[i];
-	//		}
-	//	}
-	//	return null;
+		// return service.orders[orderId];
+		for (var i = 0, len = service.orders.length; i < len; i++) {
+			if (service.orders[i]._id === orderId) {
+				return service.orders[i];
+			}
+		}
+		return null;
 	};
 	
 	service.loadProducts = function() {

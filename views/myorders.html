@@ -14,6 +14,11 @@
 			<h2>My Orders</h2>
 		</div>
 	</div>
+	<form name="search_form" role="form" class="myform">
+		<div class="form-group">
+        	<input type="text" name="search" id="search" placeholder="Search" class="form-control" ng-model="search"/>
+		</div>
+	</form>
 </div>
 
 <div class="container-fluid cart-list">
@@ -24,27 +29,20 @@
 				<thead>
 					<tr>
 						<th>ID</th>
+						<th>Email</th>
 						<th class="text-center">Quantity</th>
 						<th class="text-right">Sub total</th>
 						<th class="text-right">Total</th>
-						<th></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng:repeat="order in orders">
-						<td class="vert-align"><a href="#/orders/{{$index}}">{{ order.id }}</a></td>
-						<td class="text-center vert-align"><input type="number" min="1" max="9" ng:model="order.total" ng:required class="form-control form-control-inline" style="width: 52px!important;" disabled></td>
+					<tr ng:repeat="order in orders | filter:search">
+						<td class="vert-align"><a href="#/orders/{{order._id}}">{{order.id.substr(0,35) + '...'}}</a></td>
+						<td class="vert-align">{{ order.email }}</td>
+						<td class="text-center vert-align">{{ order.total }}</td>
 						<td class="text-right vert-align">{{ order.amount | currency:"₽ ":0 }}</td>
 						<td class="text-right vert-align">{{ order.totalAmount | currency:"₽ ":0 }}</td>
-						<td class="text-center vert-align"><a href="#/orders" ng:click="removeItem($index)" class="remove-item"><i class="icon-close"></i></a></td>
-					</tr>	
-<!-- 				<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr> -->
+					</tr>
 					<tr ng-if="ordersNumber() == 0">
 						<td colspan="5">
 							<h2 class="text-center">You don't have any orders</h2>
