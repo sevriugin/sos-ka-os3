@@ -16,7 +16,7 @@
 	</div>
 	<form name="search_form" role="form" class="myform">
 		<div class="form-group">
-        	<input type="text" name="search" id="search" placeholder="Search" class="form-control" ng-model="search"/>
+        	<input type="text" name="search" id="search" placeholder="Search" class="form-control" ng-model="pf.search"/>
 		</div>
 	</form>
 </div>
@@ -36,7 +36,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng:repeat="order in orders | filter:search">
+					<tr ng:repeat="order in orders | filter:pf.search">
 						<td class="vert-align"><a href="#/orders/{{order._id}}">{{order.id.substr(0,35) + '...'}}</a></td>
 						<td class="vert-align">{{ order.email }}</td>
 						<td class="text-center vert-align">{{ order.total }}</td>

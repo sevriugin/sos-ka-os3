@@ -301,10 +301,10 @@
         "productType" : "Соска + держатель",
         "age": "0+",
         "vendor": "paci-plushies",
-        "imageUrl": "img/dimpless-dragon.jpg", 
+        "imageUrl": "img/dimpless-dragon-new.png", 
         "title": "Дракончик", 
         "snippet": "Храбрый дракон всегда рядом! Не потеряется из виду и не нарушит сон малыша, потому что не позволит соске выпадать из ротика.",
-        "images": ["img/dimpless-dragon.jpg"],
+        "images": ["img/dimpless-dragon-new.png"],
         "style" : "col-sm-4"
     },
     {
@@ -351,7 +351,7 @@
     },
     {
     	"key": 209,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1500,
         "id": "lovie-lamb-lovies",
         "productType" : "Соска + держатель",
@@ -527,7 +527,7 @@
     },
     {
     	"key": 404,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "Peanut-blue",
         "productType" : "Комфортер и держатель для соски",
@@ -541,7 +541,7 @@
     },
     {
     	"key": 405,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "Peanut-pink",
         "productType" : "Комфортер и держатель для соски",
@@ -597,7 +597,7 @@
     },
     {
     	"key": 409,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "Skipit-s-Silly-Buddy",
         "productType" : "Комфортер и держатель для соски",
@@ -607,6 +607,34 @@
         "title": "Собачка", 
         "snippet": "Милый щенок тёплого белого тона. Его наивный взгляд умиляет. Мягкий, как шёлк, невероятно приятный на ощупь. С помощью липучки на его левой лапке Вы сможете прикрепить и иметь всегда на виду соску Вашего малыша. Поэтому пустышку не возможно потерять, а собачка всегда будет следовать за малышом.",
         "images": ["img/Skipit-s-Silly-Buddy.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+    	"key": 410,
+    	"qty": 1,
+    	"cost": 1800,
+        "id": "Grady-bunny-silly",
+        "productType" : "Комфортер и держатель для соски",
+        "age": "0+", 
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Grady-bunny-silly.jpg", 
+        "title": "Серый зайка", 
+        "snippet": "Приятный как шёлк, серый зайка с липучкой на левой лапке. Он не устанет держать соску Вашего малыша. На левой лапке зайки есть замыкание на липучке, благодаря этому соска не потеряется, а зайка не даст скучать малышу.",
+        "images": ["img/Grady-bunny-silly.jpg"],
+        "style" : "col-sm-8"
+    },
+    {
+    	"key": 411,
+    	"qty": 1,
+    	"cost": 1800,
+        "id": "Bao-bao-bear",
+        "productType" : "Комфортер и держатель для соски",
+        "age": "0+", 
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Bao-bao-bear.jpg", 
+        "title": "Милый мишка", 
+        "snippet": "Приятный как шёлк, мягкий, мишка с липучкой на левой лапке, которая удержит соску или может быть прикреплена к коляске Вашего малыша.",
+        "images": ["img/Bao-bao-bear.jpg"],
         "style" : "col-sm-4"
     }
 ]

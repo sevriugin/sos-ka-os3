@@ -140,6 +140,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.contact	= {};
 	service.comment = {};
 	service.update 	= {};
+	service.search	= '';
 	
 	service.loadComments = function() {
 		
@@ -648,6 +649,7 @@ productControllers.controller('orderListCtrl', ['$scope', '$location', 'productF
 	$scope.username 	= AuthenticationService.getUsername();
 	$scope.error 		= '';
 	$scope.orders 		= [];
+	$scope.pf			= productFactory;
 	
 	productFactory.loadOrders($scope.username);
 	
