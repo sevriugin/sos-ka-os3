@@ -62,6 +62,10 @@ storeApp.config(['$routeProvider',
 								templateUrl: 'views/article-04.html',
 								controller: 'ArticleListCtrl'
 							}).
+							when('/article-05', {
+								templateUrl: 'views/article-05.html',
+								controller: 'ArticleListCtrl'
+							}).
 							when('/article/:articleId', {
 								templateUrl: 'views/articles.html',
 								controller: 'ArticleListCtrl'
