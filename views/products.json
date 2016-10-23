@@ -1,21 +1,4 @@
 [
-	{
-    	"key": 199,
-    	"qty": 1,
-    	"banner": true,
-    	"active": false,
-    	"cost": 2000,
-        "id": "tessa-turtle",
-        "age": "0-6 мес",
-        "productType" : "Соска",
-        "vendor": "mary-meyer",
-        "imageUrl": "img/image004.png", 
-        "title": "Реклама",
-        "url": "https://rega.site",
-        "snippet": "Черепаха с цветочками на панцыре, нежная и милая. Новинка 2016 года.",
-        "images": ["img/image004.png"],
-        "style" : "col-sm-12"
-    },
     {
     	"key": 100,
     	"qty": 1,
@@ -32,7 +15,7 @@
     }, 
     {
     	"key": 101,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "afrique-elefant",
         "productType" : "Соска",
@@ -74,7 +57,7 @@
     },
     {
     	"key": 104,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "little-stretch-giraffe",
         "productType" : "Соска",
@@ -116,7 +99,7 @@
     },
     {
     	"key": 107,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "jasmin-giraffe",
         "productType" : "Соска",
@@ -158,7 +141,7 @@
     },
     {
     	"key": 110,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "cutsie-caterpillar",
         "productType" : "Соска",
@@ -200,7 +183,7 @@
     },
     {
     	"key": 113,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "okey-dokey-dino",
         "productType" : "Соска",
