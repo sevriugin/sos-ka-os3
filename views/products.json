@@ -225,7 +225,7 @@
     },
     {
     	"key": 200,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1500,
         "id": "ella-elefant",
         "productType" : "Соска + держатель",
@@ -351,7 +351,7 @@
     },
     {
     	"key": 209,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1500,
         "id": "lovie-lamb-lovies",
         "productType" : "Соска + держатель",
@@ -365,7 +365,7 @@
     },
     {
     	"key": 210,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1500,
         "id": "jaxon-giraffe",
         "productType" : "Соска + держатель",
@@ -393,7 +393,7 @@
     },
     {
     	"key": 212,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1500,
         "id": "milo-monkey",
         "productType" : "Соска + держатель",
