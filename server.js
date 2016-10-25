@@ -670,7 +670,7 @@ var SampleApp = function() {
         	console.log('/POST request to /api/contactmsg');
         				  
           	// Sending mail
-          	mailOptions['subject']	= 'Message from ' + req.body.contact.firstname + ' ' + req.body.contact.lastname;
+          	mailOptions['subject']	= 'Message from ' + req.body.contact.firstname + ' ' + req.body.contact.lastname + ' ' + req.body.contact.phone;
           	mailOptions['to']		= 'order@mg.sos-ka.com';
         	mailOptions['html'] 	= req.body.contact.message;
         	mailOptions['replyTo'] 	= req.body.contact.email;

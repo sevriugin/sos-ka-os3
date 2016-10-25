@@ -535,7 +535,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
           	});
       };
   	
-     service.setContact = function(username, firstname, lastname, email, message) {
+     service.setContact = function(username, firstname, lastname, email, phone, message) {
  		
  		if(username) {
  			service.contact.username	= username;
@@ -544,6 +544,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
  		service.contact.firstname		= firstname;
  		service.contact.lastname		= lastname;
  		service.contact.email			= email;
+ 		service.contact.phone			= phone;
  		service.contact.message			= message;
  	};
      
@@ -837,10 +838,20 @@ productControllers.controller('aboutController', ['$scope','productFactory', fun
     }
 }]);
 
-productControllers.controller('contactController', ['$scope','productFactory', 'AuthenticationService', function ($scope, productFactory, AuthenticationService) {
+productControllers.controller('contactController', ['$scope', '$routeParams', 'productFactory', 'AuthenticationService', function ($scope, $routeParams, productFactory, AuthenticationService) {
 	
 	$scope.success 			= false;
 	$scope.dataLoading 		= false;
+	
+	if($routeParams.productId) {
+		$scope.productId 	= $routeParams.productId;
+		$scope.product 		= productFactory.setCurrent($scope.productId);
+		$scope.vendor		= productFactory.getVendor($scope.product.vendor);
+		$scope.message		= 'Прошу оформить заказ на ' +
+								$scope.product.productType + ' ' +
+								$scope.vendor.title + ' ' + 
+								$scope.product.title + ' в количестве : 1';
+	}
 	
 	$scope.qty			= function() { 
     	return productFactory.qty(); 
@@ -864,7 +875,8 @@ productControllers.controller('contactController', ['$scope','productFactory', '
 		productFactory.setContact(	$scope.username, 
 									$scope.firstname, 
 									$scope.lastname, 
-									$scope.email, 
+									$scope.email,
+									$scope.phone,
 									$scope.message);
 		
 		

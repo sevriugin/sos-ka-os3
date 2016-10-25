@@ -78,6 +78,10 @@ storeApp.config(['$routeProvider',
 								templateUrl: 'views/contact.html',
 								controller: 'contactController'
 							}).
+							when('/preorder/:productId', {
+								templateUrl: 'views/contact.html',
+								controller: 'contactController'
+							}).
 							when('/login', {
 								templateUrl: 'views/login.html',
 								controller: 'loginController'
