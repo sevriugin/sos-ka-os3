@@ -1,11 +1,11 @@
 <div id="main-nav" class="">
-				<div class="container-fluid">	
-					<div class="nav-header">
-							<a href="#/products" class="nav-brand"><img ng-src="img/logo.jpg" alt="item"></a>
-							<a class="nav-icon pull-right visible-xs menu-link" href="#/products" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
-							<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
-						</div>
-				</div>
+	<div class="container-fluid">	
+		<div class="nav-header">
+			<a href="#/products" class="nav-brand"><img ng-src="img/logo.jpg" alt="item"></a>
+			<a class="nav-icon pull-right visible-xs menu-link" href="#/products" ng-click="menuToggle()"><i class="icon-menu2"></i></a>
+			<a class="nav-icon-outline cart pull-right" href="#/cart"><i class="icon-cart"></i><span class="badge">{{qty()}}</span></a>
+		</div>
+	</div>
 </div>
 
 <div id="top" ng-if="queryActive()" class="container-fluid hidden-xs">
@@ -14,6 +14,27 @@
 			<li><a href="/">Коллекция</a></li>
 			<li class="active">{{vendor.title}}</li>
 		</ol>
+	</div>
+</div>
+
+<div class="container-fluid productlist">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="col-sm-12">&nbsp;</div>
+			<div class="col-sm-12">&nbsp;</div>
+		</div>
+	</div>
+	<div class="row">
+		<div ng-class="col-sm-12">
+			<a href="#/vendorProducts/paci-plushies">
+				<img ng-src="img/sale-10.jpg" class="img-responsive" alt="item">
+				<span class="productlist-price-container">
+					<span class="product-price">
+						<span class="price">АКЦИЯ</span>
+					</span>
+				</span>
+			</a>
+		</div>
 	</div>
 </div>
 

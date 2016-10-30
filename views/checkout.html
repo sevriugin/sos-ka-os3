@@ -154,6 +154,23 @@
         						<span ng-show="form.terms.$dirty && form.terms.$error.required" class="form-control">ПОЖАЛУЙСТА, ПРИМИТЕ УСЛОВИЯ И ПРАВИЛА</span>
 							</div>
 						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-10">
+							<p>Я хочу получать новости из магазина SOS-ka.com Shop</p>
+						</div>
+						<div class="col-sm-2">
+							<div class="form-group">
+								<label class="control-label" for="news">новости</label>
+        						<i class="fa fa-key"></i>
+        						<select id="news" class="form-control" ng-model="news" tabindex="2" required>
+									<option disabled="disabled" selected="selected" value="">---</option>
+									<option value="yes">да</option>
+									<option value="no">нет</option>
+								</select>
+        						<span ng-show="form.news.$dirty && form.news.$error.required" class="form-control">ПОЖАЛУЙСТА, ПРИМИТЕ УСЛОВИЯ РАССЫЛКИ НОВОСТЕЙ</span>
+							</div>
+						</div>
 					</div>	
 					<p><button analytics-on analytics-event="ORDER" type="submit" ng-disabled="form.$invalid || dataLoading || success" class="btn btn-store btn-block">Заказать</button></p>
         			<img ng-if="newdataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>		

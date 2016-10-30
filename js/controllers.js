@@ -479,7 +479,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		return tax;
 	};
 	
-	service.setOrder = function(username, firstname, lastname, email, address, address2, city, postal, phone, total, amount, delivery, tax, totalAmount, delivery_option, delivery_date, delivery_time, updateId) {
+	service.setOrder = function(username, firstname, lastname, email, address, address2, city, postal, phone, news, total, amount, delivery, tax, totalAmount, delivery_option, delivery_date, delivery_time, updateId) {
 		
 		if(username) {
 			service.invoice.username	= username;
@@ -496,6 +496,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		service.invoice.city			= city;
 		service.invoice.postal			= postal;
 		service.invoice.phone			= phone;
+		service.invoice.news			= news;
 		
 		service.invoice.total			= total;
 		service.invoice.amount			= amount;
@@ -723,6 +724,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 	$scope.takeaway 		= '';
 	$scope.delivery			= '';
 	$scope.time				= '';
+	$scope.news				= '';
 	$scope.itsUpdate		= false;
 	
 	$scope.moment			= moment();
@@ -742,6 +744,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 		$scope.postal 		= productFactory.update.postal; 
 		$scope.phone		= productFactory.update.phone;
 		$scope.takeaway		= productFactory.update.takeaway;
+		$scope.news			= productFactory.update.news;
 	}
 	
 	$scope.updateId	= function() {
@@ -767,6 +770,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 								$scope.city, 
 								$scope.postal, 
 								$scope.phone,
+								$scope.news,
 								$scope.qty(),
 								$scope.total(),
 								$scope.shiping(),
