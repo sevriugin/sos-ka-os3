@@ -31,7 +31,8 @@
     "body-parser":"*",
     "jade":"*",
     "googleapis":"*",
-    "dateformat":"*"
+    "dateformat":"*",
+    "rufus":"*"
   },
   
   "devDependencies": {},

@@ -10,6 +10,9 @@ var bodyParser	= require('body-parser');
 var jade 		= require('jade');
 var dateFormat 	= require('dateformat');
 
+var util		= require('util');
+var rufus 		= require('rufus');
+
 //create application/json parser 
 var jsonParser 			= bodyParser.json()
  
