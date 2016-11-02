@@ -335,6 +335,7 @@ var SampleApp = function() {
           		  
           		  var count = docs.length;
           		  console.log('/api/orders/number of orders : %d', count );
+          		  console.log(util.format("%j", docs));
         			  
           		  if(count > 0) {
           			  res.status(200).json({status:"ok", orders:docs});
