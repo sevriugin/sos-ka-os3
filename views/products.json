@@ -633,6 +633,21 @@
         "style" : "col-sm-4"
     },
     {
+    	"key": 218,
+    	"qty": 1,
+    	"cost": 1200,
+    	"oldCost":1500,
+        "id": "scruffy-puppy",
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/Scruffy-Puppy.jpg", 
+        "title": "Игривый Щен~ОК", 
+        "snippet": "Игривый щенок, он всегда готов поиграть и никогда не потеряется.",
+        "images": ["img/Scruffy-Puppy.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 297,
     	"qty": 1,
     	"cost": 0,
