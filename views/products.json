@@ -257,8 +257,7 @@
     {
     	"key": 291,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-01",
@@ -275,8 +274,7 @@
     {
     	"key": 200,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "ella-elefant",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -290,8 +288,7 @@
     {
     	"key": 201,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "happy-hippo",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -305,8 +302,7 @@
     {
     	"key": 202,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "peaches-puppy",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -320,8 +316,7 @@
     {
     	"key": 203,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "paisley-panda",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -335,8 +330,7 @@
     {
     	"key": 293,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-03",
@@ -353,8 +347,7 @@
     {
     	"key": 204,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "unity-unicorn",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -368,8 +361,7 @@
     {
     	"key": 205,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "dimpless-dragon",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -383,8 +375,7 @@
     {
     	"key": 294,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-04",
@@ -401,8 +392,7 @@
     {
     	"key": 206,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "lovie-lamb",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -416,8 +406,7 @@
     {
     	"key": 207,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "jaspie-giraffe",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -431,8 +420,7 @@
     {
     	"key": 295,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-05",
@@ -449,8 +437,7 @@
     {
     	"key": 208,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "snow-leopard",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -464,8 +451,7 @@
     {
     	"key": 209,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "lovie-lamb-lovies",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -479,8 +465,7 @@
     {
     	"key": 210,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "jaxon-giraffe",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -494,8 +479,7 @@
     {
     	"key": 211,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "paisley-panda-lovies",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -509,8 +493,7 @@
     {
     	"key": 212,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "milo-monkey",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -524,8 +507,7 @@
     {
     	"key": 213,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "cutsie-cow",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -539,8 +521,7 @@
     {
     	"key": 296,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-06",
@@ -557,8 +538,7 @@
     {
     	"key": 214,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "pepper-penguin",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -572,8 +552,7 @@
     {
     	"key": 215,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "lexi-lobster",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -587,8 +566,7 @@
     {
     	"key": 216,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "ollie-octopus",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -602,8 +580,7 @@
     {
     	"key": 292,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-02",
@@ -620,8 +597,7 @@
     {
     	"key": 217,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "shakiesturtle_large",
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -635,8 +611,7 @@
     {
     	"key": 218,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost":1500,
+    	"cost": 1500,
         "id": "scruffy-puppy",
         "productType" : "Соска + держатель",
         "age": "0+",
