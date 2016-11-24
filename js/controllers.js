@@ -971,6 +971,7 @@ productControllers.controller('loginController', ['$scope', '$rootScope', '$loca
 productControllers.controller('ProductListCtrl', ['$scope', '$routeParams', 'AuthenticationService', 'productFactory', function ($scope, $routeParams, AuthenticationService, productFactory) {
 	$scope.success 		= false;
 	$scope.dataLoading 	= false;
+	$scope.sexSelector	= '';
 	
 	$scope.admin	 = function() {
 		return AuthenticationService.isItAdmin();
@@ -987,6 +988,22 @@ productControllers.controller('ProductListCtrl', ['$scope', '$routeParams', 'Aut
 		            $scope.dataLoading 	= false;
 		        }
 		    });
+	};
+	
+	$scope.toggelSex = function(sex) {
+		if($scope.sexSelector == sex) {
+			$scope.sexSelector = '';
+		} else {
+			$scope.sexSelector = sex;
+		}
+	};
+	
+	$scope.sexClass = function(sex) {
+		if($scope.sexSelector == sex) {
+			return "icon-radio-checked";
+		} else {
+			return "icon-radio-unchecked";
+		}
 	};
 	
 	$scope.productClass = function(product) {

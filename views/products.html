@@ -17,7 +17,7 @@
 	</div>
 </div>
 
-<div ng-if="false" class="container-fluid productlist">
+<div ng-if="true" class="container-fluid productlist">
 	<div class="row">
 		<div class="col-sm-12">
 			<div class="col-sm-12">&nbsp;</div>
@@ -25,12 +25,22 @@
 		</div>
 	</div>
 	<div class="row">
-		<div ng-class="col-sm-12">
-			<a href="#/vendorProducts/paci-plushies">
-				<img ng-src="img/sale-10.jpg" class="img-responsive" alt="item">
+		<div class="col-sm-6">
+			<a href="#/products" ng-click="toggelSex('boy')">
+				<img ng-src="img/nk-slide-02.jpg" class="img-responsive" alt="item">
 				<span class="productlist-price-container">
 					<span class="product-price">
-						<span class="price">АКЦИЯ</span>
+						<span class="price"><i ng-class="sexClass('boy')"></i>&nbsp;мальчик</span>
+					</span>
+				</span>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<a href="#/products" ng-click="toggelSex('girl')">
+				<img ng-src="img/nk-slide-03.jpg" class="img-responsive" alt="item">
+				<span class="productlist-price-container">
+					<span class="product-price">
+						<span class="price"><i ng-class="sexClass('girl')"></i>&nbsp;девочка</span>
 					</span>
 				</span>
 			</a>
@@ -40,7 +50,7 @@
 
 <div class="container-fluid productlist">
 	<div class="row">
-		<div ng-repeat="product in products | filter:query">
+		<div ng-repeat="product in products | filter:{vendor:query,sex:sexSelector}">
 			<div ng-if="nextVendor(product)">
 				<div class="row">
 					<div class="col-sm-12 text-center show-more">
