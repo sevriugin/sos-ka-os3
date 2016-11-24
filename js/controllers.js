@@ -608,6 +608,10 @@ productControllers.factory('productFactory', ['$http', function ($http) {
     		 var product							= service.products[i];
     		 var vendor								= service.getVendor(product.vendor);
     		 var yandexProduct 						= {};
+    		 
+    		 if(product.banner) {
+    			 continue;
+    		 }
     	 	 
     		 yandexProduct.id 						= product.key;
     		 yandexProduct.available				= product.qty > 0 ? "true" : "false";
