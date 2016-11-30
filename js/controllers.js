@@ -160,6 +160,11 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.update 	= {};
 	service.search	= '';
 	
+	service.isReady				= false;
+	service.productsAreLoaded 	= false;
+	service.vendorsAreLoaded	= false;
+	service.toWait				= 1000;
+	
 	service.loadComments = function() {
 		
 		$http.post('/api/comments')
@@ -215,10 +220,18 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	
 	service.loadProducts = function() {
 		$http.get('views/products.json').success(function(data) {
+			service.productsAreLoaded = true;
+			if(service.vendorsAreLoaded) {
+				service.isReady	= true;
+			}
 			angular.copy(data, service.products);
 		});
 		
 		$http.get('views/vendors.json').success(function(data) {
+			service.vendorsAreLoaded = true;
+			if(service.productsAreLoaded) {
+				service.isReady	= true;
+			}
 			angular.copy(data, service.vendors);
 		});
 	};
@@ -665,6 +678,13 @@ productControllers.factory('productFactory', ['$http', function ($http) {
      
 	// load products
     service.loadProducts();
+    
+    if(!service.isReady) {
+    	for( i = 0; i < service.toWait; i++) {
+    		;
+    	}
+    }
+    
     return service;
 }]);
 
