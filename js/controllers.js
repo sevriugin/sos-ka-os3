@@ -477,9 +477,9 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		var shiping = 0;
 
 		if(service.total() < 3000 && service.total() > 0) {
-			shiping = 300;
+			shiping = 330;
 		} else {
-			shiping = 300;
+			shiping = 330;
 		}
 		return shiping;
 	};
@@ -596,7 +596,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
     	googleProduct.condition				= 	"new";
     	googleProduct.googleProductCategory	= 	"Baby & Toddler > Baby Health > Pacifiers & Teethers";
     	googleProduct.price					= 	{"value": service.selectedProduct.cost, "currency": "RUB"};
-    	googleProduct.shipping				= 	[{"country": "RU", "service":"Standard shipping", "price": {"value": "300", "currency": "RUB"}}];
+    	googleProduct.shipping				= 	[{"country": "RU", "service":"Standard shipping", "price": {"value": "330", "currency": "RUB"}}];
     	googleProduct.shippingWeight		= 	{"value": "50", "unit": "grams"};
     	
     	return googleProduct;
