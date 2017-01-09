@@ -115,7 +115,7 @@
     },
     {
     	"key": 105,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1200,
     	"oldCost":2000,
         "id": "baby-buccaneer",
@@ -284,21 +284,6 @@
         "style" : "col-sm-8"
     },
     {
-    	"key": 115,
-    	"qty": 0,
-    	"cost": 2000,
-        "id": "bella-bunny",
-        "productType" : "Соска",
-        "sex":["boy","girl"],
-        "age": "0-6 мес",
-        "vendor": "mary-meyer", 
-        "imageUrl": "img/bella-bunny.jpg", 
-        "title": "Фиолетовый Зайка", 
-        "snippet": "Весёлый Зайка не даст скучать Вашему малышу. А за его длинные ушки так легко держать игрушку. Универсальная расцветка подойдет как мальчику, так и девочке.",
-        "images": ["img/bella-bunny.jpg", "img/bella-bunny-1.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
     	"key": 116,
     	"qty": 1,
     	"cost": 2000,
@@ -426,7 +411,7 @@
     },
     {
     	"key": 205,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1500,
         "id": "dimpless-dragon",
         "sex":["boy"],
@@ -955,7 +940,7 @@
     },
     {
     	"key": 503,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1500,
     	"oldCost": 1800,
         "id": "ComoTomo-250-boy",
