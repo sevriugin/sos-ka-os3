@@ -16,7 +16,7 @@
     }, 
     {
     	"key": 101,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "afrique-elefant",
         "sex":["boy","girl"],
