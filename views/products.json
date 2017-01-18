@@ -68,6 +68,25 @@
         "style" : "col-sm-6"
     },
     {
+        "key": 592,
+        "qty": 1,
+        "cost": 700,
+        "oldCost": 850,
+        "banner":true,
+        "active":true,
+        "id": "ComoTomo-2",
+        "sex":["boy","girl"],
+        "productType" : "Прорезыватель для зубов",
+        "url":"#/vendorProducts/ComoTomo",
+        "age": "3м+", 
+        "vendor": "ComoTomo",
+        "imageUrl": "img/comotomo-teether-3.gif", 
+        "title": "Синий 3+ мес.", 
+        "snippet": "Прорезыватель для молочных зубов",
+        "images": ["img/comoTomo-teether-3.gif"],
+        "style" : "col-sm-6"
+    },
+    {
     	"key": 102,
     	"qty": 1,
     	"cost": 1200,
@@ -1032,6 +1051,38 @@
         "title": "Для густых жидкостей 6+ мес.", 
         "snippet": "Сменная насадка Comotomo идеально подходит для кормления малышей: сделана из медицинского силикона, натуральной формы, мягкая, двойная антиколиковая система вентиляции предотвращает заглатывание воздуха и уменьшает колики. Насадки на бутылочки можно менять с возрастом малыша (0-3 мес, 3+ мес, 3-6 мес). Их можно помещать в микроволновую печь, кипящую воду, посудомоечную машину и стерилизатор. Они 100% безопасны и гигиеничны",
         "images": ["img/comotomo-nipples-1.jpg", "img/comotomo-nipples-2.jpg", "img/comotomo-nipples-6m-Y.jpg"],
+        "style" : "col-sm-6"
+    },
+    {
+        "key": 509,
+        "qty": 1,
+        "cost": 700,
+        "oldCost": 850,
+        "id": "ComoTomo-teether",
+        "sex":["boy","girl"],
+        "productType" : "Прорезыватель для зубов",
+        "age": "6м+", 
+        "vendor": "ComoTomo",
+        "imageUrl": "img/comotomo-teether-4.jpg", 
+        "title": "Оранжевый 3+ мес.", 
+        "snippet": "Прорезыватель для молочных зубов",
+        "images": ["img/comotomo-teether-4.jpg", "img/comotomo-teether-1.jpg", "img/comotomo-teether-2.jpg.jpg"],
+        "style" : "col-sm-6"
+    },
+    {
+        "key": 510,
+        "qty": 1,
+        "cost": 700,
+        "oldCost": 850,
+        "id": "ComoTomo-teether",
+        "sex":["boy"],
+        "productType" : "Прорезыватель для зубов",
+        "age": "6м+", 
+        "vendor": "ComoTomo",
+        "imageUrl": "img/comotomo-teether-5.jpg", 
+        "title": "Синий 3+ мес.", 
+        "snippet": "Прорезыватель для молочных зубов",
+        "images": ["img/comotomo-teether-5.jpg", "img/comotomo-teether-1.jpg", "img/comotomo-teether-2.jpg.jpg"],
         "style" : "col-sm-6"
     }
 ]
