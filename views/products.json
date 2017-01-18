@@ -1058,7 +1058,7 @@
         "qty": 1,
         "cost": 700,
         "oldCost": 850,
-        "id": "ComoTomo-teether",
+        "id": "ComoTomo-teether-orage",
         "sex":["boy","girl"],
         "productType" : "Прорезыватель для зубов",
         "age": "6м+", 
@@ -1066,7 +1066,7 @@
         "imageUrl": "img/comotomo-teether-4.jpg", 
         "title": "Оранжевый 3+ мес.", 
         "snippet": "Прорезыватель для молочных зубов",
-        "images": ["img/comotomo-teether-4.jpg", "img/comotomo-teether-1.jpg", "img/comotomo-teether-2.jpg.jpg"],
+        "images": ["img/comotomo-teether-4.jpg", "img/comotomo-teether-1.jpg", "img/comotomo-teether-2.jpg"],
         "style" : "col-sm-6"
     },
     {
@@ -1074,7 +1074,7 @@
         "qty": 1,
         "cost": 700,
         "oldCost": 850,
-        "id": "ComoTomo-teether",
+        "id": "ComoTomo-teether-blue",
         "sex":["boy"],
         "productType" : "Прорезыватель для зубов",
         "age": "6м+", 
@@ -1082,7 +1082,7 @@
         "imageUrl": "img/comotomo-teether-5.jpg", 
         "title": "Синий 3+ мес.", 
         "snippet": "Прорезыватель для молочных зубов",
-        "images": ["img/comotomo-teether-5.jpg", "img/comotomo-teether-1.jpg", "img/comotomo-teether-2.jpg.jpg"],
+        "images": ["img/comotomo-teether-5.jpg", "img/comotomo-teether-1.jpg", "img/comotomo-teether-2.jpg"],
         "style" : "col-sm-6"
     }
 ]
