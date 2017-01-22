@@ -782,10 +782,10 @@
         "productType" : "Соска + держатель",
         "age": "0+",
         "vendor": "paci-plushies",
-        "imageUrl": "img/Bella_Bunny_Blankie-1.jpg", 
+        "imageUrl": "img/Bella_Bunny_Blankie-1.png", 
         "title": "Розовый кролик", 
         "snippet": "Забавный розовый кролик, невероятно мягкий, в сочетании с любимой соской малыша, станет незаменимым другом ребёнку.",
-        "images": ["img/Bella_Bunny_Blankie-1.jpg","img/Bella_Bunny_Blankie-2.jpg"],
+        "images": ["img/Bella_Bunny_Blankie-1.png","img/Bella_Bunny_Blankie-2.png"],
         "style" : "col-sm-4"
     },
     {
