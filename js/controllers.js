@@ -509,8 +509,10 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		service.invoice.city			= city;
 		service.invoice.postal			= postal;
 		service.invoice.phone			= phone;
-		service.invoice.news			= news;
-		
+
+		if(news) {
+			service.invoice.news		= news;
+		}
 		service.invoice.total			= total;
 		service.invoice.amount			= amount;
 		service.invoice.delivery		= delivery;
