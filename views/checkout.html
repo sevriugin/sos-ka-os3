@@ -114,7 +114,7 @@
 									<option value="5">{{moment | amAdd : '5' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="6">{{moment | amAdd : '6' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="7">{{moment | amAdd : '7' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
-									<option value="8">доставка почтой</option>
+									<option value="8">почтой: {{moment | amAdd : '8' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 								</select>
         						<span ng-show="form.delivery.$dirty && form.delivery.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ДЕНЬ ДОСТАВКИ</span>
 							</div>
@@ -130,9 +130,9 @@
         						<i class="fa fa-key"></i>
         						<select id="time" class="form-control" ng-model="time" tabindex="4" required>
 									<option disabled="disabled" selected="selected" value="">время доставки</option>
-									<option value="с 10 до 14">с 10 до 14</option>
-									<option value="с 14 до 19">с 14 до 19</option>
-									<option value="почтой">доставка почтой</option>
+									<option value="10:00-14:00">10:00-14:00</option>
+									<option value="14:00-19:00">14:00-19:00</option>
+									<option value="на почте 09:00-18:00">на почте 09:00-18:00</option>
 								</select>
         						<span ng-show="form.time.$dirty && form.time.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВРЕМЯ ДОСТАВКИ</span>
 							</div>
