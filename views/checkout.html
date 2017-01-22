@@ -216,8 +216,11 @@
 					</tbody>
 				</table>
 				<div>
-					<p>
+					<p ng-if="takeaway!='post'">
 						СПОСОБ ОПЛАТЫ : Наличные курьеру
+					</p>
+					<p ng-if="takeaway=='post'">
+						СПОСОБ ОПЛАТЫ : Оплата на карточку / счет
 					</p>
 				</div>		
 			</div>	
