@@ -130,9 +130,9 @@
         						<i class="fa fa-key"></i>
         						<select id="time" class="form-control" ng-model="time" tabindex="4" required>
 									<option disabled="disabled" selected="selected" value="">время доставки</option>
-									<option value="10:00-14:00">10:00-14:00</option>
-									<option value="14:00-19:00">14:00-19:00</option>
-									<option value="на почте 09:00-18:00">на почте 09:00-18:00</option>
+									<option ng-disabled="takeaway=='post'" value="10:00-14:00">10:00-14:00</option>
+									<option ng-disabled="takeaway=='post'" value="14:00-19:00">14:00-19:00</option>
+									<option ng-disabled="takeaway!='post'" value="на почте 09:00-18:00">на почте 09:00-18:00</option>
 								</select>
         						<span ng-show="form.time.$dirty && form.time.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВРЕМЯ ДОСТАВКИ</span>
 							</div>
