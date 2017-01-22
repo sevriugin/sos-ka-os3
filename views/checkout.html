@@ -114,7 +114,7 @@
 									<option value="5">{{moment | amAdd : '5' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="6">{{moment | amAdd : '6' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="7">{{moment | amAdd : '7' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
-									<option value="8">почтой: {{moment | amAdd : '8' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="8">{{moment | amAdd : '8' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 								</select>
         						<span ng-show="form.delivery.$dirty && form.delivery.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ДЕНЬ ДОСТАВКИ</span>
 							</div>
@@ -128,10 +128,11 @@
 							<div class="form-group">
 								<label class="control-label" for="time">время доставки</label>
         						<i class="fa fa-key"></i>
-        						<select id="time" class="form-control" ng-model="time" tabindex="4" required>
+        						<select id="time" class="form-control" ng-model="time" tabindex="5" required>
 									<option disabled="disabled" selected="selected" value="">время доставки</option>
-									<option ng-disabled="takeaway=='post'" value="10:00-14:00">10:00-14:00</option>
-									<option ng-disabled="takeaway=='post'" value="14:00-19:00">14:00-19:00</option>
+									<option ng-disabled="takeaway=='post'" value="10:00-13:00">10:00-13:00</option>
+									<option ng-disabled="takeaway=='post'" value="13:00-18:00">13:00-18:00</option>
+									<option ng-disabled="takeaway=='post'" value="18:00-21:00">18:00-21:00</option>
 									<option ng-disabled="takeaway!='post'" value="на почте 09:00-18:00">на почте 09:00-18:00</option>
 								</select>
         						<span ng-show="form.time.$dirty && form.time.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВРЕМЯ ДОСТАВКИ</span>

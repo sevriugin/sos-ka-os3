@@ -750,7 +750,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 	$scope.takeaway 		= '';
 	$scope.delivery			= '';
 	$scope.time				= '';
-	$scope.news				= '';
+	$scope.news				= 'yes';
 	$scope.itsUpdate		= false;
 	
 	$scope.moment			= moment();
@@ -824,6 +824,9 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 	$scope.shiping = function() {
 		if($scope.takeaway == 'takeaway') {
 			return 0
+		}
+		else if ($scope.takeaway == 'post') {
+			return 350
 		}
 		return productFactory.shiping();
 	}
