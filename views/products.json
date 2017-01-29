@@ -1036,7 +1036,7 @@
     {
     	"key": 501,
     	"qty": 1,
-    	"cost": 1200,
+    	"cost": 1300,
     	"oldCost": 1500,
         "id": "ComoTomo-150-boy",
         "sex":["boy"],
@@ -1052,7 +1052,7 @@
     {
     	"key": 502,
     	"qty": 1,
-    	"cost": 1500,
+    	"cost": 1600,
     	"oldCost": 1800,
         "id": "ComoTomo-250-girl",
         "sex":["girl"],
@@ -1068,7 +1068,7 @@
     {
     	"key": 503,
     	"qty": 1,
-    	"cost": 1500,
+    	"cost": 1600,
     	"oldCost": 1800,
         "id": "ComoTomo-250-boy",
         "sex":["boy"],
@@ -1084,7 +1084,7 @@
     {
     	"key": 504,
     	"qty": 1,
-    	"cost": 1200,
+    	"cost": 1300,
     	"oldCost": 1500,
         "id": "ComoTomo-150-girl",
         "sex":["girl"],
