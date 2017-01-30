@@ -828,6 +828,9 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 		else if ($scope.takeaway == 'post') {
 			return 350
 		}
+		else if ($scope.takeaway == 'dpdauto') {
+			return 400
+		}
 		return productFactory.shiping();
 	}
 	
