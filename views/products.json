@@ -276,7 +276,7 @@
     {
     	"key": 112,
     	"qty": 1,
-    	"cost": 1200,
+    	"cost": 1500,
         "oldCost":2000,
         "id": "ella-bella",
         "sex":["girl"],
@@ -292,7 +292,7 @@
     {
     	"key": 113,
     	"qty": 1,
-    	"cost": 1200,
+    	"cost": 1500,
         "oldCost":2000,
         "id": "okey-dokey-dino",
         "sex":["boy"],
