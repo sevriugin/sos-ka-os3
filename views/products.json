@@ -760,7 +760,7 @@
     },
     {
         "key": 221,
-        "qty": 1,
+        "qty": 0,
         "cost": 1600,
         "id": "rufus-retriever",
         "sex":["boy"],
@@ -930,7 +930,7 @@
     },
     {
     	"key": 406,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "Blossom-s-pink",
         "sex":["girl"],
