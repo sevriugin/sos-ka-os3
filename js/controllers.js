@@ -823,7 +823,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 
 	$scope.shiping = function() {
 		if($scope.takeaway == 'takeaway') {
-			return 80
+			return 120
 		}
 		else if ($scope.takeaway == 'post') {
 			return 350
