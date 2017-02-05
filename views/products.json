@@ -1006,7 +1006,8 @@
     {
         "key": 412,
         "qty": 1,
-        "cost": 1800,
+        "cost": 1200,
+        "oldCost": 1800,
         "id": "Peanut-Silly-Buddy-Blue",
         "sex":["boy"],
         "productType" : "Комфортер и держатель для соски",
@@ -1021,7 +1022,8 @@
     {
         "key": 413,
         "qty": 1,
-        "cost": 1800,
+        "cost": 1200,
+        "oldCost": 1800,
         "id": "Peanut-Silly-Buddy-Pink",
         "sex":["girl"],
         "productType" : "Комфортер и держатель для соски",
