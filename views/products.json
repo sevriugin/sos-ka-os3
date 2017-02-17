@@ -1148,7 +1148,7 @@
     },
     {
         "key": 509,
-        "qty": 1,
+        "qty": 0,
         "cost": 700,
         "oldCost": 850,
         "id": "ComoTomo-teether-orage",
@@ -1164,7 +1164,7 @@
     },
     {
         "key": 510,
-        "qty": 1,
+        "qty": 0,
         "cost": 700,
         "oldCost": 850,
         "id": "ComoTomo-teether-blue",
