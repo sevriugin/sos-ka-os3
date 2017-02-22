@@ -276,8 +276,7 @@
     {
     	"key": 112,
     	"qty": 1,
-    	"cost": 1500,
-        "oldCost":2000,
+    	"cost": 2000,
         "id": "ella-bella",
         "sex":["girl"],
         "productType" : "Соска",
@@ -292,8 +291,7 @@
     {
     	"key": 113,
     	"qty": 1,
-    	"cost": 1500,
-        "oldCost":2000,
+    	"cost": 2000,
         "id": "okey-dokey-dino",
         "sex":["boy"],
         "productType" : "Соска",
@@ -943,7 +941,7 @@
     },
     {
     	"key": 408,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "Warm-white",
         "sex":["boy","girl"],
@@ -989,7 +987,7 @@
     {
         "key": 412,
         "qty": 1,
-        "cost": 1200,
+        "cost": 1600,
         "oldCost": 1800,
         "id": "Peanut-Silly-Buddy-Blue",
         "sex":["boy"],
@@ -1005,7 +1003,7 @@
     {
         "key": 413,
         "qty": 1,
-        "cost": 1200,
+        "cost": 1600,
         "oldCost": 1800,
         "id": "Peanut-Silly-Buddy-Pink",
         "sex":["girl"],
