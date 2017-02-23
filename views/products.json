@@ -275,7 +275,7 @@
     },
     {
     	"key": 112,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 2000,
         "id": "ella-bella",
         "sex":["girl"],
@@ -1019,7 +1019,7 @@
     {
     	"key": 501,
     	"qty": 0,
-    	"cost": 1300,
+    	"cost": 1400,
     	"oldCost": 1500,
         "id": "ComoTomo-150-boy",
         "sex":["boy"],
@@ -1035,7 +1035,7 @@
     {
     	"key": 502,
     	"qty": 1,
-    	"cost": 1600,
+    	"cost": 1700,
     	"oldCost": 1800,
         "id": "ComoTomo-250-girl",
         "sex":["girl"],
@@ -1051,7 +1051,7 @@
     {
     	"key": 503,
     	"qty": 0,
-    	"cost": 1600,
+    	"cost": 1700,
     	"oldCost": 1800,
         "id": "ComoTomo-250-boy",
         "sex":["boy"],
@@ -1067,7 +1067,7 @@
     {
     	"key": 504,
     	"qty": 1,
-    	"cost": 1300,
+    	"cost": 1400,
     	"oldCost": 1500,
         "id": "ComoTomo-150-girl",
         "sex":["girl"],
@@ -1083,7 +1083,7 @@
     {
         "key": 505,
         "qty": 1,
-        "cost": 650,
+        "cost": 750,
         "oldCost": 800,
         "id": "ComoTomo-nipples-0m",
         "sex":["boy","girl"],
@@ -1099,7 +1099,7 @@
     {
         "key": 506,
         "qty": 1,
-        "cost": 650,
+        "cost": 750,
         "oldCost": 800,
         "id": "ComoTomo-nipples-3m",
         "sex":["boy","girl"],
@@ -1115,7 +1115,7 @@
     {
         "key": 507,
         "qty": 1,
-        "cost": 650,
+        "cost": 750,
         "oldCost": 800,
         "id": "ComoTomo-nipples-6m",
         "sex":["boy","girl"],
@@ -1131,7 +1131,7 @@
     {
         "key": 508,
         "qty": 1,
-        "cost": 650,
+        "cost": 750,
         "oldCost": 800,
         "id": "ComoTomo-nipples-6m-Y",
         "sex":["boy","girl"],
@@ -1147,8 +1147,7 @@
     {
         "key": 509,
         "qty": 0,
-        "cost": 700,
-        "oldCost": 850,
+        "cost": 850,
         "id": "ComoTomo-teether-orage",
         "sex":["boy","girl"],
         "productType" : "Прорезыватель для зубов",
@@ -1163,8 +1162,7 @@
     {
         "key": 510,
         "qty": 0,
-        "cost": 700,
-        "oldCost": 850,
+        "cost": 850,
         "id": "ComoTomo-teether-blue",
         "sex":["boy"],
         "productType" : "Прорезыватель для зубов",
