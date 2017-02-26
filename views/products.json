@@ -336,7 +336,7 @@
     {
     	"key": 291,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
     	"banner":true,
     	"active":false,
         "id": "nk-slide-01",
@@ -354,7 +354,7 @@
     {
     	"key": 200,
     	"qty": 0,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "ella-elefant",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -369,7 +369,7 @@
     {
     	"key": 201,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "happy-hippo",
         "sex":["girl"],
         "productType" : "Соска + держатель",
@@ -384,7 +384,8 @@
     {
     	"key": 202,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1500,
+        "oldCost": 1800,
         "id": "peaches-puppy",
         "sex":["girl"],
         "productType" : "Соска + держатель",
@@ -399,7 +400,7 @@
     {
     	"key": 203,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "paisley-panda",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -414,7 +415,7 @@
     {
     	"key": 293,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-03",
@@ -432,7 +433,7 @@
     {
     	"key": 204,
     	"qty": 0,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "unity-unicorn",
         "sex":["girl"],
         "productType" : "Соска + держатель",
@@ -447,7 +448,7 @@
     {
     	"key": 205,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "dimpless-dragon",
         "sex":["boy"],
         "productType" : "Соска + держатель",
@@ -462,7 +463,7 @@
     {
     	"key": 294,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-04",
@@ -480,7 +481,7 @@
     {
     	"key": 206,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "lovie-lamb",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -495,7 +496,7 @@
     {
     	"key": 207,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "jaspie-giraffe",
         "sex":["girl"],
         "productType" : "Соска + держатель",
@@ -510,7 +511,7 @@
     {
     	"key": 295,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-05",
@@ -528,7 +529,7 @@
     {
     	"key": 208,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "snow-leopard",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -543,7 +544,7 @@
     {
     	"key": 209,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "lovie-lamb-lovies",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -558,7 +559,7 @@
     {
     	"key": 210,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "jaxon-giraffe",
         "sex":["boy"],
         "productType" : "Соска + держатель",
@@ -573,7 +574,7 @@
     {
     	"key": 211,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "paisley-panda-lovies",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -588,7 +589,7 @@
     {
     	"key": 212,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "milo-monkey",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -603,7 +604,7 @@
     {
     	"key": 213,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "cutsie-cow",
         "sex":["girl"],
         "productType" : "Соска + держатель",
@@ -618,7 +619,7 @@
     {
     	"key": 296,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-06",
@@ -636,7 +637,8 @@
     {
     	"key": 214,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1500,
+        "oldCost": 1800,
         "id": "pepper-penguin",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -651,7 +653,7 @@
     {
     	"key": 215,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "lexi-lobster",
         "sex":["boy"],
         "productType" : "Соска + держатель",
@@ -666,7 +668,7 @@
     {
     	"key": 216,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "ollie-octopus",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -681,7 +683,7 @@
     {
     	"key": 292,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
     	"banner":true,
     	"active":true,
         "id": "nk-slide-02",
@@ -699,7 +701,7 @@
     {
     	"key": 217,
     	"qty": 1,
-    	"cost": 1600,
+    	"cost": 1800,
         "id": "shakiesturtle_large",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -714,7 +716,7 @@
     {
     	"key": 218,
     	"qty": 1,
-    	"cost": 1700,
+    	"cost": 1800,
         "id": "scruffy-puppy",
         "sex":["boy"],
         "productType" : "Соска + держатель",
@@ -729,7 +731,7 @@
     {
         "key": 219,
         "qty": 1,
-        "cost": 1700,
+        "cost": 1800,
         "id": "barkley-bull-dog",
         "sex":["boy"],
         "productType" : "Соска + держатель",
@@ -744,7 +746,7 @@
     {
         "key": 220,
         "qty": 1,
-        "cost": 1700,
+        "cost": 1800,
         "id": "baby-hippo",
         "sex":["girl"],
         "productType" : "Соска + держатель",
@@ -759,7 +761,7 @@
     {
         "key": 221,
         "qty": 0,
-        "cost": 1700,
+        "cost": 1800,
         "id": "rufus-retriever",
         "sex":["boy"],
         "productType" : "Соска + держатель",
@@ -774,7 +776,7 @@
     {
         "key": 222,
         "qty": 1,
-        "cost": 1700,
+        "cost": 1800,
         "id": "bella-bunny-blankie",
         "sex":["girl"],
         "productType" : "Соска + держатель",
