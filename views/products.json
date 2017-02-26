@@ -16,7 +16,7 @@
     }, 
     {
     	"key": 101,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "afrique-elefant",
         "sex":["boy","girl"],
@@ -122,7 +122,7 @@
     },
     {
     	"key": 103,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "little-camo-fox",
         "sex":["boy"],
@@ -185,7 +185,7 @@
     },
     {
     	"key": 106,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "oatmeal-bunny",
         "sex":["boy","girl"],
@@ -260,7 +260,7 @@
     },
     {
     	"key": 111,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "mango-monkey",
         "sex":["boy","girl"],
@@ -1018,7 +1018,7 @@
     },
     {
     	"key": 501,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1400,
     	"oldCost": 1500,
         "id": "ComoTomo-150-boy",
@@ -1050,7 +1050,7 @@
     },
     {
     	"key": 503,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1700,
     	"oldCost": 1800,
         "id": "ComoTomo-250-boy",
@@ -1146,7 +1146,7 @@
     },
     {
         "key": 509,
-        "qty": 0,
+        "qty": 1,
         "cost": 850,
         "id": "ComoTomo-teether-orage",
         "sex":["boy","girl"],
@@ -1161,7 +1161,7 @@
     },
     {
         "key": 510,
-        "qty": 0,
+        "qty": 1,
         "cost": 850,
         "id": "ComoTomo-teether-blue",
         "sex":["boy"],
@@ -1176,7 +1176,7 @@
     },
     {
         "key": 601,
-        "qty": 0,
+        "qty": 1,
         "cost": 990,
         "oldCost": 1090,
         "id": "Training-Spoon",
