@@ -1149,7 +1149,7 @@
     {
         "key": 509,
         "qty": 1,
-        "cost": 850,
+        "cost": 900,
         "id": "ComoTomo-teether-orage",
         "sex":["boy","girl"],
         "productType" : "Прорезыватель для зубов",
@@ -1164,7 +1164,7 @@
     {
         "key": 510,
         "qty": 1,
-        "cost": 850,
+        "cost": 900,
         "id": "ComoTomo-teether-blue",
         "sex":["boy"],
         "productType" : "Прорезыватель для зубов",
