@@ -305,7 +305,7 @@
     },
     {
     	"key": 114,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 2000,
         "id": "blue-puppy",
         "productType" : "Соска",
@@ -958,7 +958,7 @@
     },
     {
     	"key": 410,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "Grady-bunny-silly",
         "sex":["boy","girl"],
@@ -1052,7 +1052,7 @@
     },
     {
     	"key": 503,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1700,
     	"oldCost": 1800,
         "id": "ComoTomo-250-boy",
