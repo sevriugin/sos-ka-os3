@@ -13,6 +13,21 @@
         "snippet": "Черепаха с цветочками на панцыре, нежная и милая. Новинка 2016 года.",
         "images": ["img/tessa-turtle.jpg"],
         "style" : "col-sm-8"
+    }, 
+    {
+    	"key": 101,
+    	"qty": 0,
+    	"cost": 2000,
+        "id": "afrique-elefant",
+        "sex":["boy","girl"],
+        "productType" : "Соска",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/afrique-elefant.jpg", 
+        "title": "Белый слон", 
+        "snippet": "Белый слон. За большие уши и хвостик-узелок легко удерживать игрушку маленьким и неокрепшим ручкам малыша. Расцветка универсальна и подойдёт как мальчику, так и девочке. Новинка 2016 года.",
+        "images": ["img/afrique-elefant.jpg"],
+        "style" : "col-sm-4"
     },
     {
     	"key": 590,
@@ -104,6 +119,21 @@
         "snippet": "Розовый котёнок для девочек, которые хотят подчеркнуть свою нежность и неповторимость.",
         "images": ["img/little-nuzzles-kitty.jpg"],
         "style" : "col-sm-4"
+    },
+    {
+    	"key": 103,
+    	"qty": 1,
+    	"cost": 2000,
+        "id": "little-camo-fox",
+        "sex":["boy"],
+        "productType" : "Соска",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/little-camo-fox.jpg", 
+        "title": "Камуфляжная лисичка", 
+        "snippet": "Эта лисичка для дерзких и бойких мальчишек. Её оценят не только мамы, но и папы. Новинка 2016 года.",
+        "images": ["img/little-camo-fox.jpg"],
+        "style" : "col-sm-8"
     },
     {
     	"key": 104,
@@ -274,6 +304,21 @@
         "style" : "col-sm-4"
     },
     {
+    	"key": 114,
+    	"qty": 0,
+    	"cost": 2000,
+        "id": "blue-puppy",
+        "productType" : "Соска",
+        "sex":["boy"],
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/blue-puppy.jpg", 
+        "title": "Голубой щенок", 
+        "snippet": "Игривый Щенок - прекрасный друг для мальчика. Не потеряется никогда из виду. Новинка 2016 года.",
+        "images": ["img/blue-puppy.jpg"],
+        "style" : "col-sm-8"
+    },
+    {
     	"key": 116,
     	"qty": 1,
     	"cost": 2000,
@@ -367,6 +412,21 @@
         "style" : "col-sm-4"
     },
     {
+    	"key": 200,
+    	"qty": 0,
+    	"cost": 1800,
+        "id": "ella-elefant",
+        "sex":["boy","girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies", 
+        "imageUrl": "img/ella-elefant.jpg", 
+        "title": "Слонёнок Элла", 
+        "snippet": "Безупречно выполненная игрушка, приятная на ощупь ткань. Слонёнка Эллу можно прикрепить к любимой пустышке и она будет излюбленным мягким другом Вашему малышу.",
+        "images": ["img/ella-elefant.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 201,
     	"qty": 1,
     	"cost": 1800,
@@ -431,11 +491,25 @@
         "style" : "col-sm-4"
     },
     {
+    	"key": 204,
+    	"qty": 0,
+    	"cost": 1800,
+        "id": "unity-unicorn",
+        "sex":["girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/unity-unicorn.jpg", 
+        "title": "Единорог", 
+        "snippet": "Этот единорог- сама нежность! Не стоит беспокоиться, что он потеряет цвет и форму после ухода ( бережной стирки). Всегда рядом, всегда на виду.",
+        "images": ["img/unity-unicorn.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 205,
     	"qty": 1,
-    	"cost": 1500,
-        "oldCost": 1800,
-        "id": "dimpless-dragon-new",
+    	"cost": 1800,
+        "id": "dimpless-dragon",
         "sex":["boy"],
         "productType" : "Соска + держатель",
         "age": "0+",
@@ -477,6 +551,21 @@
         "title": "Ласковая овечка", 
         "snippet": "Эта милая и нежная овечка подойдёт как мальчику, так и девочке. Невероятно мягкая, совсем не хочется выпускать её из рук.",
         "images": ["img/lovie-lamb.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+    	"key": 207,
+    	"qty": 0,
+    	"cost": 1800,
+        "id": "jaspie-giraffe",
+        "sex":["girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies", 
+        "imageUrl": "img/jaspie-giraffe.jpg", 
+        "title": "Жираф Джесси", 
+        "snippet": "Этот жираф - сама нежность и приятность. Хочется бесконечно его трогать. Ухаживать с помощью деликатной стирки очень просто- он не изменит цвет и не поменяет форму .",
+        "images": ["img/jaspie-giraffe.jpg"],
         "style" : "col-sm-4"
     },
     {
@@ -558,6 +647,21 @@
         "style" : "col-sm-4"
     },
     {
+    	"key": 212,
+    	"qty": 1,
+    	"cost": 1800,
+        "id": "milo-monkey",
+        "sex":["boy","girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/milo-monkey.jpg", 
+        "title": "Обезьянка", 
+        "snippet": "Нейтральные и спокойные цвета, мягкий плюш и любимая соска - все, что нужно малышу в некоторые моменты его жизни... Обезьянка подойдёт как мальчику, так и девочке.",
+        "images": ["img/milo-monkey.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 213,
     	"qty": 1,
     	"cost": 1800,
@@ -593,7 +697,8 @@
     {
     	"key": 214,
     	"qty": 1,
-    	"cost": 1800,
+    	"cost": 1500,
+        "oldCost": 1800,
         "id": "pepper-penguin",
         "sex":["boy","girl"],
         "productType" : "Соска + держатель",
@@ -701,17 +806,46 @@
     {
         "key": 220,
         "qty": 1,
-        "cost": 1500,
-        "oldCost": 1800,
-        "id": "dimpless-dragon",
+        "cost": 1800,
+        "id": "baby-hippo",
+        "sex":["girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/Baby_Hippo-1.jpg", 
+        "title": "Розовый бегемотик", 
+        "snippet": "Забавный розовый бегемотик, невероятно приятный на ощупь, в сочетании с любимой соской малыша, станет незаменимым другом ребёнку.",
+        "images": ["img/Baby_Hippo-1.jpg","img/Baby_Hippo-2.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+        "key": 221,
+        "qty": 0,
+        "cost": 1800,
+        "id": "rufus-retriever",
         "sex":["boy"],
         "productType" : "Соска + держатель",
         "age": "0+",
         "vendor": "paci-plushies",
-        "imageUrl": "img/dimpless-dragon.png", 
-        "title": "Фиолетовый дракончик",
-        "snippet": "Храбрый дракон всегда рядом! Не потеряется из виду и не нарушит сон малыша, потому что не позволит соске выпадать из ротика.",
-        "images": ["img/dimpless-dragon.png"],
+        "imageUrl": "img/Rufus_Retriever-1.jpg", 
+        "title": "Ретривер Руфус", 
+        "snippet": "Этот маленький щенок будет хорошим другом вашему малышу. Ретривер Руфус справится с любой соской и не даст ей потеряться",
+        "images": ["img/Rufus_Retriever-1.jpg","img/Rufus_Retriever-2.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+        "key": 222,
+        "qty": 0,
+        "cost": 1800,
+        "id": "bella-bunny-blankie",
+        "sex":["girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/Bella_Bunny_Blankie-1.png", 
+        "title": "Розовый кролик", 
+        "snippet": "Забавный розовый кролик, невероятно мягкий, в сочетании с любимой соской малыша, станет незаменимым другом ребёнку.",
+        "images": ["img/Bella_Bunny_Blankie-1.png","img/Bella_Bunny_Blankie-2.png"],
         "style" : "col-sm-4"
     },
     {
