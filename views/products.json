@@ -928,7 +928,7 @@
     {"key":321,"id":"LittleMouse", "productType" : "Соска", "age": "0-6 мес", "sex":["boy","girl"], "vendor": "WubbaNub®", "cost": 2000, "title":"Маленькая Мышка", "imageUrl":"img/mouse1o.jpg","qty":2, "style" : "col-sm-4", "images":["img/mouse1.jpg","img/mouse2.jpg","img/mouse3.jpg"],"snippet":"WubbaNub Маленькая Мышка – это новый член Вашей семьи. Но не стоит её пугаться. Она очаровательная, маленькая и полная любви к Вашему чаду. Маленькая мягкая мышка обязательно станет фаворитом в Вашей семье. Уникальное строение WubbaNub позволяет соске всё время быть в доступности для малыша."},
     {
     	"key": 401,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "Purr-ty-Kitty",
         "sex":["girl"],
