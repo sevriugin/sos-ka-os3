@@ -708,10 +708,10 @@
         "productType" : "Соска + держатель",
         "age": "0+",
         "vendor": "paci-plushies",
-        "imageUrl": "img/dimpless-dragon.png", 
+        "imageUrl": "img/dimpless-dragon.jpg", 
         "title": "Фиолетовый дракончик",
         "snippet": "Храбрый дракон всегда рядом! Не потеряется из виду и не нарушит сон малыша, потому что не позволит соске выпадать из ротика.",
-        "images": ["img/dimpless-dragon.png"],
+        "images": ["img/dimpless-dragon.jpg"],
         "style" : "col-sm-4"
     },
     {
