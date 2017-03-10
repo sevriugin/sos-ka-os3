@@ -971,7 +971,7 @@
     },
     {
     	"key": 501,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1400,
     	"oldCost": 1500,
         "id": "ComoTomo-150-boy",
@@ -1003,7 +1003,7 @@
     },
     {
     	"key": 503,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1700,
     	"oldCost": 1800,
         "id": "ComoTomo-250-boy",
