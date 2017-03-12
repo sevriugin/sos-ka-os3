@@ -256,6 +256,8 @@ var SampleApp = function() {
         	mailOptions['text'] 	= '';
         	mailOptions['html'] 	= self.cache_get('mail.html');
         	mailOptions['cc'] 		= '';
+          mailOptions['replyTo']  = '';
+
           				  
           	//send mail with defined transport object
           	transporter.sendMail(mailOptions, function(error, info) {
@@ -401,6 +403,7 @@ var SampleApp = function() {
           			  mailOptions['html'] 		= html;
           			  mailOptions['to']			= invoice.email;
           			  mailOptions['cc']			= 'order@mg.sos-ka.com';
+                  mailOptions['replyTo']  = invoice.email;
           				  
           			  //send mail with defined transport object
           			  transporter.sendMail(mailOptions, function(error, info) {
@@ -450,6 +453,7 @@ var SampleApp = function() {
           		  mailOptions['html'] 		= html;
           		  mailOptions['to']			= user.username;
           		  mailOptions['cc']			= '';
+                mailOptions['replyTo']  = user.username;
          				  
           		  //send mail with defined transport object
           		  transporter.sendMail(mailOptions, function(error, info) {
@@ -546,6 +550,7 @@ var SampleApp = function() {
           				  mailOptions['html'] 		= html;
           				  mailOptions['to']			= user.username;
           				  mailOptions['cc']			= 'order@mg.sos-ka.com';
+                    mailOptions['replyTo']  = user.username;
           				  
           				  //send mail with defined transport object
           				  transporter.sendMail(mailOptions, function(error, info) {
