@@ -921,7 +921,7 @@
     },
     {
     	"key": 406,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2200,
         "id": "Blossom-s-pink",
         "sex":["girl"],
@@ -936,7 +936,7 @@
     },
     {
     	"key": 407,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2200,
         "id": "Bud-s-blue",
         "sex":["boy"],
@@ -951,7 +951,7 @@
     },
     {
     	"key": 408,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2200,
         "id": "Warm-white",
         "sex":["boy","girl"],
@@ -966,7 +966,7 @@
     },
     {
     	"key": 410,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2200,
         "id": "Grady-bunny-silly",
         "sex":["boy","girl"],
@@ -1041,7 +1041,7 @@
     },
     {
     	"key": 502,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1800,
         "id": "ComoTomo-250-girl",
         "sex":["girl"],
@@ -1056,7 +1056,7 @@
     },
     {
     	"key": 503,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 1800,
         "id": "ComoTomo-250-boy",
         "sex":["boy"],
@@ -1210,7 +1210,7 @@
     },
     {
         "key": 603,
-        "qty": 0,
+        "qty": 1,
         "cost": 1100,
         "id": "Training-Spoon-Set",
         "sex":["boy","girl"],
