@@ -154,21 +154,6 @@
         "style" : "col-sm-12"
     },
     {
-    	"key": 106,
-    	"qty": 1,
-    	"cost": 2000,
-        "id": "oatmeal-bunny",
-        "sex":["boy","girl"],
-        "productType" : "Соска",
-        "age": "0-6 мес",
-        "vendor": "mary-meyer",
-        "imageUrl": "img/oatmeal-bunny.jpg", 
-        "title": "Пушистый кролик", 
-        "snippet": "Самый мягкий и пушистый из всех! Подойдёт как мальчику, так и девочке.",
-        "images": ["img/oatmeal-bunny.jpg"],
-        "style" : "col-sm-8"
-    },
-    {
     	"key": 107,
     	"qty": 1,
     	"cost": 2000,
