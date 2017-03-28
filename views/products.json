@@ -184,21 +184,6 @@
         "style" : "col-sm-4"
     },
     {
-    	"key": 109,
-    	"qty": 1,
-    	"cost": 2000,
-        "id": "kiwi-frog",
-        "sex":["boy","girl"],
-        "productType" : "Соска",
-        "age": "0-6 мес",
-        "vendor": "mary-meyer",
-        "imageUrl": "img/kiwi-frog.jpg", 
-        "title": "Салатовая лягушка", 
-        "snippet": "Сочные и контрастные цвета этой лягушки вызывают только позитивные эмоции и в дополнении тренируют несовершенное зрение малыша. Новинка 2016 года.",
-        "images": ["img/kiwi-frog.jpg"],
-        "style" : "col-sm-8"
-    },
-    {
     	"key": 110,
     	"qty": 1,
     	"cost": 2000,
@@ -369,8 +354,7 @@
     {
     	"key": 202,
     	"qty": 1,
-    	"cost": 1500,
-        "oldCost": 1800,
+    	"cost": 1800,
         "id": "peaches-puppy",
         "sex":["girl"],
         "productType" : "Соска + держатель",
@@ -715,8 +699,7 @@
     {
         "key": 220,
         "qty": 1,
-        "cost": 1600,
-        "oldCost": 1800,
+        "cost": 1800,
         "id": "dimpless-dragon",
         "sex":["boy"],
         "productType" : "Соска + держатель",
@@ -1011,7 +994,7 @@
     },
     {
     	"key": 501,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1500,
         "id": "ComoTomo-150-boy",
         "sex":["boy"],
