@@ -758,7 +758,7 @@
     },
     {
         "key": 222,
-        "qty": 0,
+        "qty": 1,
         "cost": 1800,
         "id": "bella-bunny-blankie",
         "sex":["girl"],
@@ -773,7 +773,7 @@
     },
     {
         "key": 223,
-        "qty": 0,
+        "qty": 1,
         "cost": 1800,
         "id": "lovie-lamb-blankies",
         "sex":["boy","girl"],
