@@ -15,6 +15,21 @@
         "style" : "col-sm-8"
     },
     {
+        "key": 101,
+        "qty": 0,
+        "cost": 2000,
+        "id": "afrique-elefant",
+        "sex":["boy","girl"],
+        "productType" : "Соска",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/afrique-elefant.jpg", 
+        "title": "Белый слон", 
+        "snippet": "Белый слон. За большие уши и хвостик-узелок легко удерживать игрушку маленьким и неокрепшим ручкам малыша. Расцветка универсальна и подойдёт как мальчику, так и девочке. Новинка 2016 года.",
+        "images": ["img/afrique-elefant.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 590,
     	"qty": 1,
     	"cost": 1200,
@@ -106,6 +121,21 @@
         "style" : "col-sm-4"
     },
     {
+        "key": 103,
+        "qty": 1,
+        "cost": 2000,
+        "id": "little-camo-fox",
+        "sex":["boy"],
+        "productType" : "Соска",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/little-camo-fox.jpg", 
+        "title": "Камуфляжная лисичка", 
+        "snippet": "Эта лисичка для дерзких и бойких мальчишек. Её оценят не только мамы, но и папы. Новинка 2016 года.",
+        "images": ["img/little-camo-fox.jpg"],
+        "style" : "col-sm-8"
+    },
+    {
     	"key": 104,
     	"qty": 1,
     	"cost": 2000,
@@ -182,6 +212,21 @@
         "snippet": "Львёнок Лёва всегда  составит компанию Вашему малышу: охраняет его сон и развлекает во время бодрствования.",
         "images": ["img/levi-lion.jpg"],
         "style" : "col-sm-4"
+    },
+    {
+        "key": 109,
+        "qty": 1,
+        "cost": 2000,
+        "id": "kiwi-frog",
+        "sex":["boy","girl"],
+        "productType" : "Соска",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer",
+        "imageUrl": "img/kiwi-frog.jpg", 
+        "title": "Салатовая лягушка", 
+        "snippet": "Сочные и контрастные цвета этой лягушки вызывают только позитивные эмоции и в дополнении тренируют несовершенное зрение малыша. Новинка 2016 года.",
+        "images": ["img/kiwi-frog.jpg"],
+        "style" : "col-sm-8"
     },
     {
     	"key": 110,
@@ -709,6 +754,36 @@
         "title": "Фиолетовый дракончик",
         "snippet": "Храбрый дракон всегда рядом! Не потеряется из виду и не нарушит сон малыша, потому что не позволит соске выпадать из ротика.",
         "images": ["img/dimpless-dragon.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+        "key": 222,
+        "qty": 0,
+        "cost": 1800,
+        "id": "bella-bunny-blankie",
+        "sex":["girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/Bella_Bunny_Blankie-1.png", 
+        "title": "Розовый кролик", 
+        "snippet": "Забавный розовый кролик, невероятно мягкий, в сочетании с любимой соской малыша, станет незаменимым другом ребёнку.",
+        "images": ["img/Bella_Bunny_Blankie-1.png","img/Bella_Bunny_Blankie-2.png"],
+        "style" : "col-sm-4"
+    },
+    {
+        "key": 223,
+        "qty": 0,
+        "cost": 1800,
+        "id": "lovie-lamb-blankies",
+        "sex":["boy","girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/Lovie_Lamb_Blankies.png", 
+        "title": "Милая овечка", 
+        "snippet": "Эта милая и нежная овечка подойдёт как мальчику, так и девочке. Невероятно мягкая, совсем не хочется выпускать её из рук, в сочетании с любимой соской малыша, станет незаменимым другом ребёнку.",
+        "images": ["img/Lovie_Lamb_Blankies.png"],
         "style" : "col-sm-4"
     },
     {
