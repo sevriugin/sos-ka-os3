@@ -16,7 +16,7 @@
     },
     {
         "key": 101,
-        "qty": 0,
+        "qty": 1,
         "cost": 2000,
         "id": "afrique-elefant",
         "sex":["boy","girl"],
@@ -780,10 +780,10 @@
         "productType" : "Соска + держатель",
         "age": "0+",
         "vendor": "paci-plushies",
-        "imageUrl": "img/Lovie_Lamb_Blankies.png", 
+        "imageUrl": "img/Lovie_Lamb_Blankies.jpg", 
         "title": "Милая овечка", 
         "snippet": "Эта милая и нежная овечка подойдёт как мальчику, так и девочке. Невероятно мягкая, совсем не хочется выпускать её из рук, в сочетании с любимой соской малыша, станет незаменимым другом ребёнку.",
-        "images": ["img/Lovie_Lamb_Blankies.png"],
+        "images": ["img/Lovie_Lamb_Blankies.jpg"],
         "style" : "col-sm-4"
     },
     {
