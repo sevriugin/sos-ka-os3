@@ -468,7 +468,9 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 	service.total = function() {
 		var total = 0;
 		angular.forEach(service.invoice.items, function(item) {
-				total += item.qty * item.cost;
+				if(item.id != "LexiCard-Dog-3m" && item.id != "LexiCard-Cat-3m") {
+					total += item.qty * item.cost;
+				}
 		})
 		return total;
 	};	
