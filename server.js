@@ -13,6 +13,17 @@ var dateFormat 	= require('dateformat');
 var util		= require('util');
 var rufus 		= require('rufus');
 
+var tg = require('telegram-node-bot')('343041443:AAHIFspG65gk_iGuo65V7KbQl37dIWifUQg');
+
+tg.router.
+    when(['ping'], 'PingController');
+
+tg.controller('PingController', ($) => {
+    tg.for('ping', () => {
+        $.sendMessage('pong')
+    })
+});
+
 //create application/json parser 
 var jsonParser 			= bodyParser.json()
  
