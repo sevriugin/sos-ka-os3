@@ -389,6 +389,13 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 																| #{item.cost} руб. X #{item.qty}
 																br
 																br
+																if item.id == "LexiCard-Dog-3m" || item.id == "LexiCard-Cat-3m"
+																	a(href='https://fb.com/msg/LexiClub')
+																		| Активация через Facebook
+																		| &nbsp;
+																	a(href='https://telegram.me/LexiBot')
+																		| Активация через Telegram
+																		| &nbsp;
 									table(border='0', cellpadding='0', cellspacing='0', width='100%', id='templateColumns')
 										tr
 											td(align='center', valign='top', class='templateColumnContainer', style='padding-top:20px;')
