@@ -772,6 +772,8 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 		$scope.takeaway		= productFactory.update.takeaway;
 		$scope.news			= productFactory.update.news;
 	}
+
+	$scope.product = productFactory.setCurrent("ReGa-1");
 	
 	$scope.updateId	= function() {
 		if($scope.itsUpdate) {
