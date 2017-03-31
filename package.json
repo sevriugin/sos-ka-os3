@@ -32,8 +32,7 @@
     "jade":"*",
     "googleapis":"*",
     "dateformat":"*",
-    "rufus":"*",
-    "telegram-node-bot":"4.0.5"
+    "rufus":"*"
   },
   
   "devDependencies": {},
