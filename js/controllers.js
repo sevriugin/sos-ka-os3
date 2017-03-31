@@ -773,7 +773,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 		$scope.news			= productFactory.update.news;
 	}
 
-	$scope.product = productFactory.setCurrent("LexiCard-Dog-3m");
+	$scope.product = productFactory.setCurrent("ReGa-1");
 	
 	$scope.updateId	= function() {
 		if($scope.itsUpdate) {

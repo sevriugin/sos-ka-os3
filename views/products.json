@@ -1,7 +1,7 @@
 [
     {
     	"key": 100,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 2000,
         "id": "tessa-turtle",
         "sex":["girl"],
@@ -16,7 +16,7 @@
     },
     {
         "key": 101,
-        "qty": 1,
+        "qty": 0,
         "cost": 2000,
         "id": "afrique-elefant",
         "sex":["boy","girl"],
