@@ -291,6 +291,30 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		}
 		return null;
 	};
+
+	service.getOptions = function(productId) {
+		for (var i = 0, len = service.products.length; i < len; i++) {
+			if (service.products[i].id === productId) {
+				if(service.products[i].groupId) {
+					var groupId = service.products[i].groupId;
+					for (var j = 0, length = service.products.length; j < length; j++) {
+						if (service.products[j].id === groupId) {
+							if(service.products[j].options) {
+								return service.products[j].options;
+							}
+							else {
+								return null;
+							}
+						}
+					}
+				}
+				else {
+					return null;
+				}
+			}
+		}
+		return null;
+	};
 	
 	service.getVendor = function(vendorId) {
 		for (var i = 0, len = service.vendors.length; i < len; i++) {
@@ -1273,6 +1297,7 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 	$scope.vendor		= productFactory.getVendor($scope.product.vendor);
 	$scope.nextVId		= productFactory.getNextForVendor();
 	$scope.prevVId		= productFactory.getPrevForVendor();
+	$scope.options		= productFactory.getOptions($scope.productId);
 
 	$scope.success 		= false;
 	$scope.dataLoading 	= false;
@@ -1292,6 +1317,28 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 		            $scope.dataLoading 	= false;
 		        }
 		    });
+	};
+
+	$scope.getOptions = function() {
+		return productFactory.getOptions($scope.product);
+	};
+
+	$scope.getOptionById = function(id) {
+		if($scope.product.option) {
+			if(id == 0) {
+				return Object.keys($scope.product.option)[0];
+			}
+			else if (id == 1) {
+				tag = Object.keys($scope.product.option)[0];
+				return $scope.product.option[tag];
+			}
+			else {
+				return null;
+			}
+		}
+		else {
+			return null;
+		}
 	};
 	
 	$scope.addToCart = function(product) {
