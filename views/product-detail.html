@@ -46,6 +46,11 @@
 			<div class="product-price hidden-xs">
 				<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПОД ЗАКАЗ 30 ДНЕЙ"}}</span>
 				<span ng-if="product.oldCost" class="original-price">{{product.oldCost | currency:"₽ ":0 }}</span>
+				<div ng-if="options">
+					<select ng-model="colors">
+						<option ng-repeat="option in options">{{Object.key(option)[0]}}</option>
+					</select>
+				</div>
 			</div>
 			<div class="product-detail">
 				<p>{{product.snippet}}</p>

@@ -1340,6 +1340,7 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 			return null;
 		}
 	};
+
 	
 	$scope.addToCart = function(product) {
 		productFactory.addToCart(product);
