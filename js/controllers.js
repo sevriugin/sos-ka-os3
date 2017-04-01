@@ -1341,7 +1341,10 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 		}
 	};
 
-	
+	$scope.getOptionValue = function(obj) {
+		Object.keys(obj)[0];
+	};
+
 	$scope.addToCart = function(product) {
 		productFactory.addToCart(product);
 	};
