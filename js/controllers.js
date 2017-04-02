@@ -1385,12 +1385,16 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 
     
     if($scope.options) {
-    	$scope.option_0		= $scope.getOptionById(0);
+    	var selected		= $scope.getOptionById(0);
     	$scope.options_0	= [];
 
     	for (var i = 0; i < $scope.options.length; i++) {
     		key = Object.keys($scope.options[i])[0];
-    		$scope.options_0.push(key);
+    		$scope.options_0.push({id:i, name:key});
+    		
+    		if(key == selected) {
+    			$scope.option_0 = i;
+    		}
     	}
     }
 

@@ -47,13 +47,12 @@
 				<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПОД ЗАКАЗ 30 ДНЕЙ"}}</span>
 				<span ng-if="product.oldCost" class="original-price">{{product.oldCost | currency:"₽ ":0 }}</span>
 				<div ng-if="options">
-					<select ng-model="option_0">
-						<option ng-repeat="option in options_0"
-								ng-value="option"
-								ng-selected="option == option_0">
-							{{option}}
-						</option>
-					</select>
+					<form name="optionsForm">
+						<select name="options_0_select" id="options_0_select"
+      						ng-options="option.name for option in options_0 track by option.id"
+      						ng-model="option_0">
+  						</select>
+  					</form>
 				</div>
 			</div>
 			<div class="product-detail">
