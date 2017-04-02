@@ -1390,10 +1390,10 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 
     	for (var i = 0; i < $scope.options.length; i++) {
     		key = Object.keys($scope.options[i])[0];
-    		$scope.options_0.push({id:i, name:key});
+    		$scope.options_0.push({id:i.toString(), name:key});
     		
     		if(key == selected) {
-    			$scope.option_0 = i;
+    			$scope.option_0 = i.toString();
     		}
     	}
     }
