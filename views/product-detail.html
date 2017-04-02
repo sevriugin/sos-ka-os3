@@ -49,6 +49,7 @@
 				<div ng-if="options">
 					<select ng-model="option_0">
 						<option ng-repeat="option in options" 
+								ng-value="option"
 								ng-selected="getOptionValue(option) == getOptionById(0)">
 							{{getOptionValue(option)}}
 						</option>
