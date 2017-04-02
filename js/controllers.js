@@ -1387,7 +1387,8 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
     $scope.options_0	= [];
 
     for (var i = 0; i < $scope.options.length; i++) {
-    	$scope.options_0.push(Object.keys($scope.options[i])[0]);
+    	var key = Object.keys($scope.options[i])[0];
+    	$scope.options_0.push( key );
     }
 });
 
