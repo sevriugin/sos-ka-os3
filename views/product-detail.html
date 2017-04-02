@@ -48,8 +48,8 @@
 				<span ng-if="product.oldCost" class="original-price">{{product.oldCost | currency:"₽ ":0 }}</span>
 				<div ng-if="options">
 					<select ng-model="option_0">
-						<option ng-repeat="option in options" 
-								ng-value="option"
+						<option ng-repeat="option in options"
+								ng-value="getOptionValue(option)"
 								ng-selected="getOptionValue(option) == getOptionById(0)">
 							{{getOptionValue(option)}}
 						</option>
