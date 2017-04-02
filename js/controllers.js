@@ -1298,6 +1298,7 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 	$scope.nextVId		= productFactory.getNextForVendor();
 	$scope.prevVId		= productFactory.getPrevForVendor();
 	$scope.options		= productFactory.getOptions($scope.productId);
+	$scope.option_0		= $scope.getSelectedOptions($scope.getOptionById(0))
 
 	$scope.success 		= false;
 	$scope.dataLoading 	= false;
@@ -1321,6 +1322,23 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 
 	$scope.getOptions = function() {
 		return productFactory.getOptions($scope.product);
+	};
+
+	$scope.getSelectedOptions = function(tag) {
+		if(tag == null) {
+			return null;
+		}
+
+		if($scope.options) {
+			for (var i = 0; i < $scope.options.length; i++) {
+				if(Object.keys($scope.options[i])[0] == tag) {
+					return $scope.options[i];
+				}
+			}
+		}
+		else {
+			return null;
+		}
 	};
 
 	$scope.getOptionById = function(id) {
