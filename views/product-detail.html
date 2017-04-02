@@ -48,11 +48,13 @@
 				<span ng-if="product.oldCost" class="original-price">{{product.oldCost | currency:"₽ ":0 }}</span>
 				<div ng-if="options">
 					<form name="optionsForm">
-						<select name="options_0_select" id="options_0_select"
-      						ng-options="option.name for option in options_0 track by option.id"
-      						ng-model="option_0">
-      						<option value="" ng-show="false"></option>
-  						</select>
+  						<select name="options_0_select" id="options_0_select" ng-model="option_0">
+      						<option ng-repeat="option in options_0" 
+      							ng-value="option.id"
+      							ng-selected="option.id == option_0">
+      								{{option.name}}
+      						</option>
+    					</select>
   					</form>
 				</div>
 			</div>
