@@ -1363,8 +1363,6 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
 		return value;
 	};
 
-	$scope.option_0		= $scope.getOptionById(0);
-
 	$scope.addToCart = function(product) {
 		productFactory.addToCart(product);
 	};
@@ -1384,6 +1382,8 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
     $scope.menuClass	= function() {
     	return ($scope.menuOpen ? 'menu-wrapper menu-front' : 'menu-wrapper');
     }
+
+    $scope.option_0		= $scope.getOptionById(0);
 }]);
 
 productControllers.controller('cartController', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {
