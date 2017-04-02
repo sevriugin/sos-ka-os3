@@ -1384,7 +1384,12 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
     }
 
     $scope.option_0		= $scope.getOptionById(0);
-}]);
+    $scope.options_0	= [];
+
+    for (var i = 0; i < $scope.options.length; i++) {
+    	$scope.options_0.push(Object.keys($scope.options[i])[0]);
+    }
+});
 
 productControllers.controller('cartController', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {
 	
