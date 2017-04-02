@@ -1383,10 +1383,17 @@ productControllers.controller('ProductDetailCtrl', ['$scope', '$routeParams', 'A
     	return ($scope.menuOpen ? 'menu-wrapper menu-front' : 'menu-wrapper');
     }
 
-    $scope.option_0		= $scope.getOptionById(0);
-    $scope.options_0	= [];
-
     
+    if($scope.options) {
+    	$scope.option_0		= $scope.getOptionById(0);
+    	$scope.options_0	= [];
+
+    	for (var i = 0; i < $scope.options.length; i++) {
+    		key = Object.keys($scope.options[i])[0];
+    		$scope.options_0.push(key);
+    	}
+    }
+
 }]);
 
 productControllers.controller('cartController', ['$scope', '$routeParams', 'productFactory', function($scope, $routeParams, productFactory) {
