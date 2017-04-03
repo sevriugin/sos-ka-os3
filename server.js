@@ -24,8 +24,8 @@ var urlencodedParser 	= bodyParser.urlencoded({ extended: true })
 var transporter 		= nodemailer.createTransport({
 	host: 'smtp.mailgun.org',
 	auth: {
-		user: 'postmaster@mg.sos-ka.com',
-		pass: '8Tm-WQN-Q5x-LUC'
+		user: 'postmaster@mail.sos-ka.com',
+		pass: 'd4bd94a0e178bf7c0dd42a1ddc6e7129'
 	}
 });
 
@@ -39,8 +39,8 @@ var mailOptions 		= {
 		from:'<order@sos-ka.com>',							// sender address
 		sender:'<order@sos-ka.com>',
 		replyTo:'<order@mg.sos-ka.com>',
-		to:'order@mg.sos-ka.com', 							// list of receivers
-		cc:'order@mg.sos-ka.com',
+		to:'order@mail.sos-ka.com', 							// list of receivers
+		cc:'order@mail.sos-ka.com',
 		subject:'New Order #', 								// Subject line
 		text:'Hello world from SOS-ka.com', 				// plaintext body
 		html: '<b>Hello world from SOS-ka.com</b>' 			// html body
