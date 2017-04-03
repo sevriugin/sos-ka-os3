@@ -38,7 +38,7 @@ var MongoClient = mongodb.MongoClient;
 var mailOptions 		= {
 		from:'<order@sos-ka.com>',							// sender address
 		sender:'<order@sos-ka.com>',
-		replyTo:'<order@mg.sos-ka.com>',
+		replyTo:'<order@mail.sos-ka.com>',
 		to:'order@mail.sos-ka.com', 							// list of receivers
 		cc:'order@mail.sos-ka.com',
 		subject:'New Order #', 								// Subject line
@@ -403,7 +403,7 @@ var SampleApp = function() {
           			  mailOptions['subject']	= invoice.id;
           			  mailOptions['html'] 		= html;
           			  mailOptions['to']			= invoice.email;
-          			  mailOptions['cc']			= 'order@mg.sos-ka.com';
+          			  mailOptions['cc']			= 'order@mail.sos-ka.com';
                   mailOptions['replyTo']  = invoice.email;
           				  
           			  //send mail with defined transport object
@@ -550,7 +550,7 @@ var SampleApp = function() {
           				  mailOptions['subject']	= 'New registration';
           				  mailOptions['html'] 		= html;
           				  mailOptions['to']			= user.username;
-          				  mailOptions['cc']			= 'order@mg.sos-ka.com';
+          				  mailOptions['cc']			= 'order@mail.sos-ka.com';
                     mailOptions['replyTo']  = user.username;
           				  
           				  //send mail with defined transport object
@@ -631,7 +631,7 @@ var SampleApp = function() {
 
           	  				// Sending mail
           	  				mailOptions['subject']	= 'New comment for ' + req.body.comment.article.title;
-          	  				mailOptions['to']		= 'order@mg.sos-ka.com';
+          	  				mailOptions['to']		= 'order@mail.sos-ka.com';
           	  				mailOptions['html'] 	= req.body.comment.message;
           	  				mailOptions['replyTo'] 	= req.body.comment.email;
           	  				mailOptions['cc'] 		= '';
@@ -656,7 +656,7 @@ var SampleApp = function() {
 
           	  				// Sending mail
           	  				mailOptions['subject']	= 'New comment for ' + req.body.comment.article.title;
-          	  				mailOptions['to']		= 'order@mg.sos-ka.com';
+          	  				mailOptions['to']		= 'order@mail.sos-ka.com';
           	  				mailOptions['html'] 	= req.body.comment.message;
           	  				mailOptions['replyTo'] 	= req.body.comment.email;
           	  				mailOptions['cc'] 		= '';
@@ -681,7 +681,7 @@ var SampleApp = function() {
         				  
           	// Sending mail
           	mailOptions['subject']	= 'Message from ' + req.body.contact.firstname + ' ' + req.body.contact.lastname + ' ' + req.body.contact.phone;
-          	mailOptions['to']		= 'order@mg.sos-ka.com';
+          	mailOptions['to']		= 'order@mail.sos-ka.com';
         	mailOptions['html'] 	= req.body.contact.message;
         	mailOptions['replyTo'] 	= req.body.contact.email;
         	mailOptions['cc'] 		= '';
