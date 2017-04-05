@@ -283,7 +283,7 @@
     },
     {
     	"key": 111,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 2000,
         "id": "mango-monkey",
         "sex":["boy","girl"],
