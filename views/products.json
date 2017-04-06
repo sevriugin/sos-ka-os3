@@ -1143,6 +1143,38 @@
         "style" : "col-sm-4"
     },
     {
+        "key": 414,
+        "qty": 1,
+        "cost": 2000,
+        "oldCost": 2400,
+        "id": "Bud-Bunny-Ear-resistible-Teether",
+        "sex":["boy","girl"],
+        "productType" : "Прорезыватель для зубов",
+        "age": "3м+", 
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Bud-Bunny-Ear-resistible-Teether.jpg", 
+        "title": "Зайка Егорка, 3м+", 
+        "snippet": "Этот прорезываетель прекрасно подойдёт малышам, которые любят жевать и сосать разные тканевые лоскутки. В прорезывателе используются только гипоаллергенные материалы - каучук, для ушей - сатин и гладкий велюр. Удобный дополнительный комплект съёмных ушей пригодится когда первая пара находится в стирке. Невероятно мягкие и приятные на ощупь ушки станут любимым  способом успокоиться когда так беспокоят зубки.",
+        "images": ["img/Bud-Bunny-Ear-resistible-Teether.jpg", "img/Bud-Bunny-Ear-resistible-Teether-Back.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+        "key": 415,
+        "qty": 1,
+        "cost": 2000,
+        "oldCost": 2400,
+        "id": "Skipit-Ear-resistible-Teether",
+        "sex":["boy","girl"],
+        "productType" : "Прорезыватель для зубов",
+        "age": "3м+", 
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Skipit-Ear-resistible-Teether.jpg", 
+        "title": "Щенок Филлип, 3м+", 
+        "snippet": "Этот прорезываетель прекрасно подойдёт малышам, которые любят жевать и сосать разные тканевые лоскутки. В прорезывателе используются только гипоаллергенные материалы - каучук, для ушей - сатин и гладкий велюр. Удобный дополнительный комплект съёмных ушей пригодится когда первая пара находится в стирке. Невероятно мягкие и приятные на ощупь ушки станут любимым  способом успокоиться когда так беспокоят зубки.",
+        "images": ["img/Skipit-Ear-resistible-Teether.jpg", "img/Skipit-Ear-resistible-Teether-Back.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 501,
     	"qty": 0,
     	"cost": 1500,
