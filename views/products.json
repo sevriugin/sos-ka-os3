@@ -1148,7 +1148,7 @@
         "cost": 2000,
         "oldCost": 2400,
         "id": "Bud-Bunny-Ear-resistible-Teether",
-        "sex":["boy","girl"],
+        "sex":["boy"],
         "productType" : "Прорезыватель для зубов",
         "age": "3м+", 
         "vendor": "BunniesByTheBay",
