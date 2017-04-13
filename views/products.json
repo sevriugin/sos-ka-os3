@@ -1785,6 +1785,22 @@
         "style" : "col-sm-6"
     },
     {
+        "key": 622,
+        "qty": 1,
+        "cost": 2400,
+        "oldCost": 3000,
+        "id": "Trimmo-Electric-Nail-File",
+        "sex":["boy","girl"],
+        "productType" : "Триммер",
+        "age": "0м+", 
+        "vendor": "Olababy",
+        "imageUrl": "img/Trimmo-Electric-Nail-File.jpg",
+        "title": "электрический для ногтей, 0м+", 
+        "snippet": "Электричесий триммер Olababy спецально разработан для нежных и деликатных ноготков вашего малыша. Триммер имеет центральный диск с вращающимся буфером, который легко укоротит и отполирует ноготки, не приченяя боли малышу. Устройство имеет две скорости вращения и три сменных буфера с поверхностью разной зернистости для ребенка от 0 до 12 месяцев. Триммер имеет эргономический дизайн для удобного использования в руках родтителей, а форма яйца не раздражает ребенка. Триммер имеет LED источник света, позволяющий постригать ногти во время сна. Хорошая новость, для триммера не нужны батареи, его можно зарядить через любой USB порт.",
+        "images": ["img/Trimmo-Electric-Nail-File.jpg","img/Trimmo-Electric-Nail-File-1.jpg","img/Trimmo-Electric-Nail-File-2.jpg","img/Trimmo-Electric-Nail-File-3.jpg","img/Trimmo-Electric-Nail-File-4.jpg","img/Trimmo-Electric-Nail-File-5.jpg"],
+        "style" : "col-sm-6"
+    },
+    {
         "key": 701,
         "qty": 1,
         "cost": 999,
