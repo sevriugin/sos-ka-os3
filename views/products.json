@@ -1787,8 +1787,8 @@
     {
         "key": 622,
         "qty": 1,
-        "cost": 2400,
-        "oldCost": 3000,
+        "cost": 2990,
+        "oldCost": 3200,
         "id": "Trimmo-Electric-Nail-File",
         "sex":["boy","girl"],
         "productType" : "Триммер",
