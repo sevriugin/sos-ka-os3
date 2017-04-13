@@ -1,7 +1,7 @@
 [
     {
     	"key": 100,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "tessa-turtle",
         "sex":["girl"],
@@ -16,7 +16,7 @@
     },
     {
         "key": 101,
-        "qty": 0,
+        "qty": 1,
         "cost": 2000,
         "id": "afrique-elefant",
         "sex":["boy","girl"],
@@ -184,6 +184,21 @@
         "style" : "col-sm-12"
     },
     {
+        "key": 106,
+        "qty": 1,
+        "cost": 2000,
+        "id": "oatmeal-bunny",
+        "sex":["boy","girl"],
+        "productType" : "Соска",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer",
+        "imageUrl": "img/oatmeal-bunny.jpg", 
+        "title": "Пушистый кролик", 
+        "snippet": "Самый мягкий и пушистый из всех! Подойдёт как мальчику, так и девочке.",
+        "images": ["img/oatmeal-bunny.jpg"],
+        "style" : "col-sm-8"
+    },
+    {
     	"key": 107,
     	"qty": 1,
     	"cost": 2000,
@@ -283,7 +298,7 @@
     },
     {
     	"key": 111,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "mango-monkey",
         "sex":["boy","girl"],
@@ -298,7 +313,7 @@
     },
     {
     	"key": 112,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "ella-bella",
         "sex":["girl"],
@@ -325,6 +340,21 @@
         "snippet": "Маленькие рожки и яркая грива безусловно привлекают внимание малыша. Динозаврик- отличная компания во сне и во время игры.",
         "images": ["img/okey-dokey-dino.jpg"],
         "style" : "col-sm-4"
+    },
+    {
+        "key": 114,
+        "qty": 1,
+        "cost": 2000,
+        "id": "blue-puppy",
+        "productType" : "Соска",
+        "sex":["boy"],
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/blue-puppy.jpg", 
+        "title": "Голубой щенок", 
+        "snippet": "Игривый Щенок - прекрасный друг для мальчика. Не потеряется никогда из виду. Новинка 2016 года.",
+        "images": ["img/blue-puppy.jpg"],
+        "style" : "col-sm-8"
     },
     {
     	"key": 116,
@@ -399,6 +429,21 @@
         "title": "Кит Бабли", 
         "snippet": "Большой и добрый кит. Он очень красивый и готов целый день играть с Вашим малышом. Новинка 2016 года",
         "images": ["img/Bubbly_Whale.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+        "key": 121,
+        "qty": 1,
+        "cost": 2000,
+        "id": "Lobbie_Lobster",
+        "productType" : "Соска",
+        "sex":["boy","girl"],
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/Lobbie_Lobster.jpg", 
+        "title": "Лобстер Лобби", 
+        "snippet": "Красный лобстер Лобби станет любимой игрушкой вашему малышу. Новинка 2016 года",
+        "images": ["img/Lobbie_Lobster.jpg"],
         "style" : "col-sm-4"
     },
     {
@@ -547,7 +592,7 @@
     },
     {
         "key": 207,
-        "qty": 0,
+        "qty": 1,
         "cost": 1800,
         "id": "jaspie-giraffe",
         "sex":["girl"],
