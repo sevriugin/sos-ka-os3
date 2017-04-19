@@ -1405,7 +1405,7 @@
     },
     {
         "key": 509,
-        "qty": 1,
+        "qty": 0,
         "cost": 990,
         "id": "ComoTomo-teether-orage",
         "sex":["boy","girl"],
@@ -1420,7 +1420,7 @@
     },
     {
         "key": 510,
-        "qty": 1,
+        "qty": 0,
         "cost": 990,
         "id": "ComoTomo-teether-blue",
         "sex":["boy"],
