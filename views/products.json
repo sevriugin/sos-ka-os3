@@ -32,8 +32,7 @@
     {
     	"key": 590,
     	"qty": 1,
-    	"cost": 1200,
-    	"oldCost": 1500,
+    	"cost": 1500,
     	"banner":true,
     	"active":true,
         "id": "ComoTomo-0",
@@ -51,8 +50,7 @@
     {
     	"key": 591,
     	"qty": 1,
-    	"cost": 1500,
-    	"oldCost": 1800,
+    	"cost": 1800,
     	"banner":true,
     	"active":true,
         "id": "ComoTomo-1",
@@ -70,8 +68,7 @@
     {
         "key": 592,
         "qty": 1,
-        "cost": 700,
-        "oldCost": 850,
+        "cost": 850,
         "banner":true,
         "active":true,
         "id": "ComoTomo-2",
@@ -89,8 +86,7 @@
     {
         "key": 593,
         "qty": 1,
-        "cost": 700,
-        "oldCost": 850,
+        "cost": 850,
         "banner":true,
         "active":true,
         "id": "ComoTomo-2",
@@ -1002,7 +998,6 @@
         "images": ["img/wn-slide-03.jpg"],
         "style" : "col-sm-12"
     },
-    {"key":321,"id":"LittleMouse", "productType" : "Соска", "age": "0-6 мес", "sex":["boy","girl"], "vendor": "WubbaNub®", "cost": 2000, "title":"Маленькая Мышка", "imageUrl":"img/mouse1o.jpg","qty":2, "style" : "col-sm-4", "images":["img/mouse1.jpg","img/mouse2.jpg","img/mouse3.jpg"],"snippet":"WubbaNub Маленькая Мышка – это новый член Вашей семьи. Но не стоит её пугаться. Она очаровательная, маленькая и полная любви к Вашему чаду. Маленькая мягкая мышка обязательно станет фаворитом в Вашей семье. Уникальное строение WubbaNub позволяет соске всё время быть в доступности для малыша."},
     {
         "key": 691,
         "qty": 1,
@@ -1465,7 +1460,7 @@
     },
     {
         "key": 603,
-        "qty": 0,
+        "qty": 1,
         "cost": 1100,
         "id": "Training-Spoon-Set",
         "sex":["boy","girl"],
