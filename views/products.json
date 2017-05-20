@@ -1803,7 +1803,7 @@
         "id": "SteamBowl",
         "sex":["boy","girl"],
         "productType" : "Чашка",
-        "age": "6м+", 
+        "age": "3м+", 
         "vendor": "Olababy",
         "imageUrl": "img/SteamBowl-01.jpg",
         "title": "для кормления", 
