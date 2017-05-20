@@ -850,6 +850,9 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 	};
 
 	$scope.shiping = function() {
+		if($scope.total() == 0) {
+			return 0
+		}
 		if($scope.takeaway == 'takeaway') {
 			return 120
 		}
