@@ -503,9 +503,9 @@ productControllers.factory('productFactory', ['$http', function ($http) {
 		var shiping = 0;
 
 		if(service.total() < 3000 && service.total() > 0) {
-			shiping = 330;
+			shiping = 270;
 		} else {
-			shiping = 330;
+			shiping = 270;
 		}
 		return shiping;
 	};
@@ -624,7 +624,7 @@ productControllers.factory('productFactory', ['$http', function ($http) {
     	googleProduct.condition				= 	"new";
     	googleProduct.googleProductCategory	= 	"Baby & Toddler > Baby Health > Pacifiers & Teethers";
     	googleProduct.price					= 	{"value": service.selectedProduct.cost, "currency": "RUB"};
-    	googleProduct.shipping				= 	[{"country": "RU", "service":"Standard shipping", "price": {"value": "330", "currency": "RUB"}}];
+    	googleProduct.shipping				= 	[{"country": "RU", "service":"Standard shipping", "price": {"value": "270", "currency": "RUB"}}];
     	googleProduct.shippingWeight		= 	{"value": "50", "unit": "grams"};
     	
     	return googleProduct;
@@ -854,7 +854,7 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 			return 0
 		}
 		if($scope.takeaway == 'takeaway') {
-			return 120
+			return 0
 		}
 		else if ($scope.takeaway == 'post') {
 			return 400
