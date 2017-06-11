@@ -1291,7 +1291,7 @@
     },
     {
     	"key": 502,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "ComoTomo-250-girl",
         "sex":["girl"],
@@ -1368,7 +1368,7 @@
     },
     {
         "key": 507,
-        "qty": 1,
+        "qty": 0,
         "cost": 750,
         "oldCost": 800,
         "id": "ComoTomo-nipples-6m",
