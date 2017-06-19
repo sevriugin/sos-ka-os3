@@ -67,7 +67,7 @@
 					<div class="form-group">
 						<label class="control-label" for="address2">продолжение адреса или промо-код (необязательно)</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="address2" id="address2" placeholder="продолжение адреса или промо-код (необязательно)" class="form-control" ng-model="address2" />
+       					<input type="text" name="address2" id="address2" placeholder="комментарий или промо-код (необязательно)" class="form-control" ng-model="address2" />
 					</div>
 					<div class="form-group">
 						<label class="control-label" for="city">город</label>
@@ -78,8 +78,7 @@
 					<div class="form-group">
 						<label class="control-label" for="postal">индекс</label>
         				<i class="fa fa-key"></i>
-       					<input type="text" name="postal" id="postal" placeholder="индекс" class="form-control" ng-model="postal" required />
-        				<span ng-show="form.postal.$dirty && form.postal.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ВАШ ПОЧТОВЫЙ ИНДЕКС</span>
+       					<input type="text" name="postal" id="postal" placeholder="индекс" class="form-control" ng-model="postal" />
 					</div>					
 					<div class="form-group">
 						<label class="control-label" for="phone">телефон</label>
@@ -117,12 +116,12 @@
         						<i class="fa fa-key"></i>
         						<select id="delivery" class="form-control" ng-model="delivery" tabindex="8" required>
 									<option disabled="disabled" selected="selected" value="">день доставки</option>
-									<option value="1">{{moment | amAdd : '1' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
-									<option value="2">{{moment | amAdd : '2' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="3">{{moment | amAdd : '3' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="4">{{moment | amAdd : '4' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="5">{{moment | amAdd : '5' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="6">{{moment | amAdd : '6' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="7">{{moment | amAdd : '7' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="8">{{moment | amAdd : '8' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="10">{{moment | amAdd : '10' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 								</select>
         						<span ng-show="form.delivery.$dirty && form.delivery.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ДЕНЬ ДОСТАВКИ</span>
