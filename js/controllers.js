@@ -853,11 +853,14 @@ productControllers.controller('checkoutController', ['$scope', '$location', 'pro
 		if($scope.total() == 0) {
 			return 0
 		}
-		if($scope.takeaway == 'takeaway') {
+		if($scope.takeaway == 'takeaway0') {
 			return 0
 		}
+		else if($scope.takeaway == 'takeaway1') {
+			return 200
+		}
 		else if ($scope.takeaway == 'post') {
-			return 400
+			return 300
 		}
 		else if ($scope.takeaway == 'dpdauto') {
 			return 400

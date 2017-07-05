@@ -350,7 +350,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 												br
 												| Телефон: #{invoice.phone}  e-mail: #{invoice.email} 
 												br
-												if invoice.delivery_option == "takeaway"
+												if invoice.delivery_option == "takeaway0"
 													| Адрес самовывоза : 125438, г.Москва, ул. Автомоторная дом 7, стр. 1, Склад "Шиптор", тел.: +7 (915) 436-41-75
 													br
 												else
@@ -358,7 +358,7 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 													|                  #{invoice.city}, #{invoice.postal} 
 													br
 												| Предпочтительная дата 
-												if invoice.delivery_option == "takeaway"
+												if invoice.delivery_option == "takeaway0" || invoice.delivery_option == "takeaway1"
 													| самовывоза
 												else
 													| доставки 

@@ -99,7 +99,8 @@
 									<option disabled="disabled" selected="selected" value="">способ доставки</option>
 									<option value="delivery">курьер Москва</option>
 									<option value="dpdauto">курьер НЕ Москва</option>
-									<option value="takeaway">самовывоз</option>
+									<option value="takeaway0">самовывоз Москва</option>
+									<option value="takeaway1">самовывоз НЕ Москва</option>
 									<option value="post">почтой</option>
 								</select>
         						<span ng-show="form.delivery.$dirty && form.delivery.$error.required" class="form-control">ПОЖАЛУЙСТА, СПОСОБ ДОСТАВКИ</span>
@@ -116,12 +117,12 @@
         						<i class="fa fa-key"></i>
         						<select id="delivery" class="form-control" ng-model="delivery" tabindex="8" required>
 									<option disabled="disabled" selected="selected" value="">день доставки</option>
+									<option value="1">{{moment | amAdd : '1' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
+									<option value="2">{{moment | amAdd : '2' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="3">{{moment | amAdd : '3' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="4">{{moment | amAdd : '4' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="5">{{moment | amAdd : '5' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="6">{{moment | amAdd : '6' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
-									<option value="7">{{moment | amAdd : '7' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
-									<option value="8">{{moment | amAdd : '8' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 									<option value="10">{{moment | amAdd : '10' : 'days' | amDateFormat : 'dddd Do MMMM YYYY'}}</option>
 								</select>
         						<span ng-show="form.delivery.$dirty && form.delivery.$error.required" class="form-control">ПОЖАЛУЙСТА, УКАЖИТЕ ДЕНЬ ДОСТАВКИ</span>
