@@ -1170,7 +1170,8 @@
     {
         "key": 412,
         "qty": 1,
-        "cost": 1900,
+        "cost": 1140,
+        "oldCost": 1900,
         "id": "Peanut-Silly-Buddy-Blue",
         "sex":["boy"],
         "productType" : "Комфортер и держатель для соски",
@@ -1185,7 +1186,8 @@
     {
         "key": 413,
         "qty": 1,
-        "cost": 1900,
+        "cost": 1140,
+        "oldCost": 1900,
         "id": "Peanut-Silly-Buddy-Pink",
         "sex":["girl"],
         "productType" : "Комфортер и держатель для соски",
@@ -1815,7 +1817,7 @@
     },
     {
         "key": 802,
-        "qty": 0,
+        "qty": 1,
         "cost": 2000,
         "id": "Blanket_Loved",
         "productType" : "Пелёнка",
