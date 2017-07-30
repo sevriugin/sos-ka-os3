@@ -1448,7 +1448,7 @@
     {
         "key": 605,
         "qty": 1,
-        "cost": 1100,
+        "cost": 600,
         "id": "Ola-Spoon-short",
         "sex":["boy","girl"],
         "productType" : "Ложка",
