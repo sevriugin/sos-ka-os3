@@ -1834,7 +1834,7 @@
     },
     {
         "key": 801,
-        "qty": 0,
+        "qty": 1,
         "cost": 2000,
         "id": "Blanket_Mountains",
         "productType" : "Пелёнка",
@@ -1864,7 +1864,7 @@
     },
     {
         "key": 803,
-        "qty": 0,
+        "qty": 1,
         "cost": 2000,
         "id": "Blanket_Lovely",
         "productType" : "Пелёнка",
@@ -1879,7 +1879,7 @@
     },
     {
         "key": 804,
-        "qty": 0,
+        "qty": 1,
         "cost": 2000,
         "id": "Blanket_Child",
         "productType" : "Пелёнка",
@@ -1894,7 +1894,7 @@
     },
     {
         "key": 805,
-        "qty": 0,
+        "qty": 1,
         "cost": 2000,
         "id": "Blanket_Dream",
         "productType" : "Пелёнка",
