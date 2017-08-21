@@ -3,3 +3,7 @@ target
 !.settings/.jsdtscope
 .project
 .classpath
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+~/bimbi/.gitignore
