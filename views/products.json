@@ -1250,7 +1250,7 @@
     },
     {
     	"key": 502,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "ComoTomo-250-girl",
         "sex":["girl"],
@@ -1265,7 +1265,7 @@
     },
     {
     	"key": 503,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "ComoTomo-250-boy",
         "sex":["boy"],
