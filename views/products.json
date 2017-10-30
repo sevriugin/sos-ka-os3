@@ -102,21 +102,6 @@
         "style" : "col-sm-8"
     },
     {
-    	"key": 104,
-    	"qty": 1,
-    	"cost": 2000,
-        "id": "little-stretch-giraffe",
-        "sex":["boy"],
-        "productType" : "Соска",
-        "age": "0-6 мес",
-        "vendor": "mary-meyer", 
-        "imageUrl": "img/little-stretch-giraffe.jpg", 
-        "title": "Маленький жираф", 
-        "snippet": "Маленькие ушки, маленькие рожки милого жирафа, но так приятно их ощущать и перебирать пальчиками! Хвостик узелком так и хочется потянуть в ротик.",
-        "images": ["img/little-stretch-giraffe.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
     	"key": 105,
     	"qty": 1,
     	"cost": 2000,
@@ -264,7 +249,7 @@
     },
     {
     	"key": 112,
-    	"qty": 0,
+    	"qty": 1,
     	"cost": 2000,
         "id": "ella-bella",
         "sex":["girl"],
@@ -435,6 +420,21 @@
         "style" : "col-sm-4"
     },
     {
+    	"key": 204,
+    	"qty": 1,
+    	"cost": 1800,
+        "id": "unity-unicorn",
+        "sex":["girl"],
+        "productType" : "Соска + держатель",
+        "age": "0+",
+        "vendor": "paci-plushies",
+        "imageUrl": "img/unity-unicorn.jpg", 
+        "title": "Единорог", 
+        "snippet": "Этот единорог- сама нежность! Не стоит беспокоиться, что он потеряет цвет и форму после ухода ( бережной стирки). Всегда рядом, всегда на виду.",
+        "images": ["img/unity-unicorn.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 205,
     	"qty": 1,
     	"cost": 1800,
@@ -484,21 +484,6 @@
         "style" : "col-sm-4"
     },
     {
-        "key": 207,
-        "qty": 1,
-        "cost": 1800,
-        "id": "jaspie-giraffe",
-        "sex":["girl"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies", 
-        "imageUrl": "img/jaspie-giraffe.jpg", 
-        "title": "Жираф Джесси", 
-        "snippet": "Этот жираф - сама нежность и приятность. Хочется бесконечно его трогать. Ухаживать с помощью деликатной стирки очень просто- он не изменит цвет и не поменяет форму .",
-        "images": ["img/jaspie-giraffe.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
     	"key": 295,
     	"qty": 1,
     	"cost": 1800,
@@ -517,22 +502,6 @@
         "style" : "col-sm-4"
     },
     {
-    	"key": 209,
-    	"qty": 1,
-        "cost": 1080,
-        "oldCost": 1800,
-        "id": "lovie-lamb-lovies",
-        "sex":["boy","girl"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/lovie-lamb-lovies.jpg", 
-        "title": "Ягнёнок", 
-        "snippet": "Белоснежный ягнёнок готов всегда быть рядом. Его длинные конечности идеальны для манипуляции в маленьких ручках. Бережная стирка поможет сохранить игрушку всегда в идеальной форме.",
-        "images": ["img/lovie-lamb-lovies.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
         "key": 212,
         "qty": 1,
         "cost": 1080,
@@ -546,21 +515,6 @@
         "title": "Обезьянка", 
         "snippet": "Нейтральные и спокойные цвета, мягкий плюш и любимая соска - все, что нужно малышу в некоторые моменты его жизни... Обезьянка подойдёт как мальчику, так и девочке.",
         "images": ["img/milo-monkey.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
-    	"key": 213,
-    	"qty": 1,
-    	"cost": 1800,
-        "id": "cutsie-cow",
-        "sex":["girl"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/cutsie-cow.png", 
-        "title": "Коровка", 
-        "snippet": "Безупречно выполненная игрушка, приятная на ощупь ткань. Коровку можно прикрепить к любимой соске и она будет излюбленным мягким другом Вашему малышу.",
-        "images": ["img/cutsie-cow.png"],
         "style" : "col-sm-4"
     },
     {
@@ -674,21 +628,6 @@
         "title": "Игривый Щен~ОК", 
         "snippet": "Игривый щенок, он всегда готов поиграть и никогда не потеряется.",
         "images": ["img/Scruffy-Puppy.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
-        "key": 219,
-        "qty": 1,
-        "cost": 1800,
-        "id": "barkley-bull-dog",
-        "sex":["boy"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/Barkley_Bull_Dog-1.jpg", 
-        "title": "Бульдожка Баркли", 
-        "snippet": "Нужен друг? Бульдожка Баркли будет вашему малышу верным другом. Он будет всегда рядом и никогда не потеряется",
-        "images": ["img/Barkley_Bull_Dog-1.jpg","img/Barkley_Bull_Dog-2.jpg"],
         "style" : "col-sm-4"
     },
     {
