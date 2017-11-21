@@ -87,6 +87,21 @@
         "style" : "col-sm-6"
     },
     {
+    	"key": 101,
+    	"qty": 0,
+    	"cost": 2000,
+        "id": "afrique-elefant",
+        "sex":["boy","girl"],
+        "productType" : "Соска",
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/afrique-elefant.jpg", 
+        "title": "Белый слон", 
+        "snippet": "Белый слон. За большие уши и хвостик-узелок легко удерживать игрушку маленьким и неокрепшим ручкам малыша. Расцветка универсальна и подойдёт как мальчику, так и девочке. Новинка 2016 года.",
+        "images": ["img/afrique-elefant.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
         "key": 103,
         "qty": 1,
         "cost": 2000,
@@ -133,21 +148,6 @@
         "snippet": "",
         "images": ["img/mm-slide-01.jpg"],
         "style" : "col-sm-12"
-    },
-    {
-        "key": 106,
-        "qty": 1,
-        "cost": 2000,
-        "id": "oatmeal-bunny",
-        "sex":["boy","girl"],
-        "productType" : "Соска",
-        "age": "0-6 мес",
-        "vendor": "mary-meyer",
-        "imageUrl": "img/oatmeal-bunny.jpg", 
-        "title": "Пушистый кролик", 
-        "snippet": "Самый мягкий и пушистый из всех! Подойдёт как мальчику, так и девочке.",
-        "images": ["img/oatmeal-bunny.jpg"],
-        "style" : "col-sm-8"
     },
     {
     	"key": 107,
@@ -232,21 +232,7 @@
         "images": ["img/cutsie-caterpillar.jpg"],
         "style" : "col-sm-4"
     },
-    {
-    	"key": 111,
-    	"qty": 1,
-    	"cost": 2000,
-        "id": "mango-monkey",
-        "sex":["boy","girl"],
-        "productType" : "Соска",
-        "age": "0-6 мес",
-        "vendor": "mary-meyer",
-        "imageUrl": "img/mango-monkey.jpg", 
-        "title": "Обезьянка Манго", 
-        "snippet": "Обезьянка Манго как будто из цирка! Способна поднять настроение всем вокруг.",
-        "images": ["img/mango-monkey.jpg"],
-        "style" : "col-sm-4"
-    },
+    
     {
     	"key": 112,
     	"qty": 1,
@@ -276,6 +262,21 @@
         "snippet": "Маленькие рожки и яркая грива безусловно привлекают внимание малыша. Динозаврик- отличная компания во сне и во время игры.",
         "images": ["img/okey-dokey-dino.jpg"],
         "style" : "col-sm-4"
+    },
+    {
+    	"key": 114,
+    	"qty": 0,
+    	"cost": 2000,
+        "id": "blue-puppy",
+        "productType" : "Соска",
+        "sex":["boy"],
+        "age": "0-6 мес",
+        "vendor": "mary-meyer", 
+        "imageUrl": "img/blue-puppy.jpg", 
+        "title": "Голубой щенок", 
+        "snippet": "Игривый Щенок - прекрасный друг для мальчика. Не потеряется никогда из виду. Новинка 2016 года.",
+        "images": ["img/blue-puppy.jpg"],
+        "style" : "col-sm-8"
     },
     {
     	"key": 116,
@@ -1595,7 +1596,7 @@
     },
     {
         "key": 801,
-        "qty": 0,
+        "qty": 1,
         "cost": 2400,
         "id": "Blanket_Mountains",
         "productType" : "Пелёнка",
@@ -1625,7 +1626,7 @@
     },
     {
         "key": 803,
-        "qty": 0,
+        "qty": 1,
         "cost": 2400,
         "id": "Blanket_Lovely",
         "productType" : "Пелёнка",
