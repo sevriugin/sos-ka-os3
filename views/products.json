@@ -295,7 +295,7 @@
     },
     {
         "key": 117,
-        "qty": 1,
+        "qty": 0,
         "cost": 2000,
         "id": "Afrique_Lion",
         "productType" : "Соска",
@@ -997,7 +997,7 @@
     },
     {
     	"key": 501,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1500,
         "id": "ComoTomo-150-boy",
         "sex":["boy"],
@@ -1012,7 +1012,7 @@
     },
     {
     	"key": 502,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 1800,
         "id": "ComoTomo-250-girl",
         "sex":["girl"],
