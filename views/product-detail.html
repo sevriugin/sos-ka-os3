@@ -44,7 +44,7 @@
 		<div class="col-sm-4 ">
 			<h3 class="product-title hidden-xs">{{product.productType}} {{vendor.title}} {{product.title}}</h3>
 			<div class="product-price hidden-xs">
-				<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПОД ЗАКАЗ 30 ДНЕЙ"}}</span>
+				<span class="price">{{product.qty ? (product.cost | currency:"₽ ":0) : "ПОД ЗАКАЗ 14 ДНЕЙ"}}</span>
 				<span ng-if="product.oldCost" class="original-price">{{product.oldCost | currency:"₽ ":0 }}</span>
 				<div ng-if="false">
 					<form name="optionsForm">
