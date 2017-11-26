@@ -996,6 +996,22 @@
         "style" : "col-sm-4"
     },
     {
+        "key": 416,
+        "qty": 1,
+        "cost": 550,
+        "oldCost": 700,
+        "id": "Clucky-Bandana-Bib",
+        "sex":["boy","girl"],
+        "productType" : "Нагрудник",
+        "age": "0м+", 
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Clucky-Bandana-Bib.jpg", 
+        "title": "Нагрудник Clucky Bandana Bib", 
+        "snippet": "Идеальный нагрудник, чтобы впитывать всё жидкое, что падает на него. Давухсторонний, с одной стороны с мягкой тканью и махровой с другой. С кнопкой -защёлкой. Машинная стирка. Один размер.",
+        "images": ["img/Clucky-Bandana-Bib.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 501,
     	"qty": 0,
     	"cost": 1500,
