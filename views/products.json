@@ -1060,6 +1060,22 @@
         "style" : "col-sm-4"
     },
     {
+        "key": 420,
+        "qty": 1,
+        "cost": 1600,
+        "oldCost": 1800,
+        "id": "Cuddle-Toe-Slippers-3-6",
+        "sex":["boy"],
+        "productType" : "Тапочки",
+        "age": "3-6м",
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Cuddle-Toe-Slippers-3-6.jpg", 
+        "title": "Тапочки-Зайки для 3-6 мес", 
+        "snippet": "Тёплые, мягкие и ох, какие нарядные! Такие тапочки прекрасно украсят любую ножку маленькой  Золушки! Искусственный мех с трикотажной подкладкой внутри. Тапочки в подарочной коробке. Машинная стирка на деликатном режиме. Сушить в подвешенном состоянии.",
+        "images": ["img/Cuddle-Toe-Slippers-3-6.jpg","img/Cuddle-Toe-Slippers-3-6-1.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 501,
     	"qty": 0,
     	"cost": 1500,
