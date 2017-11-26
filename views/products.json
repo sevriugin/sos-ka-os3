@@ -1962,5 +1962,20 @@
         "snippet": "Это прекрасный  набор самого необходимого для новорождённого и ребёнка первого года жизни. Канадская фирма с 2014 года выпускает изделия из муслина премиального качества. Набор приятно упакован в подарочную упаковку, содержит 4 предмета : одну большую муслиновую пелёнку 120x120 см, две средние муслиновые пелёнки 70x70 см и одна  муслиновая салфетка для лица 20x20 см.",
         "images": ["img/Lulujo-Sailing-Softly-Gift-Set.jpg","img/Lulujo-Sailing-Softly-Gift-Set-1.jpg","img/Lulujo-Sailing-Softly-Gift-Set-2.jpg"],
         "style" : "col-sm-4"
+    },
+    {
+        "key": 811,
+        "qty": 1,
+        "cost": 1200,
+        "id": "Lulujo-Organic-Cotton-Washcloths",
+        "productType" : "Салфетка",
+        "sex":["boy"],
+        "age": "0+",
+        "vendor": "Lulujo", 
+        "imageUrl": "img/Lulujo-Organic-Cotton-Washcloths.jpg", 
+        "title": "Набор салфеток для лица 0+",
+        "snippet": "Эти экологически чистые салфетки из органического хлопка без красителей очень мягкие и нежные! Предназначены для нежной кожи ребёнка с самого рождения. Вы быстро к ним привыкнете и больше не представите уход за малышом без них! Красиво завернутые и упакованные, они прекрасно дополнят любой подарок. 100% органический хлопок. 20 см x 20 см. 4-шт в упаковке.",
+        "images": ["img/Lulujo-Organic-Cotton-Washcloths.jpg","img/Lulujo-Organic-Cotton-Washcloths-1.jpg","img/Lulujo-Organic-Cotton-Washcloths-2.jpg"],
+        "style" : "col-sm-4"
     }
 ]
