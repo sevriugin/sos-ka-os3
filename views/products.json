@@ -1028,6 +1028,22 @@
         "style" : "col-sm-4"
     },
     {
+        "key": 418,
+        "qty": 1,
+        "cost": 550,
+        "oldCost": 700,
+        "id": "Hammie-Bandana-Bib",
+        "sex":["girl"],
+        "productType" : "Нагрудник",
+        "age": "0м+", 
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Hammie-Bandana-Bib.jpg", 
+        "title": "Нагрудник Hammie Bandana Bib", 
+        "snippet": "Идеальный нагрудник, чтобы впитывать всё жидкое, что падает на него. Давухсторонний, с одной стороны с мягкой тканью и махровой с другой. С кнопкой -защёлкой. Машинная стирка. Один размер.",
+        "images": ["img/Hammie-Bandana-Bib.jpg","img/Hammie-Bandana-Bib-2.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
     	"key": 501,
     	"qty": 0,
     	"cost": 1500,
