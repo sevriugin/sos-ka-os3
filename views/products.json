@@ -1890,8 +1890,8 @@
     },
     {
         "key": 806,
-        "qty": 1,
-        "cost": 2400,
+        "qty": 0,
+        "cost": 3000,
         "id": "Here-I-Grow-Again",
         "productType" : "Пелёнка",
         "sex":["boy"],
@@ -1905,8 +1905,8 @@
     },
     {
         "key": 807,
-        "qty": 1,
-        "cost": 2400,
+        "qty": 0,
+        "cost": 3000,
         "id": "Brave-wings-she-fly",
         "productType" : "Пелёнка",
         "sex":["girl"],
