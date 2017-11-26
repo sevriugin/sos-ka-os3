@@ -1037,10 +1037,26 @@
         "productType" : "Нагрудник",
         "age": "0м+", 
         "vendor": "BunniesByTheBay",
-        "imageUrl": "img/Hammie-Bandana-Bib.jpg", 
+        "imageUrl": "img/Hammie-Bandana-Bib-2.jpg", 
         "title": "Нагрудник Hammie Bandana Bib", 
         "snippet": "Идеальный нагрудник, чтобы впитывать всё жидкое, что падает на него. Давухсторонний, с одной стороны с мягкой тканью и махровой с другой. С кнопкой -защёлкой. Машинная стирка. Один размер.",
         "images": ["img/Hammie-Bandana-Bib.jpg","img/Hammie-Bandana-Bib-2.jpg"],
+        "style" : "col-sm-4"
+    },
+    {
+        "key": 419,
+        "qty": 1,
+        "cost": 550,
+        "oldCost": 700,
+        "id": "Moo-Moo-Bandana-Bib",
+        "sex":["boy"],
+        "productType" : "Нагрудник",
+        "age": "0м+", 
+        "vendor": "BunniesByTheBay",
+        "imageUrl": "img/Moo-Moo-Bandana-Bib.jpg", 
+        "title": "Нагрудник Moo Moo Bandana Bib", 
+        "snippet": "Идеальный нагрудник, чтобы впитывать всё жидкое, что падает на него. Давухсторонний, с одной стороны с мягкой тканью и махровой с другой. С кнопкой -защёлкой. Машинная стирка. Один размер.",
+        "images": ["img/Moo-Moo-Bandana-Bib.jpg"],
         "style" : "col-sm-4"
     },
     {
