@@ -496,21 +496,6 @@
         "style" : "col-sm-4"
     },
     {
-    	"key": 204,
-    	"qty": 1,
-    	"cost": 1800,
-        "id": "unity-unicorn",
-        "sex":["girl"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/unity-unicorn.jpg", 
-        "title": "Единорог", 
-        "snippet": "Этот единорог- сама нежность! Не стоит беспокоиться, что он потеряет цвет и форму после ухода ( бережной стирки). Всегда рядом, всегда на виду.",
-        "images": ["img/unity-unicorn.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
     	"key": 205,
     	"qty": 1,
     	"cost": 1800,
@@ -541,22 +526,6 @@
         "title": "Nookums", 
         "snippet": "",
         "images": ["img/nk-slide-04.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
-    	"key": 206,
-    	"qty": 1,
-        "cost": 1080,
-        "oldCost": 1800,
-        "id": "lovie-lamb",
-        "sex":["boy","girl"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/lovie-lamb.jpg", 
-        "title": "Ласковая овечка", 
-        "snippet": "Эта милая и нежная овечка подойдёт как мальчику, так и девочке. Невероятно мягкая, совсем не хочется выпускать её из рук.",
-        "images": ["img/lovie-lamb.jpg"],
         "style" : "col-sm-4"
     },
     {
