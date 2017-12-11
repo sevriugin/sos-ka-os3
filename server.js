@@ -203,7 +203,7 @@ var SampleApp = function() {
         	MongoClient.connect('mongodb://'+ self.connection_string, function(err, db) {
             	  if(err) { return res.status(500).json({status:"error", message:err }); }
             	  
-            	  var coll	= db.collection('shop.users');
+            	  var coll	= db.collection('shop.orders);
           		  
             	  coll.find().toArray(function(err, docs) {
             		  if(err) { return res.status(500).json({status:"error", message:err }); }
