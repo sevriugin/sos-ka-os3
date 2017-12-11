@@ -214,11 +214,8 @@ var SampleApp = function() {
             		  
             		  for(i = 0; i < count; i++) {
             			
-            			  var user		= {};
-            			  
-            			  user.firstname 	= docs[i].firstname;
-            			  user.lastname		= docs[i].lastname;
-            			  user.username		= docs[i].username;
+						  var user		= {};
+						  user.username	= docs.email;
             			  
             			  if(user.username) {
             				  result.push(user.username);
