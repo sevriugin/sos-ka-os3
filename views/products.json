@@ -88,7 +88,7 @@
     },
     {
     	"key": 101,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 2000,
         "id": "afrique-elefant",
         "sex":["boy","girl"],
@@ -235,7 +235,7 @@
     
     {
     	"key": 112,
-    	"qty": 1,
+    	"qty": 0,
     	"cost": 2000,
         "id": "ella-bella",
         "sex":["girl"],
@@ -447,21 +447,6 @@
         "style" : "col-sm-4"
     },
     {
-    	"key": 201,
-    	"qty": 1,
-    	"cost": 1800,
-        "id": "happy-hippo",
-        "sex":["girl"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/happy-hippo.jpg", 
-        "title": "Счастливый бегемотик", 
-        "snippet": "Забавный бегемотик, невероятно приятный на ощупь, в сочетании с любимой соской малыша, станет незаменимым другом ребёнку.",
-        "images": ["img/happy-hippo.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
     	"key": 202,
     	"qty": 1,
         "cost": 1080,
@@ -493,21 +478,6 @@
         "title": "Nookums", 
         "snippet": "",
         "images": ["img/nk-slide-03.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
-    	"key": 205,
-    	"qty": 1,
-    	"cost": 1800,
-        "id": "dimpless-dragon-new",
-        "sex":["boy"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/dimpless-dragon-new.png", 
-        "title": "Дракончик", 
-        "snippet": "Храбрый дракон всегда рядом! Не потеряется из виду и не нарушит сон малыша, потому что не позволит соске выпадать из ротика.",
-        "images": ["img/dimpless-dragon-new.png"],
         "style" : "col-sm-4"
     },
     {
@@ -1309,7 +1279,7 @@
     },
     {
         "key": 507,
-        "qty": 1,
+        "qty": 0,
         "cost": 750,
         "oldCost": 800,
         "id": "ComoTomo-nipples-6m",
@@ -1325,7 +1295,7 @@
     },
     {
         "key": 508,
-        "qty": 1,
+        "qty": 0,
         "cost": 750,
         "oldCost": 800,
         "id": "ComoTomo-nipples-6m-Y",
@@ -1341,7 +1311,7 @@
     },
     {
         "key": 509,
-        "qty": 1,
+        "qty": 0,
         "cost": 1100,
         "id": "ComoTomo-teether-orage",
         "sex":["boy","girl"],
