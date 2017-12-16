@@ -630,21 +630,6 @@
         "style" : "col-sm-4"
     },
     {
-        "key": 220,
-        "qty": 1,
-        "cost": 1800,
-        "id": "dimpless-dragon",
-        "sex":["boy"],
-        "productType" : "Соска + держатель",
-        "age": "0+",
-        "vendor": "paci-plushies",
-        "imageUrl": "img/dimpless-dragon.jpg", 
-        "title": "Фиолетовый дракончик",
-        "snippet": "Храбрый дракон всегда рядом! Не потеряется из виду и не нарушит сон малыша, потому что не позволит соске выпадать из ротика.",
-        "images": ["img/dimpless-dragon.jpg"],
-        "style" : "col-sm-4"
-    },
-    {
         "key": 222,
         "qty": 1,
         "cost": 1800,
