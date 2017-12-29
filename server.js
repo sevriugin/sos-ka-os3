@@ -84,10 +84,13 @@ var SampleApp = function() {
      */
     self.setupVariables = function() {
     	
-        //  Set the environment variables we need.
-        self.ipaddress 			= process.env.OPENSHIFT_NODEJS_IP;
-        self.port      			= process.env.OPENSHIFT_NODEJS_PORT || 8080;
-        self.connection_string  = '127.0.0.1:27017/OpenShift-Sample-App';
+        // Set the environment variables we need.
+		// self.ipaddress 			= process.env.OPENSHIFT_NODEJS_IP;
+		// self.port      			= process.env.OPENSHIFT_NODEJS_PORT || 8080;
+		// self.connection_string  = '127.0.0.1:27017/OpenShift-Sample-App';
+		self.ipaddress 			= '0.0.0.0';
+		self.port      			= 8080;
+		self.connection_string  = '0.0.0.0:27017/OpenShift-Sample-App';
         
         if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD) {
         	  self.connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
