@@ -25,7 +25,7 @@ var transporter 		= nodemailer.createTransport({
 	host: 'smtp.mailgun.org',
 	auth: {
 		user: 'postmaster@mail.sos-ka.com',
-		pass: 'd4bd94a0e178bf7c0dd42a1ddc6e7129'
+		pass: 'p4Z-BTe-fkc-KYk'
 	}
 });
 
